@@ -1,0 +1,32 @@
+.map-facade {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 600px;
+  width: 100%;
+  border-radius: 2rem;
+  background: linear-gradient(135deg, #e8f4f5 0%, #d4ecee 100%);
+  cursor: pointer;
+}
+
+.map-facade button {
+  padding: 0.875rem 1.75rem;
+  border: none;
+  border-radius: 9999px;
+  background: #066168;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.map-facade button:hover {
+  background: #055459;
+}
+
+@media (max-width: 768px) {
+  .map-facade {
+    min-height: 360px;
+  }
+}

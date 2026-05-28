@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<!-- Character Encoding -->
+	<meta charset="UTF-8">
+
+	<!-- Responsive Design -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Title -->
+	<title>Travlla - Travel & Tour Tailwind CSS Template | DexignZone</title>
+
+    <meta name="title" content="Travlla - Travel & Tour Tailwind CSS Template | DexignZone">
+    <meta name="description" content="Travlla is a responsive Travel & Tour Tailwind CSS template designed for travel agencies, tour operators, holiday planners, and booking websites.">
+    <meta name="keywords" content="travel HTML template, tour booking template, Tailwind travel website, tourism Tailwind template, holiday booking, responsive travel design, tour operator website, Travlla template, modern travel design, travel agency web design">
+    <meta name="author" content="DexignZone">
+    <meta name="robots" content="index, follow">
+
+    <!-- CANONICAL URL -->
+    <link rel="canonical" href="https://travlla.dexignzone.com/tailwind/doc/index.html">
+
+    <!-- FAVICONS ICON -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Travlla - Travel & Tour Tailwind CSS Template | DexignZone">
+    <meta property="og:description" content="Travlla is a responsive Travel & Tour Tailwind CSS template designed for travel agencies, tour operators, holiday planners, and booking websites.">
+    <meta property="og:image" content="https://travlla.dexignzone.com/demo/social-image.png">
+    <meta property="og:url" content="https://travlla.dexignzone.com/tailwind/doc">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Travlla">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Travlla - Travel & Tour Tailwind CSS Template | DexignZone">
+    <meta name="twitter:description" content="Travlla is a responsive Travel & Tour Tailwind CSS template designed for travel agencies, tour operators, holiday planners, and booking websites.">
+    <meta name="twitter:image" content="https://travlla.dexignzone.com/tailwind/social-image.png">
+
+    <!-- IE Compatibility -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="format-detection" content="telephone=no">
+	
+	<!-- Bootstrap CSS CDN -->
+	<link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="plugins/jstree/dist/themes/default/style.min.css">
+	<link rel="stylesheet" href="plugins/perfect-scrollbar/css/perfect-scrollbar.css">
+	<link rel="stylesheet" href="plugins/font-awesome/css/all.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+	
+</head>
+<body data-bs-spy="scroll" data-bs-target=".nav-bar" data-bs-offset="50">
+<div class="wrapper" id="tableofcontent">
+
+	<!-- Sidebar Holder -->
+	<nav id="nevbarleft">
+		<div class="side-nav">
+			<div class="sidebar-header">
+				<img src="images/logo-light.png" alt="logo">
+			</div>
+			<div class="nav-bar deznav-scroll">
+				<ul class="list-unstyled components navbar-nav nav" id="download-button">
+					<li class="nav-item"><a class="nav-link" href="#introduction">Introduction</a></li>
+					<li class="nav-item"><a class="nav-link" href="#Installation">Installation</a></li>
+					<li class="nav-item"><a class="nav-link" href="#folder_directories">Folder Directories</a></li>
+					<li class="nav-item"><a class="nav-link" href="#html_file">HTML File</a></li>
+					<li class="nav-item"><a class="nav-link" href="#credits_file">Credits </a></li>
+					<li class="nav-item"><a class="nav-link" href="#html_structure">Basic HTML Structure</a></li>
+					<li class="nav-item"><a class="nav-link" href="#cursor_pointer">Disable Cursor Pointer</a></li>
+					<li class="nav-item"><a class="nav-link" href="#recaptcha">reCAPTCHA <i class="fa fa-star text-yellow"></i></a></li>
+					<li class="nav-item"><a class="nav-link" href="#custom_work">Custom Work Requirements </a></li>
+					<li class="nav-item"><a class="nav-link" href="#version_history">Version History</a></li>
+				</ul>
+			</div>
+			<div class="sidebar-bottom">
+				<h6 class="name">Travlla - Travel & Tour Tailwind CSS Template</h6>
+				<span class="ver-info">Version 1.0</span>
+			</div>
+		</div>
+		<button type="button" id="mobileCloseBtn" class="navbar-btn">
+			<img src="images/close.png" alt="">
+		</button>
+	</nav>
+	
+	<!-- Page Content Holder -->
+	<div id="content">
+		
+		<!-- Top Nav -->
+		<header class="header">
+			<nav class="navbar navbar-default top-nav-bar">
+				<div class="container-fluid">
+					<div class="navbar-header">
+					   <button type="button" id="sidebarCollapse" class="navbar-btn">
+							<span></span>
+							<span></span>
+							<span></span>
+						</button>
+					</div>
+					<div class="extra-nav">
+						<a target="_blank" href="https://support.w3itexperts.com/" class="btn DZSupportBtn support-button">Support</a>
+						<a target="_blank" href="javascript:void(0);" class="btn DZBuyNowBtn support-button">Buy Now</a>
+						<a target="_blank" href="https://Travlla.dexignzone.com/tailwind/demo" class="btn support-button">Live Demo</a>
+					</div>
+				</div>
+			</nav>
+		</header>
+		
+		<!-- Banner -->
+		<section class="slide-banner overlay-black" style="background-image: url(images/bg2.png);">
+			<div class="container">
+				<div class="inner-content">
+					<h1 class="title">Documentation</h1>
+					<div class="colored-line"></div>
+					<div class="section-description">
+						Travlla - Travel & Tour Tailwind CSS Template
+					</div>
+					<div class="colored-line"></div>
+				</div>
+			</div>
+		</section>
+				
+		<!-- Introduction -->
+		<section class="app-brief introduction-wrapper text-center" id="introduction">
+			<div class="container center-align ">
+				<h2 class="title">Travlla</h2>
+				<h4 class="sub-title">Travlla - Travel & Tour Tailwind CSS Template</h4>
+				<p>This documentation is last updated on 07 October 2025</p>
+				<a href="https://themeforest.net/user/dexignzone/portfolio" target="_blank" class="wishes-bx">
+					<p>Thank you for purchasing this HTML template.</p>
+					<p class="rating-text">If you like this template, Please support us by rating this template with <strong>5 stars</strong></p>
+				</a>
+			</div>
+		</section>
+		
+		<hr>
+		
+		<!-- Sass Compile -->
+		<section class="app-brief" id="Installation">
+			<div class="container">
+				<div class="section-head">
+					<h2 class="title">Installation  - </h2>
+				</div>
+				<div class="installation">
+					<div class="content-bx">
+						<h5 class="title">1.- Install Node Module</h5>
+						<p>Install tailwindcss modules via npm</p>
+<pre class="brush: javascript; h-100">npm install
+</pre>
+					</div>
+					
+					<div class="content-bx">
+						<h5 class="title">2.- Start the Tailwind CLI build process</h5>
+						<p>Run the CLI tool to scan your template files for classes and build your CSS.</p>
+<pre class="brush: javascript; h-100">npm run dev
+</pre>
+					</div>
+					
+					<div class="content-bx">
+						<h5 class="title">3.- Start using Tailwind in your HTML</h5>
+						<p>Add your compiled CSS file to the <code>	&lt;head&gt;</code>  and start using Tailwind’s utility classes to style your content.</p>
+					</div>
+
+					
+				</div>
+			</div>
+		</section>
+				
+		<!-- Folder Directories -->
+		<section class="app-brief grey-bg" id="folder_directories">
+			<div class="container left-align">
+				<div class="section-header">
+					<h2 class="title">Folder Directories - </h2>
+				</div>
+				<div class="">
+					<ul class="list-files">
+						<li>
+							<div class="row">
+								<div class="col-sm-4">
+									<p class="text-highlight">images</p>
+								</div>
+								<div class="col-sm-8">
+									<p>This folder contains all the images of <span class="text-highlight">Travlla</span> template.</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="row">
+								<div class="col-sm-4">
+									<p class="text-highlight">fonts</p>
+								</div>
+								<div class="col-sm-8">
+									<p>This folder font files for various template features.</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="row">
+								<div class="col-sm-4">
+									<p class="text-highlight">css</p>
+								</div>
+								<div class="col-sm-8">
+									<p>This folder contains all the CSS files of <span class="text-highlight">Travlla</span> template.</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="row">
+								<div class="col-sm-4">
+									<p class="text-highlight">js</p>
+								</div>
+								<div class="col-sm-8">
+									<p>This folder has all javascript files for various template features.</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="row">
+								<div class="col-sm-4">
+									<p class="text-highlight">vendor</p>
+								</div>
+								<div class="col-sm-8">
+									<p>This folder has all plugins used in the template.</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="row">
+								<div class="col-sm-4">
+									<p class="text-highlight">icons</p>
+								</div>
+								<div class="col-sm-8">
+									<p>This folder has all icons contact form used in the template.</p>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		
+		<!-- Folder Directories -->
+		<section class="app-brief" id="html_file">
+			<div class="container left-align">
+				<div class="section-header ">
+					<h2 class="title">HTML File - </h2>
+				</div>
+				<div id="dz_tree" class="tree-demo">
+					<ul>
+						<li data-jstree='{ "opened" : true }'>package
+							<ul>
+								<li data-jstree='{ "opened" : true }'>src 
+									<ul>
+										<li data-jstree='{ "opened" : true }'>assets
+											<ul>
+												<li data-jstree='{ "selected" : false }'>css</li>
+												<li data-jstree='{ "selected" : false }'>fonts</li>
+												<li data-jstree='{ "selected" : false }'>icons
+													<ul>
+														<li data-jstree='{ "opened" : true }'>feather</li>
+														<li data-jstree='{ "opened" : true }'>flaticon</li>
+														<li data-jstree='{ "opened" : true }'>fontawesome</li>
+														<li data-jstree='{ "opened" : true }'>line-awesome</li>
+														<li data-jstree='{ "opened" : true }'>themify-icons</li>
+													</ul>
+												</li>
+												<li data-jstree='{ "selected" : false }'>images
+													<ul>
+														<li data-jstree='{ "opened" : true }'>avatar</li>
+														<li data-jstree='{ "opened" : true }'>big</li>
+														<li data-jstree='{ "opened" : true }'>card</li>
+														<li data-jstree='{ "opened" : true }'>product</li>
+														<li data-jstree='{ "opened" : true }'>profile</li>
+														<li data-jstree='{ "opened" : true }'>tab</li>
+														<li data-jstree='{ "opened" : true }'>.....</li>
+													</ul>
+												</li>
+												<li data-jstree='{ "selected" : false }'>js
+													<ul>
+														<li data-jstree='{ "type" : "file" }'>custom.js</li>
+														<li data-jstree='{ "type" : "file" }'>animation.js</li>
+														<li data-jstree='{ "type" : "file" }'>dz.carousel.js</li>
+														<li data-jstree='{ "type" : "file" }'>...</li>
+													</ul>
+												</li>
+												<li data-jstree='{ "selected" : false }'>vendor
+													<ul>
+														<li data-jstree='{ "opened" : true }'>gsap</li>
+														<li data-jstree='{ "opened" : true }'>flatpickr</li>
+														<li data-jstree='{ "opened" : true }'>lightgallery</li>
+														<li data-jstree='{ "opened" : true }'>...</li>
+													</ul>
+												</li>
+												<li data-jstree='{ "selected" : false }'>script</li>
+											</ul>
+										</li>
+										<li data-jstree='{ "type" : "file" }'>index.html</li>
+														<li data-jstree='{ "type" : "file" }'>blog-grid.html</li>
+										<li data-jstree='{ "type" : "file" }'>services.html</li>
+										<li data-jstree='{ "type" : "file" }'>.....</li>
+									</ul>
+								</li>
+								<li data-jstree='{ "type" : "file" }'>package.json</li>
+								<li data-jstree='{ "type" : "file" }'>package-lock.json</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		
+		<hr>
+		
+
+		<!-- Credits -->
+		<section class="app-brief grey-bg" id="credits_file">
+			<div class="container left-align">
+				<div class="section-header">
+					<h2 class="title">Credits - </h2>
+				</div>
+				<div class="">
+					<ul class="list-files">
+						<li>
+							<div class="row">
+								<div class="col-sm-4">
+									<p class="text-highlight">gsap</p>
+								</div>
+								<div class="col-sm-8">
+									<p><a class="btn-link" target="_blank" href="https://gsap.com/">https://gsap.com/</a></p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="row">
+								<div class="col-sm-4">
+									<p class="text-highlight">Swiper JS</p>
+								</div>
+								<div class="col-sm-8">
+									<p><a class="btn-link" target="_blank" href="https://swiperjs.com/">https://swiperjs.com/</a></p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="row">
+								<div class="col-sm-4">
+									<p class="text-highlight">lightgallery</p>
+								</div>
+								<div class="col-sm-8">
+									<p><a class="btn-link" target="_blank" href="https://www.lightgalleryjs.com/">https://www.lightgalleryjs.com/</a></p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="row">
+								<div class="col-sm-4">
+									<p class="text-highlight">magnific-popup</p>
+								</div>
+								<div class="col-sm-8">
+									<p><a class="btn-link" target="_blank" href="https://dimsemenov.com/plugins/magnific-popup/">https://dimsemenov.com/plugins/magnific-popup/</a></p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="row">
+								<div class="col-sm-4">
+									<p class="text-highlight">nouislider</p>
+								</div>
+								<div class="col-sm-8">
+									<p><a class="btn-link" target="_blank" href="https://refreshless.com/nouislider/">https://refreshless.com/nouislider/</a></p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="row">
+								<div class="col-sm-4">
+									<p class="text-highlight">Tailwind</p>
+								</div>
+								<div class="col-sm-8">
+									<p><a class="btn-link" target="_blank" href="https://tailwindcss.com/">https://tailwindcss.com/</a></p>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		
+		<!-- HTML Structure -->
+		<section class="app-brief" id="html_structure">
+			<div class="container left-align">
+				<div class="section-header">
+					<h2 class="title">HTML Structure - </h2>
+				</div>
+				<div class="content-bx">
+					<h3>Head Structure</h3>
+					<div class="img-frame">
+						<img src="images/screenshot/Screenshot_1.png" alt="1">
+					</div>	
+				</div>	
+				<div class="content-bx">
+					<h3>Header</h3>
+					<div class="img-frame">
+						<img src="images/screenshot/Screenshot_2.png" alt="2">
+					</div>	
+				</div>
+				<div class="content-bx">
+					<h3>Footer</h3>
+					<div class="img-frame">
+						<img src="images/screenshot/Screenshot_4.png" alt="4">
+					</div>
+				</div>
+				<div class="content-bx mb-0">
+					<h3>Footer Essentials</h3>
+					<div class="img-frame">
+						<img src="images/screenshot/Screenshot_3.png" alt="4">
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<hr>
+		
+		<hr>
+		
+		<!-- Contact Form -->
+		<section class="app-brief" id="contact_form">
+			<div class="container left-align">
+				<div class="section-header">
+					<h2 class="title">Contact Form Handler - </h2>
+				</div>
+				<div class="theme-images">
+					<div class="content-bx">
+						<h5 class="mb-3">1. Simple Mail Function</h5>
+						<p><strong>File Path</strong> <code> script/contact.php</code></p>
+						<div class="img-frame">
+							<img src="images/screenshot/7.png" alt="8">
+						</div>
+					</div>
+					<div class="content-bx mb-0">
+						<h5 class="mb-3">2. Using SMTP</h5>
+						<p><strong>File Path</strong> <code>  script/contact_smtp.php</code></p>
+						
+						<p>Enter the required details for the SMTP server. These should be provided by your system administrator.</p>
+<pre>
+Host = '&lt;Put Your Server Host&gt;';
+Username = '&lt;Put Your SMTP Username&gt;';
+Password = '&lt;Put Your SMTP Password&gt;';
+SMTPSecure = '&lt;PHPMailer::ENCRYPTION_SMTPS or 'ssl' OR PHPMailer::ENCRYPTION_STARTTLS or 'tls'&gt;';
+Port = '&lt;465 or 587&gt;';
+</pre>
+						<div class="img-frame">
+							<img src="images/screenshot/10.png" alt="8">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<hr>
+		
+		<!-- reCAPTCHA -->
+		<section class="app-brief no-grey-bg" id="recaptcha">
+			<div class="container left-align">
+				<div class="section-header">
+					<h2 class="title">reCAPTCHA - </h2>
+				</div>
+				<div class="content-bx">
+					<div class="theme-images">
+						<div class="item m-b10">
+							<img src="images/important/recaptcha.png" width="350" alt="8">
+						</div>
+					</div>
+					<h5>Register your website and get Secret Key.</h5>
+					<p>Very first thing you need to do is register your website on Google recaptcha to do that click <a href="https://www.google.com/recaptcha/admin" class="text-primary">here.</a></p>
+					<p>Login to your Google account and submit the form.</p>
+					<div class="theme-images">
+						<img class="img-frame" src="images/important/capcha.png" alt="8">
+					</div>
+					<p>Once submit, Google will provide you following two information.</p>
+					<ul>
+						<li>Site key</li>
+						<li>Secret key</li>
+					</ul>
+				</div>
+				
+				<div class="content-bx">
+					<h5>Integrate Google reCAPTCHA in your website.</h5>
+					<p>To integrate it into your website you need to put it in client side as well as in Server side. In client HTML page you need to integrate this line before <code>HEAD</code>tag.</p>
+					<img src="images/important/script1.png" alt="10">
+					<p>And to show the widget into your form you need to put this below contact form, comment form etc.</p>
+					<img src="images/important/script2.png" alt="10">
+					<p>When the form get submit to Server, this script will send ‘g-recaptcha-response�?as a POST data. You need to verify it in order to see whether user has checked the Captcha or not.</p>
+				</div>
+				
+				<div class="content-bx mb-0">
+					<h5>Sample project</h5>
+					<p>Here is the HTML code for the simple form with comment box and submit button. On submit of this form we will use PHP in back-end to do the Google reCAPTCHA validation.</p>
+					<div class="theme-images">
+						<div class="item">
+							<img src="images/important/9.png" alt="8">
+						</div>
+					</div>
+					<p>This will generate this form.</p>
+					<div class="">	
+						<img src="images/important/recaptcha2.png" class="border" alt="8">
+					</div>	
+					<p>On server side i am using PHP for now. So on Form submit request we will check the POST variable.</p>
+					<div class="theme-images">
+						<div class="item">
+							<img src="images/important/8.png" alt="8">
+						</div>
+					</div>
+					<p>try out the demo to see how it works.</p>
+				</div>
+			</div>
+		</section>
+		
+		
+		<hr>
+		
+		
+		<!-- Customization -->
+		<section class="app-brief custom-info" id="custom_work" style="background-image: url(images/bg1.png); background-position: left center;">
+			<div class="container left-align">
+				<div class="col-md-12 text-center">
+					<h2 class="m-t0">Do You Need Help To Customization</h2>
+					<h3>After Purchase A Template...</h3>
+					<h4>You Will Start Customizing According Your Requirement<br> <span>BUT</span> What If You Don't Know</h4>
+					<h3 class="text-black">SOLUTION IS <span><u>HIRE DexignZone</u></span></h3>
+					<div class="hire">
+						<h4><span class="">Hire Same Team For </span> <span>Quality Customization</span></h4>
+						<ul>
+							<li>In Order To Ensure Your Website Is Live, We Will Customize <br>The Template According To Your Requirements And Upload It to the Server.</li>
+						</ul>
+						<div class="gmail-box">
+							<a href="https://teams.microsoft.com/l/chat/0/0?users=rahulxarma@gmail.com" class="gmail"><i class="fa-brands fa-microsoft"></i>rahulxarma</a>
+							<a target="_blank" href="mailto:dexignzones@gmail.com" class="gmail"><i class="fa fa-envelope"></i>dexignzones@gmail.com</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<!-- Change Log -->
+		<section class="app-brief change-log grey-bg" id="version_history">
+			<div class="container left-align">
+				<div class="section-header">
+					<h3 class="dark-text title">Version History - <a href="javascript:void();" class="text-primary scroltop topbutton">#back to top</a></h3>
+				</div>
+				
+				<h5><span class="text-primary">v1.0</span> - 08 October 2025</h5>
+				<ul>
+					<li>New - Created & Upload Travlla</li>
+				</ul>
+				
+			</div>
+		</section>
+		
+		<!-- Footer -->
+		<footer class="footer text-center">
+			<div class="container">
+				<p class="copyright">© <span class="current-year">2024</span> DexignZone, All Rights Reserved</p>
+			</div>
+		</footer>
+	
+	</div>
+	
+	<div class="scroltop-progress scroltop-primary">
+		<svg width="100%" height="100%" viewBox="-1 -1 102 102">
+			<path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+		</svg>
+	</div>
+	
+</div>
+
+<!-- JAVASCRIPT FILES ========================================= -->
+<script src="js/jquery.min.js"></script>
+<script src="plugins/bootstrap/bootstrap.min.js"></script>
+<script src="plugins/jstree/dist/jstree.min.js"></script>
+<script src="plugins/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
+<script src="js/custom.js"></script>
+</body>
+</html>

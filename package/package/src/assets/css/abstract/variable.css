@@ -1,0 +1,32 @@
+:root{
+
+    /* Rich Antique Gold — deeper accent, reads premium on buttons & headers */
+    --primary: #9E7349;
+
+    /* Warm Champagne Sand — clearer surface tone for buttons & sticky nav */
+    --secondary: #D9CCBA;
+
+    /* RGB Gold */
+    --primary-rgb: 158, 115, 73;
+
+    /* Soft Beige — warm highlight backgrounds */
+    --primarylight: #EDE6DA;
+
+    /* Warm Gray Text */
+    --body-color: #57524C;
+
+    /* Main Website Background */
+    --body-bgcolor: #F8F5EF;
+
+    /* Headings */
+    --heading-color: #1F1A17;
+
+    /* Card Background */
+    --light: #FFFFFF;
+
+    /* Loader dot palette — matches site gold brand */
+    --loader-dot-1: #9E7349;
+    --loader-dot-2: #C9A24D;
+    --loader-dot-3: #B8956A;
+    --loader-dot-4: #7A5A38;
+}
