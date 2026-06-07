@@ -1,0 +1,23 @@
+.maintenance-overlay {
+    @apply fixed inset-0 z-9999999 flex flex-col items-center justify-center gap-6 px-6 text-center;
+    background: var(--body-bgcolor);
+}
+
+.maintenance-overlay__title {
+    @apply text-4xl sm:text-6xl lg:text-7xl font-semibold uppercase tracking-wide;
+    color: var(--heading-color);
+}
+
+.maintenance-overlay__text {
+    @apply text-lg sm:text-xl max-w-lg;
+    color: var(--body-color);
+}
+
+.maintenance-overlay__link {
+    @apply inline-block mt-2 px-8 py-4 rounded-full text-white text-base font-medium transition-opacity duration-300 hover:opacity-90;
+    background: var(--primary);
+}
+
+body.maintenance-active {
+    @apply overflow-hidden;
+}

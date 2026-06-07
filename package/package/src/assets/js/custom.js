@@ -499,6 +499,29 @@ const Travlla = (function () {
     setTimeout(() => loader.remove(), 400);
   };
 
+  const isHomePage = () => {
+    const path = window.location.pathname.replace(/\/+$/, "") || "/";
+    const page = path.split("/").pop() || "index.html";
+    return page === "" || page === "index.html" || page === "index";
+  };
+
+  const handleMaintenanceOverlay = () => {
+    if (isHomePage()) return;
+
+    const overlay = document.createElement("div");
+    overlay.className = "maintenance-overlay";
+    overlay.setAttribute("role", "alertdialog");
+    overlay.setAttribute("aria-modal", "true");
+    overlay.setAttribute("aria-labelledby", "maintenance-title");
+    overlay.innerHTML =
+      '<h1 id="maintenance-title" class="maintenance-overlay__title">Under Maintenance</h1>' +
+      '<p class="maintenance-overlay__text">This page is temporarily unavailable while we make improvements. Please check back soon.</p>' +
+      '<a href="index.html" class="maintenance-overlay__link">Return to Homepage</a>';
+
+    document.body.classList.add("maintenance-active");
+    document.body.appendChild(overlay);
+  };
+
   const handleDelegationPackageParams = () => {
     const params = new URLSearchParams(window.location.search);
     const packageSelect = document.getElementById("delegation-package");
@@ -544,6 +567,7 @@ const Travlla = (function () {
       handleTagSlider();
       handleShopProductPrice();
       handlePageLoader();
+      handleMaintenanceOverlay();
       handleDelegationPackageParams();
     },
   };
