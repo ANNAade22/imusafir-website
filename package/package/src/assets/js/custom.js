@@ -499,6 +499,32 @@ const Travlla = (function () {
     setTimeout(() => loader.remove(), 400);
   };
 
+  const handleDelegationPackageParams = () => {
+    const params = new URLSearchParams(window.location.search);
+    const packageSelect = document.getElementById("delegation-package");
+    const subjectInput = document.getElementById("Subject");
+    const packageMap = {
+      "standard-delegate": "Standard Delegate ($2,997)",
+      "executive-delegate": "Executive Delegate ($4,997)",
+      "elite-founder-circle": "Elite Founder Circle ($7,997)",
+      "not-sure": "Not sure yet",
+    };
+
+    const pkg = params.get("package");
+    if (packageSelect && pkg && packageMap[pkg]) {
+      packageSelect.value = pkg;
+    }
+
+    if (subjectInput) {
+      const interest = params.get("interest");
+      if (interest === "indonesia-2026") {
+        subjectInput.value = "Indonesia 2026 Delegation Inquiry";
+      } else if (pkg && packageMap[pkg]) {
+        subjectInput.value = "Indonesia 2026 — " + packageMap[pkg];
+      }
+    }
+  };
+
   return {
     init: function () {
       handleCursorsection();
@@ -518,6 +544,7 @@ const Travlla = (function () {
       handleTagSlider();
       handleShopProductPrice();
       handlePageLoader();
+      handleDelegationPackageParams();
     },
   };
 })();

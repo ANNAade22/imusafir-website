@@ -12,7 +12,7 @@ const PRIORITY = [
   { rel: "li-eye.gif", maxWidth: 200 },
   { rel: "Advertisment.png", maxWidth: 1200, quality: 80 },
   { rel: "main-slider/slider1/Rock.png", maxWidth: 800, quality: 85 },
-  ...Array.from({ length: 8 }, (_, i) => ({
+  ...Array.from({ length: 10 }, (_, i) => ({
     rel: `destinations/style1/pic${i + 1}.jpg`,
     maxWidth: 800,
     quality: 80,

@@ -52,3 +52,200 @@
 .animate-away {
    animation: text-fade-away 300ms forwards ease;
 }
+
+.we-rec-images {
+    @apply relative w-full;
+    min-height: 18rem;
+    padding-bottom: 2rem;
+}
+@media (width >= 576px) {
+    .we-rec-images {
+        min-height: 22.5rem;
+        padding-bottom: 4rem;
+    }
+}
+@media (width >= 1199px) {
+    .we-rec-images {
+        min-height: 26.25rem;
+        padding-bottom: 5.5rem;
+    }
+}
+.we-rec-badge {
+    @apply absolute z-30 right-0 animate-slide-top max-md:hidden;
+    top: 0.5rem;
+}
+@media (width >= 992px) {
+    .we-rec-badge {
+        top: 1rem;
+        right: 1rem;
+    }
+}
+.we-rec-badge-plane {
+    @apply absolute bottom-1.25 max-lg:max-w-60;
+    left: -5.5rem;
+}
+@media (width >= 1199px) {
+    .we-rec-badge-plane {
+        left: -6rem;
+        max-width: 18rem;
+    }
+}
+.we-rec-badge-card {
+    @apply bg-white rounded-xl py-1 pl-10.75 pr-5 inline-flex items-center w-70 origin-top-right;
+    transform: scale(0.9);
+}
+@media (width >= 992px) {
+    .we-rec-badge-card {
+        width: 18.75rem;
+        padding-left: 2.5rem;
+        transform: scale(0.95);
+    }
+}
+.we-rec-circle-wrap {
+    @apply relative z-10 mt-8 sm:mt-10 xl:mt-12 ml-0 mr-auto w-fit max-lg:mx-auto;
+}
+.we-rec-circle {
+    @apply size-70 sm:size-90 border-[15px] border-white rounded-full overflow-hidden;
+    box-shadow: 0 27px 35.9px rgba(41, 137, 145, 0.2);
+}
+@media (width >= 1199px) {
+    .we-rec-circle {
+        width: 22.5rem;
+        height: 22.5rem;
+        border-width: 18px;
+    }
+}
+.we-rec-landscape {
+    @apply absolute z-20 right-0 max-lg:relative max-lg:mx-auto;
+    bottom: -3.5rem;
+    width: 90%;
+}
+@media (width >= 576px) {
+    .we-rec-landscape {
+        width: 76%;
+        bottom: -4.5rem;
+    }
+}
+@media (width >= 1199px) {
+    .we-rec-landscape {
+        width: 72%;
+        bottom: -6rem;
+    }
+}
+@media (width < 992px) {
+    .we-rec-landscape {
+        width: 92%;
+        position: relative;
+        bottom: auto;
+        margin-top: 3.5rem;
+    }
+}
+.we-rec-landscape img {
+    @apply w-full h-auto rounded-2xl;
+    box-shadow: 0 12px 30px rgba(41, 137, 145, 0.18);
+}
+
+.happy-customer-avatars i {
+    @apply shrink-0;
+}
+
+.trv-service-badge-label {
+    @apply text-xs/[1.5] font-medium block text-white font-title px-2.5 pb-0;
+    padding-top: 2.875rem;
+}
+
+.steps-hero-column {
+    @apply relative z-1 max-2xl:flex max-2xl:justify-center;
+    padding-top: 3rem;
+    padding-bottom: 2.5rem;
+    min-height: 24rem;
+}
+@media (width >= 576px) {
+    .steps-hero-column {
+        min-height: 30rem;
+        padding-bottom: 3rem;
+    }
+}
+@media (width >= 992px) {
+    .steps-hero-column {
+        padding-top: 3.5rem;
+        min-height: 34rem;
+        padding-bottom: 3.5rem;
+    }
+}
+@media (width >= 1280px) {
+    .steps-hero-column {
+        min-height: 38rem;
+        padding-bottom: 4rem;
+    }
+}
+
+.steps-hero-wrap {
+    @apply relative z-1 mx-auto w-fit;
+    transform: translateY(2.5rem);
+}
+@media (width >= 992px) {
+    .steps-hero-wrap {
+        transform: translateY(3.5rem);
+    }
+}
+@media (width >= 1280px) {
+    .steps-hero-wrap {
+        transform: translateY(4.5rem);
+    }
+}
+
+.steps-hero-wrap::after {
+    content: "";
+    @apply absolute -z-1 rounded-full bg-eggshell;
+    width: 18rem;
+    height: 18rem;
+    left: 42%;
+    bottom: 4%;
+    transform: translateX(-50%);
+}
+@media (width >= 640px) {
+    .steps-hero-wrap::after {
+        width: 24rem;
+        height: 24rem;
+        bottom: 6%;
+    }
+}
+@media (width >= 992px) {
+    .steps-hero-wrap::after {
+        width: 28rem;
+        height: 28rem;
+        bottom: 8%;
+    }
+}
+@media (width >= 1280px) {
+    .steps-hero-wrap::after {
+        width: 31.25rem;
+        height: 31.25rem;
+        bottom: 10%;
+    }
+}
+
+.steps-hero-image {
+    @apply relative z-5 mr-16 sm:mr-20 block h-auto w-auto object-contain object-bottom;
+    max-width: 22rem;
+    max-height: 22rem;
+}
+@media (width >= 576px) {
+    .steps-hero-image {
+        max-width: 26rem;
+        max-height: 26rem;
+    }
+}
+@media (width >= 992px) {
+    .steps-hero-image {
+        max-width: 30rem;
+        max-height: 30rem;
+    }
+}
+@media (width >= 1280px) {
+    .steps-hero-image {
+        max-width: 32rem;
+        max-height: 32rem;
+    }
+}

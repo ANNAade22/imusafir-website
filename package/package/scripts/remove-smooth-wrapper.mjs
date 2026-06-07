@@ -6,7 +6,6 @@ const pages = [
   "index.html",
   "contact.html",
   "gallery.html",
-  "services.html",
   "pricing.html",
   "our-team.html",
   "error-404.html",

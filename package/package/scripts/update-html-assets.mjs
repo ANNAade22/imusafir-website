@@ -6,7 +6,6 @@ const pages = [
   "index.html",
   "contact.html",
   "gallery.html",
-  "services.html",
   "pricing.html",
   "our-team.html",
   "error-404.html",
@@ -56,14 +55,6 @@ const pageConfig = {
 <script defer src="assets/js/form-config.js"></script>
 <script defer src="assets/js/dz.ajax.js"></script>
 <script defer src="assets/js/map-facade.js"></script>
-<script defer src="assets/js/animation.js"></script>`),
-  },
-  "services.html": {
-    css: `${baseCss()}\n    <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">`,
-    scripts: coreScripts(`
-<script defer src="assets/vendor/gsap/ScrollTrigger.min.js"></script>
-<script defer src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-<script defer src="assets/js/dz.carousel.js"></script>
 <script defer src="assets/js/animation.js"></script>`),
   },
   "pricing.html": {
