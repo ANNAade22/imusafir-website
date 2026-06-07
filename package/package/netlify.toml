@@ -2,6 +2,12 @@
   publish = "dist"
   command = "npm run build"
 
+[build.environment]
+  NODE_VERSION = "20"
+  # Set in Netlify UI → Site configuration → Environment variables:
+  # FORMSPREE_CONTACT_ID = your Formspree contact form ID
+  # FORMSPREE_NEWSLETTER_ID = your Formspree newsletter form ID
+
 [[headers]]
   for = "/assets/*"
   [headers.values]

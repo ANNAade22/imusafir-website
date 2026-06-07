@@ -25,3 +25,6 @@ npm-debug.log*
 
 # Lighthouse reports (local perf audits)
 lighthouse-*.json
+
+# Local Netlify folder
+.netlify
