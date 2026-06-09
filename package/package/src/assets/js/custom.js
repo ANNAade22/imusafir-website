@@ -505,7 +505,17 @@ const Travlla = (function () {
     return page === "" || page === "index.html" || page === "index";
   };
 
+  const isProduction = () => /(?:^|\.)travlla\.com$/i.test(window.location.hostname);
+
+  const handlePricingRedirect = () => {
+    const page = window.location.pathname.split("/").pop() || "";
+    if (page === "pricing.html" || page === "pricing") {
+      window.location.replace("indonesia-2026.html");
+    }
+  };
+
   const handleMaintenanceOverlay = () => {
+    if (!isProduction()) return;
     if (isHomePage()) return;
 
     const overlay = document.createElement("div");
@@ -567,6 +577,7 @@ const Travlla = (function () {
       handleTagSlider();
       handleShopProductPrice();
       handlePageLoader();
+      handlePricingRedirect();
       handleMaintenanceOverlay();
       handleDelegationPackageParams();
     },

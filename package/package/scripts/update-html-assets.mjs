@@ -7,7 +7,6 @@ const pages = [
   "contact.html",
   "gallery.html",
   "pricing.html",
-  "our-team.html",
   "error-404.html",
 ];
 
@@ -58,14 +57,6 @@ const pageConfig = {
 <script defer src="assets/js/animation.js"></script>`),
   },
   "pricing.html": {
-    css: `${baseCss(true)}\n    <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">`,
-    scripts: coreScripts(`
-<script defer src="assets/vendor/gsap/ScrollTrigger.min.js"></script>
-<script defer src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-<script defer src="assets/js/dz.carousel.js"></script>
-<script defer src="assets/js/animation.js"></script>`),
-  },
-  "our-team.html": {
     css: `${baseCss(true)}\n    <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">`,
     scripts: coreScripts(`
 <script defer src="assets/vendor/gsap/ScrollTrigger.min.js"></script>

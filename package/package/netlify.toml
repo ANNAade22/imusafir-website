@@ -8,6 +8,11 @@
   # FORMSPREE_CONTACT_ID = your Formspree contact form ID
   # FORMSPREE_NEWSLETTER_ID = your Formspree newsletter form ID
 
+[[redirects]]
+  from = "/pricing.html"
+  to = "/indonesia-2026.html"
+  status = 302
+
 [[headers]]
   for = "/assets/*"
   [headers.values]
