@@ -11,8 +11,7 @@
 		"start": "npx concurrently \"npm run dev\" \"npm run serve\"",
 		"build:css": "npx @tailwindcss/cli -i ./src/assets/css/tailwind.css -o ./dist/assets/css/style.css --minify",
 		"build:assets": "node scripts/build.mjs",
-		"build:forms": "node scripts/generate-form-config.mjs",
-		"build": "npm run setup:fonts && npm run build:forms && npm run build:assets && npm run build:css",
+		"build": "npm run setup:fonts && npm run build:assets && npm run build:css",
 		"preview": "npx serve dist -l 3000",
 		"verify": "node scripts/verify-build.mjs"
 	},

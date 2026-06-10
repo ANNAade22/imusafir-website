@@ -51,7 +51,6 @@ const pageConfig = {
     css: baseCss(),
     scripts: coreScripts(`
 <script defer src="assets/vendor/gsap/ScrollTrigger.min.js"></script>
-<script defer src="assets/js/form-config.js"></script>
 <script defer src="assets/js/dz.ajax.js"></script>
 <script defer src="assets/js/map-facade.js"></script>
 <script defer src="assets/js/animation.js"></script>`),

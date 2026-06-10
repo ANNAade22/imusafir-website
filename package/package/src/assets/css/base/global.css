@@ -36,9 +36,6 @@ input[type=number] {
 .dzFormMsg .alert-success {
   @apply text-green-900 bg-green-200 p-5 mb-2.5 rounded;
 }
-.dzSubscribeMsg {
-  @apply relative;
-}
-.dzSubscribeMsg .alert {
-  @apply text-green-900 bg-green-200 py-1.75 px-5 rounded-5xl absolute -top-9.25 w-full;
+.dzFormMsg .alert-danger {
+  @apply text-red-900 bg-red-100 p-5 mb-2.5 rounded;
 }

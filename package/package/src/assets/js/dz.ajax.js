@@ -1,39 +1,4 @@
 
-function setCookie(cname, cvalue, exhours) {
-  const d = new Date();
-  d.setTime(d.getTime() + (30 * 60 * 1000));
-  const expires = "expires=" + d.toUTCString();
-  document.cookie = `${cname}=${cvalue};${expires};path=/`;
-}
-
-function getCookie(cname) {
-  const name = cname + "=";
-  const decodedCookie = decodeURIComponent(document.cookie);
-  const ca = decodedCookie.split(';');
-  for (let c of ca) {
-    c = c.trim();
-    if (c.indexOf(name) === 0) {
-      return c.substring(name.length);
-    }
-  }
-  return "";
-}
-
-function deleteCookie(cname) {
-  const d = new Date();
-  d.setTime(d.getTime() - 1000);
-  const expires = "expires=" + d.toUTCString();
-  document.cookie = `${cname}=;${expires};path=/`;
-}
-
-function getFormAction(form, type) {
-  const config = window.TRAVLLA_FORMS || {};
-  if (config[type]) {
-    return config[type];
-  }
-  return form.getAttribute('action') || '';
-}
-
 function showFormMessage(container, message, isSuccess) {
   if (!container) return;
 
@@ -46,13 +11,94 @@ function showFormMessage(container, message, isSuccess) {
   }, 5000);
 }
 
-function submitToFormspree(form, msgContainer, onComplete) {
-  const actionUrl = form.getAttribute('action');
+function setContactFieldState(field, isValid) {
+  if (!field) return;
+  field.classList.toggle('border-red-500', !isValid);
+  field.classList.toggle('border-primary/20', isValid);
+}
 
-  if (!actionUrl || actionUrl.includes('YOUR_')) {
+function isLocalPreview() {
+  const host = window.location.hostname;
+  return host === 'localhost' || host === '127.0.0.1';
+}
+
+function validateContactForm(form) {
+  const msgContainer = form.querySelector('.dzFormMsg');
+  const honeypot = form.querySelector('[name="bot-field"]');
+  const requiredFields = form.querySelectorAll('[required]');
+  let isValid = true;
+
+  requiredFields.forEach((field) => setContactFieldState(field, true));
+
+  if (honeypot && honeypot.value.trim()) {
+    return false;
+  }
+
+  requiredFields.forEach((field) => {
+    if (!field.checkValidity()) {
+      setContactFieldState(field, false);
+      isValid = false;
+    }
+  });
+
+  if (!isValid) {
+    showFormMessage(msgContainer, 'Please fill in all required fields.', false);
+    const firstInvalid = form.querySelector('.border-red-500');
+    firstInvalid?.focus();
+  }
+
+  return isValid;
+}
+
+function ensureContactSubject(form) {
+  const subjectInput = form.querySelector('[name="subject"]');
+  if (!subjectInput || subjectInput.value.trim()) return;
+
+  const interest = form.querySelector('#delegation-interest')?.value || '';
+  const pkg = form.querySelector('#delegation-package')?.value || '';
+  const subject = window.Imusafir?.buildContactSubject?.(interest, pkg);
+
+  if (subject) {
+    subjectInput.value = subject;
+  } else if (interest || pkg) {
+    subjectInput.value = 'iMUSAFIR Contact Form Submission';
+  }
+}
+
+function setSubmitButtonState(form, isSubmitting) {
+  const button = form.querySelector('[type="submit"]');
+  if (!button) return;
+
+  button.disabled = isSubmitting;
+  button.setAttribute('aria-busy', isSubmitting ? 'true' : 'false');
+  if (isSubmitting) {
+    button.dataset.originalText = button.textContent;
+    button.textContent = 'Sending...';
+  } else if (button.dataset.originalText) {
+    button.textContent = button.dataset.originalText;
+  }
+}
+
+function encodeNetlifyFormBody(form) {
+  const formData = new FormData(form);
+  const params = new URLSearchParams();
+
+  for (const [key, value] of formData.entries()) {
+    params.append(key, value);
+  }
+
+  if (!params.has('form-name') && form.getAttribute('name')) {
+    params.set('form-name', form.getAttribute('name'));
+  }
+
+  return params.toString();
+}
+
+function submitToNetlify(form, msgContainer, onComplete) {
+  if (isLocalPreview()) {
     showFormMessage(
       msgContainer,
-      'Form is not configured yet. Add your Formspree form ID in assets/js/form-config.js.',
+      'Form submissions are processed on the live site. Test at imusafir.com/contact.html after deploying.',
       false
     );
     if (onComplete) onComplete();
@@ -60,23 +106,29 @@ function submitToFormspree(form, msgContainer, onComplete) {
   }
 
   if (msgContainer) {
-    msgContainer.innerHTML = '<div class="gen alert dz-alert alert-success">Submitting..</div>';
+    msgContainer.innerHTML = '<div class="gen alert dz-alert alert-success">Submitting...</div>';
   }
 
-  fetch(actionUrl, {
+  fetch('/', {
     method: 'POST',
-    body: new FormData(form),
-    headers: { Accept: 'application/json' }
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: encodeNetlifyFormBody(form)
   })
-    .then(response => response.json().then(data => ({ ok: response.ok, data })))
-    .then(({ ok, data }) => {
-      if (ok) {
-        showFormMessage(msgContainer, 'Thank you! Your message has been sent.', true);
+    .then((response) => {
+      if (response.ok) {
+        showFormMessage(msgContainer, 'Thank you! Your message has been sent. We will be in touch shortly.', true);
         form.reset();
-      } else {
-        const errorMessage = data.error || data.errors?.[0]?.message || 'Something went wrong. Please try again.';
-        showFormMessage(msgContainer, errorMessage, false);
+
+        const subjectInput = form.querySelector('#contact-subject');
+        if (subjectInput) {
+          delete subjectInput.dataset.userEdited;
+        }
+
+        window.Imusafir?.applyContactFormParams?.();
+        return;
       }
+
+      throw new Error('Submission failed');
     })
     .catch(() => {
       showFormMessage(msgContainer, 'Unable to send your message. Please try again later.', false);
@@ -87,41 +139,29 @@ function submitToFormspree(form, msgContainer, onComplete) {
 }
 
 /* ----------------------------
-   Contact & Subscription Forms
+   Contact Forms (Netlify)
 ----------------------------- */
 function contactForm() {
-  const formsConfig = window.TRAVLLA_FORMS || {};
-
   document.querySelectorAll('.dzForm').forEach(form => {
-    if (formsConfig.contact) {
-      form.setAttribute('action', formsConfig.contact);
-    }
-    form.setAttribute('method', 'POST');
-
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      submitToFormspree(form, form.querySelector('.dzFormMsg'));
-    });
-  });
-
-  document.querySelectorAll('.dzSubscribe').forEach(form => {
-    if (formsConfig.newsletter) {
-      form.setAttribute('action', formsConfig.newsletter);
-    }
-    form.setAttribute('method', 'POST');
-
     form.addEventListener('submit', function (e) {
       e.preventDefault();
 
-      const msgContainer = form.querySelector('.dzSubscribeMsg') || document.querySelector('.dzSubscribeMsg');
-      form.classList.add('dz-ajax-overlay');
+      const msgContainer = form.querySelector('.dzFormMsg');
+      if (!validateContactForm(form)) {
+        return;
+      }
 
-      submitToFormspree(form, msgContainer, () => {
-        form.classList.remove('dz-ajax-overlay');
-        if (msgContainer && msgContainer.querySelector('.alert-success')) {
-          setCookie('prevent_subscription', 'true', 1);
-        }
+      ensureContactSubject(form);
+      setSubmitButtonState(form, true);
+
+      submitToNetlify(form, msgContainer, () => {
+        setSubmitButtonState(form, false);
       });
+    });
+
+    form.querySelectorAll('.contact-field').forEach((field) => {
+      field.addEventListener('input', () => setContactFieldState(field, true));
+      field.addEventListener('change', () => setContactFieldState(field, true));
     });
   });
 }

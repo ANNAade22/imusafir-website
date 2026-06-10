@@ -1,4 +1,4 @@
-const Travlla = (function () {
+const Imusafir = (function () {
   const handleCursorsection = () => {
     let cursor = document.querySelector(".cursor");
     let cursor2 = document.querySelector(".cursor2");
@@ -505,7 +505,7 @@ const Travlla = (function () {
     return page === "" || page === "index.html" || page === "index";
   };
 
-  const isProduction = () => /(?:^|\.)travlla\.com$/i.test(window.location.hostname);
+  const isProduction = () => /(?:^|\.)imusafir\.com$/i.test(window.location.hostname);
 
   const handlePricingRedirect = () => {
     const page = window.location.pathname.split("/").pop() || "";
@@ -532,30 +532,85 @@ const Travlla = (function () {
     document.body.appendChild(overlay);
   };
 
-  const handleDelegationPackageParams = () => {
+  const DELEGATION_PACKAGE_LABELS = {
+    "standard-delegate": "Standard Delegate ($2,997)",
+    "executive-delegate": "Executive Delegate ($4,997)",
+    "elite-founder-circle": "Elite Founder Circle ($7,997)",
+    "not-sure": "Not sure yet — help me choose",
+  };
+
+  const buildContactSubject = (interest, pkg) => {
+    if (interest === "indonesia-2026" && pkg && DELEGATION_PACKAGE_LABELS[pkg]) {
+      return "Indonesia 2026 — " + DELEGATION_PACKAGE_LABELS[pkg];
+    }
+    if (interest === "indonesia-2026") {
+      return "Indonesia 2026 Delegation Inquiry";
+    }
+    if (pkg && DELEGATION_PACKAGE_LABELS[pkg]) {
+      return "Delegation Inquiry — " + DELEGATION_PACKAGE_LABELS[pkg];
+    }
+    return "";
+  };
+
+  const applyContactFormParams = () => {
+    const form = document.getElementById("contact-form");
+    if (!form) return;
+
     const params = new URLSearchParams(window.location.search);
     const packageSelect = document.getElementById("delegation-package");
-    const subjectInput = document.getElementById("Subject");
-    const packageMap = {
-      "standard-delegate": "Standard Delegate ($2,997)",
-      "executive-delegate": "Executive Delegate ($4,997)",
-      "elite-founder-circle": "Elite Founder Circle ($7,997)",
-      "not-sure": "Not sure yet",
-    };
-
+    const interestSelect = document.getElementById("delegation-interest");
+    const subjectInput = document.getElementById("contact-subject");
     const pkg = params.get("package");
-    if (packageSelect && pkg && packageMap[pkg]) {
+    const interest = params.get("interest");
+
+    if (interestSelect && interest) {
+      const option = interestSelect.querySelector(`option[value="${interest}"]`);
+      if (option) {
+        interestSelect.value = interest;
+      }
+    }
+
+    if (packageSelect && pkg && DELEGATION_PACKAGE_LABELS[pkg]) {
       packageSelect.value = pkg;
     }
 
-    if (subjectInput) {
-      const interest = params.get("interest");
-      if (interest === "indonesia-2026") {
-        subjectInput.value = "Indonesia 2026 Delegation Inquiry";
-      } else if (pkg && packageMap[pkg]) {
-        subjectInput.value = "Indonesia 2026 — " + packageMap[pkg];
+    if (subjectInput && !subjectInput.dataset.userEdited) {
+      const resolvedInterest = interest || interestSelect?.value || "";
+      const resolvedPackage = pkg || packageSelect?.value || "";
+      const subject = buildContactSubject(resolvedInterest, resolvedPackage);
+      if (subject) {
+        subjectInput.value = subject;
       }
     }
+  };
+
+  const handleContactFormHelpers = () => {
+    const form = document.getElementById("contact-form");
+    if (!form) return;
+
+    const subjectInput = document.getElementById("contact-subject");
+    const interestSelect = document.getElementById("delegation-interest");
+    const packageSelect = document.getElementById("delegation-package");
+
+    if (subjectInput) {
+      subjectInput.addEventListener("input", () => {
+        subjectInput.dataset.userEdited = "true";
+      });
+    }
+
+    const updateSubjectFromSelections = () => {
+      if (!subjectInput || subjectInput.dataset.userEdited) return;
+
+      const interest = interestSelect?.value || "";
+      const pkg = packageSelect?.value || "";
+      const subject = buildContactSubject(interest, pkg);
+      if (subject) {
+        subjectInput.value = subject;
+      }
+    };
+
+    interestSelect?.addEventListener("change", updateSubjectFromSelections);
+    packageSelect?.addEventListener("change", updateSubjectFromSelections);
   };
 
   return {
@@ -579,11 +634,14 @@ const Travlla = (function () {
       handlePageLoader();
       handlePricingRedirect();
       handleMaintenanceOverlay();
-      handleDelegationPackageParams();
+      applyContactFormParams();
+      handleContactFormHelpers();
     },
+    applyContactFormParams,
+    buildContactSubject,
   };
 })();
 
 document.addEventListener("DOMContentLoaded", () => {
-  Travlla.init();
+  Imusafir.init();
 });

@@ -1,4 +1,4 @@
-const TravllaCarousel = function () {
+const ImusafirCarousel = function () {
   const handleReviewSlider = function () {
     const reviewSliderEl = document.querySelector(".reviewtwo-slider");
 
@@ -866,5 +866,5 @@ const TravllaCarousel = function () {
 };
 
 window.addEventListener("load", function () {
-  TravllaCarousel().load();
+  ImusafirCarousel().load();
 });
