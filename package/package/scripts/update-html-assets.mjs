@@ -16,7 +16,7 @@ function baseCss(lineAwesome = false) {
     : "";
   return `\t<link rel="stylesheet" type="text/css" href="assets/icons/fontawesome/css/all.min.css">${la}
     <link rel="stylesheet" href="assets/css/fonts.css">
-    <link rel="stylesheet" href="assets/css/style.css">`;
+    <link rel="stylesheet" href="assets/css/style.css?v=20260611">`;
 }
 
 function coreScripts(extra = "") {
@@ -24,7 +24,7 @@ function coreScripts(extra = "") {
 <script defer src="assets/vendor/gsap/gsap.min.js"></script>
 <script defer src="assets/js/jquery-3.7.1.min.js"></script>
 <script defer src="assets/vendor/xmenu/xmenu.js"></script>${extra}
-<script defer src="assets/js/custom.js"></script>`;
+<script defer src="assets/js/custom.js?v=20260611"></script>`;
 }
 
 const pageConfig = {
