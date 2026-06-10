@@ -499,46 +499,11 @@ const Imusafir = (function () {
     setTimeout(() => loader.remove(), 400);
   };
 
-  const getCurrentPage = () => {
-    const path = window.location.pathname.replace(/\/+$/, "") || "/";
-    return path.split("/").pop() || "index.html";
-  };
-
-  const isHomePage = () => {
-    const page = getCurrentPage();
-    return page === "" || page === "index.html" || page === "index";
-  };
-
-  const isMaintenanceExempt = () => {
-    const page = getCurrentPage();
-    return isHomePage() || page === "contact.html" || page === "contact";
-  };
-
-  const isProduction = () => /(?:^|\.)imusafir\.com$/i.test(window.location.hostname);
-
   const handlePricingRedirect = () => {
     const page = window.location.pathname.split("/").pop() || "";
     if (page === "pricing.html" || page === "pricing") {
       window.location.replace("indonesia-2026.html");
     }
-  };
-
-  const handleMaintenanceOverlay = () => {
-    if (!isProduction()) return;
-    if (isMaintenanceExempt()) return;
-
-    const overlay = document.createElement("div");
-    overlay.className = "maintenance-overlay";
-    overlay.setAttribute("role", "alertdialog");
-    overlay.setAttribute("aria-modal", "true");
-    overlay.setAttribute("aria-labelledby", "maintenance-title");
-    overlay.innerHTML =
-      '<h1 id="maintenance-title" class="maintenance-overlay__title">Under Maintenance</h1>' +
-      '<p class="maintenance-overlay__text">This page is temporarily unavailable while we make improvements. Please check back soon.</p>' +
-      '<a href="index.html" class="maintenance-overlay__link">Return to Homepage</a>';
-
-    document.body.classList.add("maintenance-active");
-    document.body.appendChild(overlay);
   };
 
   const DELEGATION_PACKAGE_LABELS = {
@@ -642,7 +607,6 @@ const Imusafir = (function () {
       handleShopProductPrice();
       handlePageLoader();
       handlePricingRedirect();
-      handleMaintenanceOverlay();
       applyContactFormParams();
       handleContactFormHelpers();
     },
