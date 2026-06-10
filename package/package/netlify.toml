@@ -4,8 +4,9 @@
 
 [build.environment]
   NODE_VERSION = "20"
-  # Contact form uses Netlify Forms — enable email notifications in:
-  # Netlify UI → Forms → Form notifications → Add notification
+  # Contact form: Netlify Forms (see Forms in Netlify dashboard).
+  # Email notifications: Site configuration → Notifications → Form submission notifications.
+  # Note: info@imusafir.com requires GoDaddy/Microsoft email + MX records on the domain.
 
 [[redirects]]
   from = "/pricing.html"

@@ -45,7 +45,7 @@
     
 	<link rel="stylesheet" type="text/css" href="assets/icons/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="assets/css/fonts.css">
-    <link rel="stylesheet" href="assets/css/style.css?v=20260611">
+    <link rel="stylesheet" href="assets/css/style.css?v=20260611b">
 	
 </head>
 
@@ -220,21 +220,21 @@
 								<div class="gmap-outline">
 									<div class="google-map">
 										<div class="overflow-hidden" style="width: 100%">
-											<div class="map-facade" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.272796714594!2d-87.64937353634511!3d41.90849403896016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd324fc400797%3A0x76a989827d7eb84e!2s853%20W%20Blackhawk%20St%2C%20Chicago%2C%20IL%2060642%2C%20USA!5e0!3m2!1sen!2sin!4v1745326667544!5m2!1sen!2sin">
+											<div class="map-facade" data-src="https://maps.google.com/maps?q=12425+River+Ridge+Blvd+%232,+Burnsville,+MN+55337&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed">
 												<button type="button">Click to load map</button>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="grid grid-cols-12 lg:gap-7.5">
+							<div class="grid grid-cols-12 lg:gap-7.5 items-start">
 								<div class="2xl:col-span-6 lg:col-span-5 col-span-12">
 									<div>
-										<div class="bg-[#FFF8EB] xl:py-15 xl:px-12.5 sm:p-7.5 p-5 rounded-3xl max-lg:mx-auto max-lg:max-w-160 max-md:max-w-full">
+										<div class="bg-[#FFF8EB] lg:p-8 p-5 rounded-3xl max-lg:mx-auto max-lg:max-w-160 max-md:max-w-full">
 											<!-- TITLE START-->
-											<div class="sm:mb-15 mb-7.5">
-												<h2 class="xl:text-46 md:text-40 text-3xl mb-2.5"><span class="text-citrusyellow">Reserve</span> Your Delegation Seat</h2>
-												<div class="text-base">Tell us about your business goals and preferred package. A $750 deposit secures your seat — flexible payment plans available.</div>
+											<div class="mb-6">
+												<h2 class="md:text-34 text-2xl mb-2"><span class="text-citrusyellow">Reserve</span> Your Delegation Seat</h2>
+												<p class="text-sm leading-relaxed text-bodycolor/80">Tell us about your business goals and preferred package. A $750 deposit secures your seat — flexible payment plans available.</p>
 											</div>
 											<!-- TITLE END-->
 											<form id="contact-form" name="contact" class="dz-form dzForm" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" novalidate>
@@ -244,60 +244,66 @@
 													<label>Don't fill this out: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
 												</p>
 
-												<div class="mb-5">
-													<label for="contact-name" class="sr-only">Full name</label>
-													<input class="contact-field block w-full sm:h-18.5 h-12.5 rounded-5xl border border-primary/20 sm:py-5 sm:px-10 py-1.25 px-3.75 sm:text-base text-sm text-bodycolor bg-white outline-0 placeholder:text-bodycolor" required type="text" name="name" id="contact-name" autocomplete="name" placeholder="Full Name *">
+												<div class="form-row form-grid">
+													<div>
+														<label for="contact-name" class="sr-only">Full name</label>
+														<input class="contact-field" required type="text" name="name" id="contact-name" autocomplete="name" placeholder="Full Name *">
+													</div>
+													<div>
+														<label for="contact-email" class="sr-only">Email address</label>
+														<input class="contact-field" required type="email" name="email" id="contact-email" autocomplete="email" placeholder="Email Address *">
+													</div>
 												</div>
-												<div class="mb-5">
-													<label for="contact-email" class="sr-only">Email address</label>
-													<input class="contact-field block w-full sm:h-18.5 h-12.5 rounded-5xl border border-primary/20 sm:py-5 sm:px-10 py-1.25 px-3.75 sm:text-base text-sm text-bodycolor bg-white outline-0 placeholder:text-bodycolor" required type="email" name="email" id="contact-email" autocomplete="email" placeholder="Email Address *">
+												<div class="form-row form-grid">
+													<div>
+														<label for="contact-phone" class="sr-only">Phone number</label>
+														<input class="contact-field" required type="tel" name="phone" id="contact-phone" autocomplete="tel" placeholder="Phone Number *">
+													</div>
+													<div>
+														<label for="contact-company" class="sr-only">Company or business name</label>
+														<input class="contact-field" type="text" name="company" id="contact-company" autocomplete="organization" placeholder="Company / Business Name">
+													</div>
 												</div>
-												<div class="mb-5">
-													<label for="contact-phone" class="sr-only">Phone number</label>
-													<input class="contact-field block w-full sm:h-18.5 h-12.5 rounded-5xl border border-primary/20 sm:py-5 sm:px-10 py-1.25 px-3.75 sm:text-base text-sm text-bodycolor bg-white outline-0 placeholder:text-bodycolor" required type="tel" name="phone" id="contact-phone" autocomplete="tel" placeholder="Phone Number *">
-												</div>
-												<div class="mb-5">
-													<label for="contact-company" class="sr-only">Company or business name</label>
-													<input class="contact-field block w-full sm:h-18.5 h-12.5 rounded-5xl border border-primary/20 sm:py-5 sm:px-10 py-1.25 px-3.75 sm:text-base text-sm text-bodycolor bg-white outline-0 placeholder:text-bodycolor" type="text" name="company" id="contact-company" autocomplete="organization" placeholder="Company / Business Name">
-												</div>
-												<div class="mb-5">
+												<div class="form-row">
 													<label for="delegation-interest" class="sr-only">Delegation of interest</label>
-													<select name="delegationInterest" id="delegation-interest" required class="contact-field block w-full sm:h-18.5 h-12.5 rounded-5xl border border-primary/20 sm:py-5 sm:px-10 py-1.25 px-3.75 sm:text-base text-sm text-bodycolor bg-white outline-0">
+													<select name="delegationInterest" id="delegation-interest" required class="contact-field">
 														<option value="">Select Delegation *</option>
 														<option value="indonesia-2026">Indonesia 2026</option>
 														<option value="future-delegation">Future Delegation</option>
 														<option value="general-inquiry">General Inquiry</option>
 													</select>
 												</div>
-												<div class="mb-5">
-													<label for="delegation-package" class="sr-only">Package</label>
-													<select name="delegationPackage" id="delegation-package" class="contact-field block w-full sm:h-18.5 h-12.5 rounded-5xl border border-primary/20 sm:py-5 sm:px-10 py-1.25 px-3.75 sm:text-base text-sm text-bodycolor bg-white outline-0">
-														<option value="">Select Your Package</option>
-														<option value="standard-delegate">Standard Delegate ($2,997)</option>
-														<option value="executive-delegate">Executive Delegate ($4,997)</option>
-														<option value="elite-founder-circle">Elite Founder Circle ($7,997)</option>
-														<option value="not-sure">Not sure yet — help me choose</option>
-													</select>
+												<div class="form-row form-grid">
+													<div>
+														<label for="delegation-package" class="sr-only">Package</label>
+														<select name="delegationPackage" id="delegation-package" class="contact-field">
+															<option value="">Select Your Package</option>
+															<option value="standard-delegate">Standard Delegate ($2,997)</option>
+															<option value="executive-delegate">Executive Delegate ($4,997)</option>
+															<option value="elite-founder-circle">Elite Founder Circle ($7,997)</option>
+															<option value="not-sure">Not sure yet — help me choose</option>
+														</select>
+													</div>
+													<div>
+														<label for="payment-plan" class="sr-only">Payment preference</label>
+														<select name="paymentPlan" id="payment-plan" class="contact-field">
+															<option value="">Payment Preference</option>
+															<option value="deposit-and-plan">$750 deposit + payment plan</option>
+															<option value="pay-in-full">Pay in full</option>
+															<option value="need-details">Send me payment plan details</option>
+															<option value="not-sure">Not sure yet</option>
+														</select>
+													</div>
 												</div>
-												<div class="mb-5">
-													<label for="payment-plan" class="sr-only">Payment preference</label>
-													<select name="paymentPlan" id="payment-plan" class="contact-field block w-full sm:h-18.5 h-12.5 rounded-5xl border border-primary/20 sm:py-5 sm:px-10 py-1.25 px-3.75 sm:text-base text-sm text-bodycolor bg-white outline-0">
-														<option value="">Payment Preference</option>
-														<option value="deposit-and-plan">$750 deposit + payment plan</option>
-														<option value="pay-in-full">Pay in full</option>
-														<option value="need-details">Send me payment plan details</option>
-														<option value="not-sure">Not sure yet</option>
-													</select>
-												</div>
-												<div class="mb-5">
+												<div class="form-row">
 													<label for="contact-subject" class="sr-only">Subject</label>
-													<input class="contact-field block w-full sm:h-18.5 h-12.5 rounded-5xl border border-primary/20 sm:py-5 sm:px-10 py-1.25 px-3.75 sm:text-base text-sm text-bodycolor bg-white outline-0 placeholder:text-bodycolor" type="text" name="subject" id="contact-subject" placeholder="Subject">
+													<input class="contact-field" type="text" name="subject" id="contact-subject" placeholder="Subject">
 												</div>
-												<div class="mb-5">
+												<div class="form-row">
 													<label for="contact-message" class="sr-only">Message</label>
-													<textarea name="message" id="contact-message" required class="contact-field block w-full min-h-42 h-full rounded-3xl border border-primary/20 py-10 px-7.5 sm:text-base text-sm text-bodycolor bg-white outline-0 placeholder:text-bodycolor" placeholder="Tell us about your business, goals for this trip, and any questions you have. *"></textarea>
+													<textarea name="message" id="contact-message" required class="contact-field" placeholder="Tell us about your business, goals for this trip, and any questions you have. *"></textarea>
 												</div>
-												<button name="submit" type="submit" id="contact-submit" class="site-button butn-bg-shape disabled:opacity-60 disabled:cursor-not-allowed">Send Message</button>
+												<button name="submit" type="submit" id="contact-submit" class="site-button butn-bg-shape mt-2 disabled:opacity-60 disabled:cursor-not-allowed">Send Message</button>
 											</form>
 											
 										</div>
@@ -305,16 +311,16 @@
 								</div>
 								<div class="2xl:col-span-6 lg:col-span-7 col-span-12">
 									<div class="relative z-1">
-										<div class="lg:pt-34.5 pt-12.5 lg:w-112.5 w-full lg:ml-6 max-lg:px-7.5  max-md:px-0">
+										<div class="lg:pt-8 pt-12.5 lg:w-112.5 w-full lg:ml-6 max-lg:px-7.5 max-md:px-0">
 											<!-- TITLE START-->
-											<div class="sm:mb-15 mb-7.5">
-												<h2 class="xl:text-46 md:text-40 text-3xl mb-2.5">Contact Us<span class="text-citrusyellow"> Detail</span></h2>
-												<div class="text-base">iMUSAFIR is a multi-award-winning strategy and content creation agency that specializes in travel marketing.</div>
+											<div class="mb-6">
+												<h2 class="md:text-34 text-2xl mb-2">Contact Us<span class="text-citrusyellow"> Detail</span></h2>
+												<p class="text-sm leading-relaxed text-bodycolor/80">iMUSAFIR is a multi-award-winning strategy and content creation agency that specializes in travel marketing.</p>
 											</div>
 											<!-- TITLE END-->
 
 											<ul>
-												<li class="mb-7.5">
+												<li class="mb-5">
 													<div class="sm:flex items-center max-sm:text-center">
 														<div class="bg-[#45869D] size-25 rounded-5xl flex items-center justify-center max-sm:mx-auto max-sm:mb-5">
 															<div class="bg-white shadow-[0px_4px_4px_rgba(0,0,0,0.25)] size-17.5 rounded-5xl flex items-center justify-center">
@@ -323,11 +329,11 @@
 														</div>
 														<div class="sm:w-[calc(100%_-_100px)] sm:pl-7.5">
 															<span class="text-lg font-normal text-primary leading-[1.4]">Phone</span>
-															<h6 class="md:text-28 text-xl text-darkcyan !font-semibold"><a href="tel:+1 (615) 506-8853">+1 (615) 506-8853</a></h6>
+															<h6 class="md:text-28 text-xl text-darkcyan !font-semibold"><a href="tel:+16127077177">+1 (612) 707-7177</a></h6>
 														</div>
 													</div>
 												</li>
-												<li class="mb-7.5">
+												<li class="mb-5">
 													<div class="sm:flex items-center max-sm:text-center">
 														<div class="bg-[#CE8594] size-25 rounded-5xl flex items-center justify-center max-sm:mx-auto max-sm:mb-5">
 															<div class="bg-white shadow-[0px_4px_4px_rgba(0,0,0,0.25)] size-17.5 rounded-5xl flex items-center justify-center">
@@ -336,11 +342,11 @@
 														</div>
 														<div class="sm:w-[calc(100%_-_100px)] sm:pl-7.5">
 															<span class="text-lg font-normal text-primary leading-[1.4]">Email</span>
-															<h6 class="md:text-28 text-xl text-darkcyan !font-semibold"><a href="Fiyooriina@gmail.com">Fiyooriina@gmail.com</a></h6>
+															<h6 class="md:text-28 text-xl text-darkcyan !font-semibold"><a href="mailto:info@imusafir.com">info@imusafir.com</a></h6>
 														</div>
 													</div>
 												</li>
-												<li class="mb-7.5">
+												<li class="mb-5">
 													<div class="sm:flex items-center max-sm:text-center">
 														<div class="bg-[#047881] size-25 rounded-5xl flex items-center justify-center max-sm:mx-auto max-sm:mb-5">
 															<div class="bg-white shadow-[0px_4px_4px_rgba(0,0,0,0.25)] size-17.5 rounded-5xl flex items-center justify-center">
@@ -349,14 +355,14 @@
 														</div>
 														<div class="sm:w-[calc(100%_-_100px)] sm:pl-7.5">
 															<span class="text-lg font-normal text-primary leading-[1.4]">Address</span>
-															<h6 class="md:text-28 text-xl text-darkcyan !font-semibold">853 W Blackhawk St, Chicago, IL 60642</h6>
+															<h6 class="md:text-28 text-xl text-darkcyan !font-semibold">12425 River Ridge Blvd #2, Burnsville, MN 55337</h6>
 														</div>
 													</div>
 												</li>
 											</ul>
 
-											<div class="lg:pt-12.5 max-sm:text-center">
-												<h3 class="!font-display md:text-48 sm:text-40 text-2xl">Let's <span class="text-citrusyellow">Talk</span> About You !</h3>
+											<div class="lg:pt-6 max-sm:text-center">
+												<h3 class="!font-display md:text-40 sm:text-34 text-2xl">Let's <span class="text-citrusyellow">Talk</span> About You !</h3>
 											</div>
 										</div>
 										<img src="assets/images/image-cont.png" alt="Image" class="absolute -bottom-2 -right-5 rounded-2xl w-65 -z-1 max-2xl:hidden" alt="img" width="260" height="488" loading="lazy">
@@ -446,8 +452,8 @@
                                 <div class="xl:size-14 size-12 xl:min-w-14 min-w-12 rounded-full mr-3.5 bg-white/40 flex items-center justify-center">
 									<i class="fa-solid fa-phone text-xl text-white"></i>
 								</div>
-                                <a href="tel:+15551234567">
-									<span class="xl:text-3xl text-2xl text-citrusyellow font-normal font-display">+1 (555) 123-4567</span>
+                                <a href="tel:+16127077177">
+									<span class="xl:text-3xl text-2xl text-citrusyellow font-normal font-display">+1 (612) 707-7177</span>
 								</a>
                             </li>
                             <li class="mb-2.5 relative flex items-center">
@@ -460,7 +466,7 @@
                                 <div class="xl:size-14 size-12 xl:min-w-14 min-w-12 rounded-full mr-3.5 bg-white/40 flex items-center justify-center">
 									<i class="fa-solid fa-house text-xl text-white"></i>
 								</div>
-                                <span class="black text-paleaqua font-semibold xl:text-lg text-sm font-base">853 W Blackhawk St, Chicago, IL 60642</span>
+                                <span class="black text-paleaqua font-semibold xl:text-lg text-sm font-base">12425 River Ridge Blvd #2, Burnsville, MN 55337</span>
                             </li>
                         </ul>  
                     </div>
