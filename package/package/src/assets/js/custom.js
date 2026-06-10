@@ -499,10 +499,19 @@ const Imusafir = (function () {
     setTimeout(() => loader.remove(), 400);
   };
 
-  const isHomePage = () => {
+  const getCurrentPage = () => {
     const path = window.location.pathname.replace(/\/+$/, "") || "/";
-    const page = path.split("/").pop() || "index.html";
+    return path.split("/").pop() || "index.html";
+  };
+
+  const isHomePage = () => {
+    const page = getCurrentPage();
     return page === "" || page === "index.html" || page === "index";
+  };
+
+  const isMaintenanceExempt = () => {
+    const page = getCurrentPage();
+    return isHomePage() || page === "contact.html" || page === "contact";
   };
 
   const isProduction = () => /(?:^|\.)imusafir\.com$/i.test(window.location.hostname);
@@ -516,7 +525,7 @@ const Imusafir = (function () {
 
   const handleMaintenanceOverlay = () => {
     if (!isProduction()) return;
-    if (isHomePage()) return;
+    if (isMaintenanceExempt()) return;
 
     const overlay = document.createElement("div");
     overlay.className = "maintenance-overlay";
