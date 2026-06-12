@@ -6,7 +6,8 @@
 @import "./base/base.css";
 
 /* LAYOUT CSS */
-@import "./layout/header/header.css"; 
+@import "./layout/header/header.css";
+@import "./layout/footer/footer.css"; 
 
 @import "./components/component.css";
 @import "./components/homepages.css";

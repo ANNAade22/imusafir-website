@@ -1,0 +1,99 @@
+footer {
+    @apply font-base font-normal text-sm;
+}
+
+footer h1,
+footer h2,
+footer h3,
+footer h4,
+footer h5,
+footer h6 {
+    @apply font-display font-normal;
+}
+
+/* Main block — less top padding */
+footer > .container > div.border-b {
+    @apply sm:pt-12 pt-6;
+}
+
+/* Column spacing */
+footer .mb-10 {
+    @apply mb-5;
+}
+
+footer h3 {
+    @apply mb-4 text-lg xl:text-xl;
+}
+
+/* Logo */
+footer img[alt="logo"] {
+    @apply max-w-36 w-full h-auto;
+}
+
+footer .max-w-48\.25 {
+    @apply mb-5 max-w-36;
+}
+
+/* Body copy & links */
+footer p.text-white\/50 {
+    @apply text-sm leading-relaxed;
+}
+
+footer ul li a.text-base {
+    @apply text-sm pb-1;
+}
+
+/* Contact row icons */
+footer .rounded-full.bg-white\/40 {
+    @apply size-10 min-w-10 mr-2.5 xl:size-11 xl:min-w-11;
+}
+
+footer .rounded-full.bg-white\/40 i {
+    @apply text-base;
+}
+
+/* Phone */
+footer a[href^="tel:"] span {
+    @apply text-lg xl:text-xl font-display font-normal;
+}
+
+/* Email & address */
+footer a[href^="mailto:"],
+footer li.flex.items-center > span {
+    @apply text-sm xl:text-base;
+}
+
+/* Social icons */
+footer ul.mt-5 > li.inline-flex {
+    @apply size-8 xl:size-9 xl:mr-2 mr-1;
+}
+
+footer ul.mt-5 > li.inline-flex > a {
+    @apply size-7 text-base;
+}
+
+/* Instagram row */
+footer > .container > div.xl\:flex {
+    @apply xl:py-6 py-1;
+}
+
+footer > .container > div.xl\:flex > h3 {
+    @apply mr-6 text-xl max-xl:mb-4;
+}
+
+footer > .container > div.xl\:flex ul img {
+    @apply max-h-16 xl:max-h-20 w-full object-cover;
+}
+
+/* Copyright */
+footer > .container > div.py-10.font-normal {
+    @apply py-5;
+}
+
+footer .copyrights-text {
+    @apply text-xs;
+}
+
+footer .copyrights-text span {
+    @apply text-xs;
+}

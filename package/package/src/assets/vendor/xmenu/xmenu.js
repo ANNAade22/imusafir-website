@@ -321,7 +321,7 @@ const xMenu = function () {
           backdrop.addEventListener("click", function () {
             document
               .querySelector(btn.dataset.drawer)
-              .classList.remove("translate-none");
+              .classList.remove("translate-x-0");
             if (btn.dataset.drawerPlacement == "left") {
               document
                 .querySelector(btn.dataset.drawer)
@@ -352,35 +352,35 @@ const xMenu = function () {
               .classList.remove("-translate-x-full");
             document
               .querySelector(btn.dataset.drawer)
-              .classList.add("translate-none");
+              .classList.add("translate-x-0");
           } else if (btn.dataset.drawerPlacement == "right") {
             document
               .querySelector(btn.dataset.drawer)
               .classList.remove("translate-x-full");
             document
               .querySelector(btn.dataset.drawer)
-              .classList.add("translate-none");
+              .classList.add("translate-x-0");
           } else if (btn.dataset.drawerPlacement == "top") {
             document
               .querySelector(btn.dataset.drawer)
               .classList.remove("-translate-y-full");
             document
               .querySelector(btn.dataset.drawer)
-              .classList.add("translate-none");
+              .classList.add("translate-y-0");
           } else if (btn.dataset.drawerPlacement == "bottom") {
             document
               .querySelector(btn.dataset.drawer)
               .classList.remove("translate-y-full");
             document
               .querySelector(btn.dataset.drawer)
-              .classList.add("translate-none");
+              .classList.add("translate-y-0");
           } else {
             document
               .querySelector(btn.dataset.drawer)
               .classList.remove("-translate-x-full");
             document
               .querySelector(btn.dataset.drawer)
-              .classList.add("translate-none");
+              .classList.add("translate-x-0");
           }
         }
       });
@@ -391,22 +391,23 @@ const xMenu = function () {
           const position = document.querySelector(
             `[data-drawer="#${btn.dataset.drawerHide}"]`
           );
+          const placement = position?.dataset?.drawerPlacement || "right";
           document
             .querySelector(`#${btn.dataset.drawerHide}`)
-            .classList.remove("translate-none");
-          if (position.dataset.drawerPlacement == "left") {
+            .classList.remove("translate-x-0", "translate-y-0");
+          if (placement == "left") {
             document
               .querySelector(`#${btn.dataset.drawerHide}`)
               .classList.add("-translate-x-full");
-          } else if (position.dataset.drawerPlacement == "right") {
+          } else if (placement == "right") {
             document
               .querySelector(`#${btn.dataset.drawerHide}`)
               .classList.add("translate-x-full");
-          } else if (position.dataset.drawerPlacement == "top") {
+          } else if (placement == "top") {
             document
               .querySelector(`#${btn.dataset.drawerHide}`)
               .classList.add("-translate-y-full");
-          } else if (position.dataset.drawerPlacement == "bottom") {
+          } else if (placement == "bottom") {
             document
               .querySelector(`#${btn.dataset.drawerHide}`)
               .classList.add("translate-y-full");

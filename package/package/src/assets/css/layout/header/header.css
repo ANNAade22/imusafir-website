@@ -57,6 +57,31 @@
     @apply h-10 sm:h-11 lg:h-12 w-auto max-w-none object-contain;
 }
 
+.info-tab-trigger {
+    @apply fixed top-1/2 z-[99999] cursor-pointer uppercase font-title font-medium border-0 duration-500;
+    right: 0;
+    transform: translateY(-50%);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    padding-block: 0.5rem;
+    padding-inline: 1.25rem;
+    font-size: 0.625rem;
+    letter-spacing: 0.28em;
+    color: #C9A24D;
+    background: rgba(15, 12, 10, 0.72);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-left: 1px solid rgba(201, 162, 77, 0.35);
+    border-radius: 6px 0 0 6px;
+    box-shadow: -4px 0 14px rgba(0, 0, 0, 0.35);
+}
+.info-tab-trigger:hover {
+    color: #E8C872;
+    background: rgba(15, 12, 10, 0.85);
+    border-left-color: rgba(201, 162, 77, 0.6);
+    box-shadow: -6px 0 18px rgba(0, 0, 0, 0.45);
+}
+
 @media (width >= 992px) {
     .site-header .main-bar-wraper > .flex.bg-white > div:first-child {
         position: absolute;

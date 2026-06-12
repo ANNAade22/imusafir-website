@@ -43,6 +43,17 @@ const Imusafir = (function () {
         cursor.classList.remove("grow-small");
       });
     });
+
+    document.querySelectorAll(".info-tab-trigger, .quick-search").forEach((el) => {
+      el.addEventListener("mouseenter", () => {
+        cursor.style.opacity = "0";
+        cursor2.style.opacity = "0";
+      });
+      el.addEventListener("mouseleave", () => {
+        cursor.style.opacity = "1";
+        cursor2.style.opacity = "1";
+      });
+    });
   };
 
   $(window).scroll(function () {
