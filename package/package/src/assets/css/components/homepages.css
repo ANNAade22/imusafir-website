@@ -39,7 +39,7 @@
     @apply absolute size-100 left-12.5 top-50 bg-caribbeanblue [filter:blur(100px)] -z-1 animate-scale-up-center ;
 }
 .emblem span {
-   @apply p-1.5 absolute inline-block inset-0 uppercase text-sm;
+   @apply p-1.5 absolute inline-block inset-0 normal-case text-sm;
     transition: all 0.5s cubic-bezier(0, 0, 0, 1);
 }
 .blog-youtube-vide iframe {
@@ -253,12 +253,12 @@
 /* Hero — Positioning First */
 .hero-positioning__video {
     object-position: center center;
-    will-change: transform;
-    animation:
-        hero-bg-reveal 2.4s cubic-bezier(0.16, 1, 0.3, 1) both,
-        hero-bg-drift 32s ease-in-out 2.4s infinite alternate;
+    opacity: 1;
+    transform: scale(1.02);
+    animation: hero-bg-drift 32s ease-in-out infinite alternate;
 }
 .hero-positioning__overlay {
+    opacity: 1;
     background:
         linear-gradient(
             90deg,
@@ -273,16 +273,15 @@
             rgba(0, 0, 0, 0.18) 28%,
             transparent 52%
         );
-    animation: hero-overlay-in 1.8s cubic-bezier(0.16, 1, 0.3, 1) 0.35s both;
 }
 .hero-positioning__eyebrow {
     @apply flex items-center gap-4 mb-5 md:mb-6;
-    animation: hero-eyebrow-in 1s cubic-bezier(0.16, 1, 0.3, 1) 0.55s both;
+    animation: hero-eyebrow-in 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 .hero-positioning__eyebrow-text {
-    @apply text-citrusyellow font-title font-medium uppercase;
+    @apply text-citrusyellow font-title font-medium normal-case;
     font-size: clamp(0.6875rem, 1vw, 0.8125rem);
-    letter-spacing: 0.22em;
+    letter-spacing: 0.04em;
     text-shadow: 0 1px 12px rgba(0, 0, 0, 0.45);
 }
 .hero-positioning__eyebrow::after {
@@ -292,7 +291,7 @@
     height: 1px;
     background: linear-gradient(90deg, rgba(201, 162, 77, 0.95), rgba(201, 162, 77, 0.15));
     transform-origin: left center;
-    animation: hero-eyebrow-line-in 1.1s cubic-bezier(0.16, 1, 0.3, 1) 0.85s both;
+    animation: hero-eyebrow-line-in 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0.08s both;
 }
 .hero-positioning__headline {
     @apply font-title font-semibold text-white max-w-[28ch] lg:max-w-4xl mb-6 md:mb-8;
@@ -306,7 +305,7 @@
 }
 .hero-positioning__headline-line {
     display: block;
-    animation: hero-headline-line-in 1.15s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation: hero-headline-line-in 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
     animation-delay: var(--line-delay, 0s);
 }
 .hero-positioning__subheadline {
@@ -315,11 +314,11 @@
     line-height: 1.7;
     letter-spacing: 0.01em;
     text-shadow: 0 1px 16px rgba(0, 0, 0, 0.65);
-    animation: hero-subhead-in 1.15s cubic-bezier(0.16, 1, 0.3, 1) 0.95s both;
+    animation: hero-subhead-in 0.45s cubic-bezier(0.16, 1, 0.3, 1) 0.12s both;
 }
 .hero-positioning__actions {
     @apply flex flex-wrap items-center gap-4 md:gap-5;
-    animation: hero-actions-in 1.1s cubic-bezier(0.16, 1, 0.3, 1) 1.15s both;
+    animation: hero-actions-in 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0.18s both;
 }
 .hero-positioning__actions .site-button {
     transition:
@@ -345,7 +344,7 @@
 }
 .hero-positioning__scroll {
     @apply absolute left-1/2 -translate-x-1/2 bottom-36 md:bottom-40 max-lg:hidden flex flex-col items-center gap-2 pointer-events-none;
-    animation: hero-scroll-cue 2.4s ease-in-out 2s infinite;
+    animation: hero-scroll-cue 2.4s ease-in-out 0.8s infinite;
 }
 .hero-positioning__scroll-text {
     @apply text-citrusyellow/90 font-display font-normal normal-case;
@@ -359,26 +358,25 @@
 .hero-positioning__scroll-line::after {
     content: "";
     @apply absolute inset-0 bg-white/80;
-    animation: hero-scroll-line 2.4s ease-in-out 2s infinite;
+    animation: hero-scroll-line 2.4s ease-in-out 0.8s infinite;
 }
 .hero-positioning__stats {
     @apply border-t border-white/15 relative;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.42), transparent);
-    animation: hero-stats-bar-in 1.1s cubic-bezier(0.16, 1, 0.3, 1) 1.25s both;
 }
 .hero-positioning__stats::before {
     content: "";
     @apply absolute top-0 left-0 right-0 h-px;
     background: linear-gradient(90deg, transparent, rgba(201, 162, 77, 0.65) 20%, rgba(201, 162, 77, 0.65) 80%, transparent);
     transform-origin: center;
-    animation: hero-stats-line-in 1.4s cubic-bezier(0.16, 1, 0.3, 1) 1.35s both;
+    transform: scaleX(1);
+    opacity: 1;
 }
 .hero-positioning__stats-grid {
     @apply grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-8 py-8 md:py-10 lg:py-12;
 }
 .hero-stat {
-    animation: hero-stat-in 1s cubic-bezier(0.16, 1, 0.3, 1) both;
-    animation-delay: var(--stat-delay, 0s);
+    animation: none;
 }
 .hero-stat__value {
     @apply block font-title font-semibold text-white mb-1.5;
@@ -393,9 +391,9 @@
     @apply text-citrusyellow;
 }
 .hero-stat__label {
-    @apply block text-white/65 font-title font-medium uppercase;
+    @apply block text-white/65 font-title font-medium normal-case;
     font-size: clamp(0.6875rem, 1vw, 0.8125rem);
-    letter-spacing: 0.18em;
+    letter-spacing: 0.03em;
     text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
 }
 @media (prefers-reduced-motion: reduce) {
@@ -456,7 +454,7 @@
     @apply block w-10 h-px bg-citrusyellow mb-8;
 }
 .invitation-panel__wordmark {
-    @apply font-title text-citrusyellow uppercase tracking-[0.28em] text-sm font-medium;
+    @apply font-title text-citrusyellow normal-case tracking-[0.04em] text-sm font-medium;
 }
 .invitation-panel__logo {
     @apply max-w-36 opacity-90;
@@ -466,14 +464,14 @@
     @apply flex flex-col flex-1;
 }
 .invitation-panel__eyebrow {
-    @apply font-title font-medium uppercase text-citrusyellow mb-6;
+    @apply font-title font-medium normal-case text-citrusyellow mb-6;
     font-size: clamp(0.6875rem, 1.2vw, 0.8125rem);
-    letter-spacing: 0.32em;
+    letter-spacing: 0.04em;
 }
 .invitation-panel__headline {
-    @apply font-title font-semibold uppercase !text-white mb-8;
+    @apply font-title font-semibold normal-case !text-white mb-8;
     font-size: clamp(1.75rem, 3.5vw, 2.625rem);
-    letter-spacing: 0.06em;
+    letter-spacing: 0.02em;
     line-height: 1.15;
 }
 .invitation-panel__divider {
@@ -494,9 +492,9 @@
     @apply inline-flex items-center justify-center py-3.75 px-7.5 text-base font-medium text-white/90 border border-white/20 rounded-full duration-500 whitespace-nowrap hover:bg-white/5 hover:border-citrusyellow/40 hover:text-white w-full sm:w-auto text-center;
 }
 .invitation-panel__credibility {
-    @apply mt-auto pt-8 border-t border-white/10 font-title text-white/45 uppercase flex flex-wrap items-center gap-x-3 gap-y-1;
+    @apply mt-auto pt-8 border-t border-white/10 font-title text-white/45 normal-case flex flex-wrap items-center gap-x-3 gap-y-1;
     font-size: clamp(0.625rem, 1vw, 0.75rem);
-    letter-spacing: 0.24em;
+    letter-spacing: 0.03em;
 }
 .invitation-panel__credibility-sep {
     @apply text-citrusyellow/60;
@@ -519,9 +517,9 @@
     @apply flex items-center gap-4 mb-4 md:mb-5 mt-2 sm:mt-4 lg:mt-0;
 }
 .founder-vision__eyebrow-text {
-    @apply text-citrusyellow font-title font-medium uppercase;
+    @apply text-citrusyellow font-title font-medium normal-case;
     font-size: clamp(0.6875rem, 1vw, 0.8125rem);
-    letter-spacing: 0.22em;
+    letter-spacing: 0.04em;
 }
 .founder-vision__eyebrow::after {
     content: "";
@@ -558,9 +556,9 @@
     backdrop-filter: blur(6px);
 }
 .founder-vision__nameplate-role {
-    @apply block font-title font-medium uppercase text-citrusyellow mb-3;
+    @apply block font-title font-medium normal-case text-citrusyellow mb-3;
     font-size: clamp(0.625rem, 1vw, 0.75rem);
-    letter-spacing: 0.24em;
+    letter-spacing: 0.03em;
 }
 .founder-vision__nameplate-signature {
     @apply block w-auto max-h-10 sm:max-h-11 max-w-full;
@@ -583,8 +581,8 @@
     @apply shrink-0 size-11 flex items-center justify-center rounded-full bg-primary/10 text-citrusyellow text-lg;
 }
 .founder-vision__stat-label {
-    @apply block font-title text-xs font-medium uppercase text-primary mb-1 leading-snug;
-    letter-spacing: 0.1em;
+    @apply block font-title text-xs font-medium normal-case text-primary mb-1 leading-snug;
+    letter-spacing: 0.02em;
 }
 .founder-vision__stat-value {
     @apply block font-title font-semibold text-base sm:text-lg text-heading leading-snug;
@@ -602,6 +600,18 @@
 }
 .founder-vision__cta-secondary:hover {
     transform: translateY(-3px);
+}
+.trv-adventure-st1 {
+    background-image: image-set(
+        url("../images/adv-bg.webp") type("image/webp"),
+        url("../images/adv-bg.png") type("image/png")
+    );
+}
+@media (width < 992px) {
+    .cursor,
+    .cursor2 {
+        display: none;
+    }
 }
 @media (width < 992px) {
     .founder-vision__portrait::before,

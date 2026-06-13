@@ -845,26 +845,47 @@ const ImusafirCarousel = function () {
 
   return {
     load() {
-      handleReviewSlider();
-      handleBrandSwiper();
-      handlePlacesLogoSwiper();
-      handleTrvToursSt1();
-      handleTrvTestiSlider();
-      handleTrvLatBlogSt2();
-      handleTrvDSlider();
-      handleTourSwiper();
-      handleTourCatSwiper();
-      handleTestimonialSwiper();
-      handleToursSt2Swiper();
-      handleToursSt3Swiper();
-      handleBlogSt2Swiper();
-      handleFilterSwiper();
-      handleTrvTourGuide();
-      handleTrvGallerySwiper();
+      const inits = [
+        [".reviewtwo-slider", handleReviewSlider],
+        [".brand-swiper", handleBrandSwiper],
+        [".popular-places-logo-swiper", handlePlacesLogoSwiper],
+        [".trv-tours-st1", handleTrvToursSt1],
+        [".testimonial-content-sld", handleTrvTestiSlider],
+        [".trv-lat-blog-st2", handleTrvLatBlogSt2],
+        [".trv_d-slider", handleTrvDSlider],
+        [".trv-mf-tour-swiper", handleTourSwiper],
+        [".trv-tr-cat-swiper", handleTourCatSwiper],
+        [".trv-t-monial-swiper", handleTestimonialSwiper],
+        [".pro-filtr-cate-bx", handleFilterSwiper],
+        [".trv-tours-st2-swiper", handleToursSt2Swiper],
+        [".trv-tours-st3-swiper", handleToursSt3Swiper],
+        [".trv-lat-blog-st2-swiper", handleBlogSt2Swiper],
+        [".trv-tour-guide", handleTrvTourGuide],
+        [".trv-inr-gallery-swiper", handleTrvGallerySwiper],
+      ];
+
+      inits.forEach(([selector, init]) => {
+        if (document.querySelector(selector)) init();
+      });
     },
   };
 };
 
-window.addEventListener("load", function () {
+const scheduleCarouselInit = (callback) => {
+  if (typeof window.requestIdleCallback === "function") {
+    window.requestIdleCallback(callback, { timeout: 2000 });
+  } else {
+    window.setTimeout(callback, 1);
+  }
+};
+
+const bootCarousels = () => {
+  if (typeof Swiper === "undefined") return;
   ImusafirCarousel().load();
-});
+};
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", () => scheduleCarouselInit(bootCarousels));
+} else {
+  scheduleCarouselInit(bootCarousels);
+}

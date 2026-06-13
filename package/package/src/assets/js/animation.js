@@ -187,11 +187,25 @@ const ClinicMasterGsap = function () {
   };
 };
 
-window.addEventListener("load", () => {
+const scheduleAnimationInit = (callback) => {
+  if (typeof window.requestIdleCallback === "function") {
+    window.requestIdleCallback(callback, { timeout: 2000 });
+  } else {
+    window.setTimeout(callback, 1);
+  }
+};
+
+const bootAnimations = () => {
   if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
     ClinicMasterGsap().init();
   }
-});
+};
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", () => scheduleAnimationInit(bootAnimations));
+} else {
+  scheduleAnimationInit(bootAnimations);
+}
 
 let resizeTimeout;
 window.addEventListener("resize", () => {

@@ -1,7 +1,12 @@
 const Imusafir = (function () {
   const handleCursorsection = () => {
+    const coarsePointer = window.matchMedia("(pointer: coarse)").matches;
+    const narrowScreen = window.matchMedia("(max-width: 991px)").matches;
+    if (coarsePointer || narrowScreen) return;
+
     let cursor = document.querySelector(".cursor");
     let cursor2 = document.querySelector(".cursor2");
+    if (!cursor || !cursor2 || typeof gsap === "undefined") return;
     let cursorScale = document.querySelectorAll(".cursor-scale");
     let mouseX = 0;
     let mouseY = 0;
@@ -63,19 +68,6 @@ const Imusafir = (function () {
       $(".sticky-header").removeClass("is-fixed");
     }
   });
-
-  const handleColorfillheader = () => {
-    const scroll = window.scrollY;
-    const header = document.querySelector(".is-fixed");
-
-    if (!header) return;
-
-    if (scroll >= 100) {
-      header.classList.add("color-fill");
-    } else {
-      header.classList.remove("color-fill");
-    }
-  };
 
   function handleMobilesidedrawer() {
     jQuery("#mobile-side-drawer").on("click", function () {
@@ -601,21 +593,13 @@ const Imusafir = (function () {
   return {
     init: function () {
       handleCursorsection();
-      handleColorfillheader();
       handleMobilesidedrawer();
       handleSitesearch();
-      handleTvrRainEffetctfunction();
-      handleMagnificvideo();
       handleScrollTop();
       handleCounterJS();
       handleSetCurrentYear();
       handleCustomSelects();
       handleAccordion();
-      handleLightboxPopup();
-      handleTouchSpin();
-      handleflatpickr();
-      handleTagSlider();
-      handleShopProductPrice();
       handlePageLoader();
       handlePricingRedirect();
       applyContactFormParams();

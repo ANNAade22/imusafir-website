@@ -10,6 +10,55 @@
 .header-style-1.sticky-header.is-fixed {
     animation: 0.95s ease 0s normal forwards 1 running mainBar_on_scrollAnimatio;
 }
+.site-header.sticky-header.is-fixed {
+    position: fixed;
+    top: 0.75rem;
+    left: 0.75rem;
+    right: 0.75rem;
+    width: auto;
+    z-index: 999;
+    overflow: hidden;
+    border-radius: var(--radius-3xl);
+    background: linear-gradient(
+        180deg,
+        rgba(31, 26, 23, 0.78) 0%,
+        rgba(var(--primary-rgb), 0.68) 100%
+    );
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: none;
+    box-shadow:
+        0 8px 32px rgba(31, 26, 23, 0.28),
+        0 2px 8px rgba(31, 26, 23, 0.12);
+    transition:
+        top 0.45s ease,
+        left 0.45s ease,
+        right 0.45s ease,
+        border-radius 0.45s ease,
+        background 0.45s ease,
+        backdrop-filter 0.45s ease,
+        box-shadow 0.45s ease;
+}
+@media (min-width: 992px) {
+    .site-header.sticky-header.is-fixed {
+        top: 1.25rem;
+        left: 2.1875rem;
+        right: 2.1875rem;
+        border-radius: var(--radius-4xl);
+    }
+}
+.site-header.sticky-header.is-fixed .main-bar-wraper > div {
+    border-radius: inherit;
+}
+.site-header.sticky-header.is-fixed .navbar-nav a {
+    color: #fff;
+}
+.site-header.sticky-header.is-fixed .navbar-nav a:hover {
+    color: var(--secondary);
+}
+.site-header.sticky-header.is-fixed .quick-search {
+    color: #fff;
+}
 .header-style-1.is-fixed {
     @apply fixed top-0 left-8.75 right-8.75 z-999;
 }
@@ -58,7 +107,7 @@
 }
 
 .info-tab-trigger {
-    @apply fixed top-1/2 z-[99999] cursor-pointer uppercase font-title font-medium border-0 duration-500;
+    @apply fixed top-1/2 z-[99999] cursor-pointer normal-case font-title font-medium border-0 duration-500;
     right: 0;
     transform: translateY(-50%);
     writing-mode: vertical-rl;
@@ -66,7 +115,7 @@
     padding-block: 0.5rem;
     padding-inline: 1.25rem;
     font-size: 0.625rem;
-    letter-spacing: 0.28em;
+    letter-spacing: 0.06em;
     color: #C9A24D;
     background: rgba(15, 12, 10, 0.72);
     backdrop-filter: blur(10px);

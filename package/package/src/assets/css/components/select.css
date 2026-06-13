@@ -10,8 +10,9 @@
 }
 
 .select-selected:after {
-    content: "\e842";
-    font-family: "feather";
+    content: "\f107";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
     position: absolute;
     right: 0px;
     left: 97px;

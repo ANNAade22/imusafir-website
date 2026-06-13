@@ -1,5 +1,5 @@
 .loading-area {
-    @apply size-full fixed left-0 top-0 z-99999 overflow-hidden transition-opacity duration-300;
+    display: none !important;
 }
 .loading-area.fade-out {
     @apply opacity-0 pointer-events-none;

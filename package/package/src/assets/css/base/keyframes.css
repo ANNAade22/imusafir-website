@@ -300,9 +300,9 @@
 }
 @keyframes hero-headline-line-in {
   from {
-    opacity: 0;
-    transform: translateY(1.75rem);
-    filter: blur(10px);
+    opacity: 1;
+    transform: translateY(0.75rem);
+    filter: blur(4px);
   }
   to {
     opacity: 1;
@@ -312,8 +312,8 @@
 }
 @keyframes hero-eyebrow-in {
   from {
-    opacity: 0;
-    transform: translateX(-1rem);
+    opacity: 1;
+    transform: translateX(-0.5rem);
   }
   to {
     opacity: 1;
@@ -322,8 +322,8 @@
 }
 @keyframes hero-eyebrow-line-in {
   from {
-    opacity: 0;
-    transform: scaleX(0);
+    opacity: 1;
+    transform: scaleX(0.35);
   }
   to {
     opacity: 1;
@@ -358,9 +358,9 @@
 }
 @keyframes hero-subhead-in {
   from {
-    opacity: 0;
-    transform: translateY(1.25rem);
-    filter: blur(6px);
+    opacity: 1;
+    transform: translateY(0.5rem);
+    filter: blur(2px);
   }
   to {
     opacity: 1;
@@ -370,8 +370,8 @@
 }
 @keyframes hero-actions-in {
   from {
-    opacity: 0;
-    transform: translateY(1rem) scale(0.96);
+    opacity: 1;
+    transform: translateY(0.5rem) scale(0.98);
   }
   to {
     opacity: 1;
@@ -380,9 +380,9 @@
 }
 @keyframes hero-stat-in {
   from {
-    opacity: 0;
-    transform: translateY(1.25rem);
-    filter: blur(4px);
+    opacity: 1;
+    transform: translateY(0.5rem);
+    filter: blur(2px);
   }
   to {
     opacity: 1;
@@ -402,8 +402,8 @@
 }
 @keyframes hero-stats-bar-in {
   from {
-    opacity: 0;
-    transform: translateY(1.5rem);
+    opacity: 1;
+    transform: translateY(0.5rem);
   }
   to {
     opacity: 1;
@@ -412,8 +412,8 @@
 }
 @keyframes hero-stats-line-in {
   from {
-    transform: scaleX(0);
-    opacity: 0;
+    transform: scaleX(0.35);
+    opacity: 1;
   }
   to {
     transform: scaleX(1);

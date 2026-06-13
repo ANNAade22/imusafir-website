@@ -47,7 +47,6 @@
 	<link rel="stylesheet" type="text/css" href="assets/icons/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="assets/css/fonts.css">
     <link rel="stylesheet" href="assets/css/style.css?v=20260623">
-    <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/lc_lightbox.css">
 	
 </head>
@@ -77,94 +76,90 @@
 	<div class="page-wraper">
 		
 		<!-- HEADER START -->
-		<header class="site-header sticky-header absolute lg:left-8.75 lg:right-8.75 lg:top-8.75 left-2.5 right-2.5 top-2.5 duration-500 z-999 before:absolute before:w-62.5 before:h-37.5 before:left-1/2 before:-translate-x-1/2 before:bg-white before:shadow-header before:rounded-[50%] before:top-1.25 before:-z-1 max-4xl:before:hidden [.site-header.is-fixed]:fixed [.site-header.is-fixed]:animate-header-scroll-animation [.site-header.is-fixed]:rounded-b-3xl [.site-header.is-fixed]:top-0">
+        <header class="site-header sticky-header absolute lg:left-8.75 lg:right-8.75 lg:top-8.75 left-0 right-0 top-0 duration-500 z-999 [.site-header.is-fixed]:animate-header-scroll-animation">
     <div class="main-bar-wraper">
-        <div class="flex items-center justify-between relative w-full bg-white rounded-2xl 2xl:min-h-30 min-h-20 2xxl:ps-8.75 px-4.5 2xxl:pe-13.75 duration-500">
-            <div class="flex items-center z-9 h-20 w-30">
-                <a href="index.html" class="table-cell align-middle">
-                    <img src="assets/images/logo-light.png" alt="logo" class="object-contain duration-500 lg:max-w-40 sm:max-w-30 max-w-27.5">
-                </a>
-            </div>
-            <button class="xmenu-toggler lg:hidden float-right mt-4.5 mb-4 md:ml-7 ml-4 size-11 bg-dark-600 relative cursor-pointer max-lg:order-1" type="button">
-                <span class="block absolute left-2.5 h-0.5 rounded-px bg-primary duration-300 top-3.25 w-5.5"></span>
-                <span class="block absolute left-2.5 h-0.5 rounded-px bg-primary duration-0 top-5.5 w-6.25"></span>
-                <span class="block absolute left-2.5 h-0.5 rounded-px bg-primary duration-300 top-8 w-4"></span>
-            </button>
-            <div class="lg:hidden fixed top-0 left-0 bg-black size-full duration-300 z-999 opacity-0 visible pointer-events-none menu-close fade-overlay"></div>
-            <div class="flex lg:basis-auto lg:grow max-lg:flex-col lg:justify-start justify-start font-base max-lg:fixed max-lg:h-screen max-lg:px-5 max-lg:top-0 max-lg:-left-75 max-lg:z-9999 max-lg:bg-white max-lg:w-72 max-lg:overflow-auto max-lg:duration-700 header-nav custom-scroll">
-                <div class="flex items-center relative z-9 py-6.25 lg:hidden">
+        <div class="w-full lg:min-h-30 min-h-20 lg:ps-8.75 px-4 lg:pe-13.75 duration-500 rounded-5xl flex items-center justify-between">
+            <div class="flex relative w-full">
+                <div class="flex items-center relative z-9 h-20 lg:w-auto w-auto shrink-0">
                     <a href="index.html" class="table-cell align-middle">
-                        <img src="assets/images/logo-dark.png" alt="" class="object-contain duration-500">
+                        <img src="assets/images/logo-dark.png" alt="logo" class="object-contain duration-500" fetchpriority="high" width="193" height="81">
                     </a>
                 </div>
-                <ul class="lg:flex flex-wrap navbar-nav">
+                <button class="xmenu-toggler lg:hidden float-right mt-4.5 mb-4 md:ml-7 ml-4 size-11 bg-dark-600 relative cursor-pointer max-lg:order-1 max-lg:ms-auto" type="button">
+                    <span class="block absolute left-2.5 h-0.5 rounded-px bg-white duration-300 top-3.25 w-5.5"></span>
+                    <span class="block absolute left-2.5 h-0.5 rounded-px bg-white duration-0 top-5.5 w-6.25"></span>
+                    <span class="block absolute left-2.5 h-0.5 rounded-px bg-white duration-300 top-8 w-4"></span>
+                </button>
+                <div class="lg:hidden fixed top-0 left-0 bg-black size-full duration-300 z-999 opacity-0 visible pointer-events-none menu-close fade-overlay"></div>
+                <div class="flex lg:justify-center lg:basis-auto lg:grow max-lg:flex-col justify-start font-base max-lg:fixed max-lg:h-screen max-lg:px-5 max-lg:top-0 max-lg:-left-75 max-lg:z-9999 max-lg:bg-white max-lg:w-72 max-lg:overflow-auto max-lg:duration-700 header-nav custom-scroll">
+                    <div class="flex items-center relative z-9 py-6.25 lg:hidden">
+                        <a href="index.html" class="table-cell align-middle">
+                            <img src="assets/images/logo-dark.png" alt="" class="object-contain duration-500">
+                        </a>
+                    </div>
+                    <ul class="lg:flex flex-wrap navbar-nav">
                         <li class="lg:inline-block block max-lg:border-b max-lg:border-gray-200 relative group">
-                            <a class="lg:py-7.5 py-2 3xxl:px-5 2xxl:px-3 lg:px-2 relative lg:inline-block block text-lg font-medium text-primary hover:text-primary" href="index.html">
+                            <a class="lg:py-7.5 py-2 xl:px-5 lg:px-2 relative lg:inline-block block text-lg font-medium lg:text-primary text-primary hover:text-secondary" href="index.html">
                                 <span class="inline-block">Home</span>
                             </a>
                         </li>
                         <li class="lg:inline-block block max-lg:border-b max-lg:border-gray-200 relative group">
-                            <a class="lg:py-7.5 py-2 3xxl:px-5 2xxl:px-3 lg:px-2 relative lg:inline-block block text-lg font-medium text-primary hover:text-primary" href="gallery.html">
+                            <a class="lg:py-7.5 py-2 xl:px-5 lg:px-2 relative lg:inline-block block text-lg font-medium lg:text-primary text-primary hover:text-secondary" href="gallery.html">
                                 <span class="inline-block">Gallery</span>
                             </a>
                         </li>
                         <li class="lg:inline-block block max-lg:border-b max-lg:border-gray-200 relative group">
-                            <a class="lg:py-7.5 py-2 3xxl:px-5 2xxl:px-3 lg:px-2 relative lg:inline-block block text-lg font-medium text-primary hover:text-primary" href="indonesia-2026.html">
+                            <a class="lg:py-7.5 py-2 xl:px-5 lg:px-2 relative lg:inline-block block text-lg font-medium lg:text-primary text-primary hover:text-secondary" href="indonesia-2026.html">
                                 <span class="inline-block">Indonesia 2026</span>
                             </a>
                         </li>
-<li class="lg:inline-block block max-lg:border-b max-lg:border-gray-200 relative group">
-                            <a class="lg:py-7.5 py-2 3xxl:px-5 2xxl:px-3 lg:px-2 relative lg:inline-block block text-lg font-medium text-primary hover:text-primary" href="contact.html">
+                        <li class="lg:inline-block block max-lg:border-b max-lg:border-gray-200 relative group">
+                            <a class="lg:py-7.5 py-2 xl:px-5 lg:px-2 relative lg:inline-block block text-lg font-medium lg:text-primary text-primary hover:text-secondary" href="contact.html">
                                 <span class="inline-block">Contact</span>
                             </a>
                         </li>
-</ul>
-                <div class="lg:hidden block max-lg:p-5 text-center mt-auto">
-                    <ul>
-                        <li class="inline-block mx-0.5">
-                            <a class="size-10 !leading-10 border border-black/10 text-center text-primary fab fa-facebook-f" target="_blank" href="#"></a>
-                        </li>
-                        <li class="inline-block mx-0.5">
-                            <a class="size-10 !leading-10 border border-black/10 text-center text-primary fab fa-twitter" target="_blank" href="#"></a>
-                        </li>
-                        <li class="inline-block mx-0.5">
-                            <a class="size-10 !leading-10 border border-black/10 text-center text-primary fab fa-linkedin-in" target="_blank" href="#"></a>
-                        </li>
-                        <li class="inline-block mx-0.5">
-                            <a class="size-10 !leading-10 border border-black/10 text-center text-primary fab fa-instagram" target="_blank" href="#"></a>
-                        </li>
                     </ul>
-                </div>
-            </div>
-            <div class="flex lg:justify-end lg:items-center z-9 h-20 xl:pl-8 max-lg:ms-auto">
-                <div class="flex items-center">
-                    <ul class="ml-5 flex items-center -mr-2.5">
-                        <li class="inline-block max-xl:hidden">
-                            <ul class="flex">
-                                <li><a class="text-xl text-primary mr-5 block" href="javascript:;"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                <li><a class="text-xl text-primary mr-5 block" href="javascript:;"><i class="fa-brands fa-instagram"></i></a></li>
-                                <li><a class="text-xl text-primary mr-5 block" href="javascript:;"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                                <li><a class="text-xl text-primary mr-5 block" href="javascript:;"><i class="fa-brands fa-x-twitter"></i></a></li>
-                            </ul>
-                        </li>
-                        <li class="inline-block">
-                            <button type="button" class="flex items-center justify-center sm:size-14 size-8 sm:px-4 quick-search cursor-pointer text-primary" data-target="#searchOverlay1">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                            </button>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="fixed -top-full left-0 size-full bg-body-bg z-999 flex items-center justify-center p-8 duration-500 xmenu-search" id="searchOverlay1">
-                <form class="absolute top-1/2 left-1/2 -translate-1/2 w-[calc(100%_-_80px)] max-w-150 text-primary text-3xl font-light text-left outline-none p-1.5 duration-500 bg-paleaqua rounded-25xl" action="#">
-                    <div class="relative flex flex-wrap items-stretch w-full bg-white rounded-25xl overflow-hidden">
-                        <input name="search" value="" type="text" class="h-17.5 pr-3 pl-7.5 text-lg text-primary w-[1%] flex-1 outline-none duration-300 placeholder:text-primary focus:border-primary" placeholder="Search...">
-                        <span class="flex">
-                            <button type="button" class="px-2.5 outline-none size-17.5 bg-primary text-2xl text-white rounded-full flex-1 ml-2.5 duration-500 cursor-pointer"><i class="fa fa-search"></i></button>
-                        </span>
+                    <div class="lg:hidden block max-lg:p-5 text-center mt-auto">
+                        <ul>
+                            <li class="inline-block mx-0.5">
+                                <a class="size-10 !leading-10 border border-black/10 text-center text-primary fab fa-facebook-f" target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/profile.php?id=61590921115006"></a>
+                            </li>
+                            <li class="inline-block mx-0.5">
+                                <a class="size-10 !leading-10 border border-black/10 text-center text-primary fab fa-x-twitter" target="_blank" rel="noopener noreferrer" href="https://x.com/iMusafirGlobal"></a>
+                            </li>
+                            <li class="inline-block mx-0.5">
+                                <a class="size-10 !leading-10 border border-black/10 text-center text-primary fab fa-tiktok" target="_blank" rel="noopener noreferrer" href="https://www.tiktok.com/@imusafir.com"></a>
+                            </li>
+                            <li class="inline-block mx-0.5">
+                                <a class="size-10 !leading-10 border border-black/10 text-center text-primary fab fa-instagram" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/imusafir.global/"></a>
+                            </li>
+                        </ul>
                     </div>
-                </form>
-                <button type="button" class="absolute right-8 top-8 text-primary bg-citrusyellow text-base size-10 cursor-pointer rounded search-remove"><i class="fa fa-close"></i></button>
+                </div>
+                <div class="hidden lg:flex items-center shrink-0 z-9 h-20 xl:pl-6 ml-auto">
+                    <ul class="flex items-center">
+                        <li class="inline-flex size-10.5 bg-citrusyellow mr-1.5 rounded-4xl justify-center items-center duration-500 hover:rounded-2lg group">
+                            <a class="inline-flex size-9 bg-primary rounded-4xl justify-center items-center duration-500 text-white text-lg group-hover:rounded-2lg" href="https://x.com/iMusafirGlobal" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+                                <i class="fa-brands fa-x-twitter group-hover:rotate-y-[360deg] group-hover:scale-[1.2] !inline-block duration-[0.5s] group-hover:text-citrusyellow"></i>
+                            </a>
+                        </li>
+                        <li class="inline-flex size-10.5 bg-citrusyellow mr-1.5 rounded-4xl justify-center items-center duration-500 hover:rounded-2lg group">
+                            <a class="inline-flex size-9 bg-primary rounded-4xl justify-center items-center duration-500 text-white text-lg group-hover:rounded-2lg" href="https://www.facebook.com/profile.php?id=61590921115006" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                                <i class="fa-brands fa-facebook group-hover:rotate-y-[360deg] group-hover:scale-[1.2] !inline-block duration-[0.5s] group-hover:text-citrusyellow"></i>
+                            </a>
+                        </li>
+                        <li class="inline-flex size-10.5 bg-citrusyellow mr-1.5 rounded-4xl justify-center items-center duration-500 hover:rounded-2lg group">
+                            <a class="inline-flex size-9 bg-primary rounded-4xl justify-center items-center duration-500 text-white text-lg group-hover:rounded-2lg" href="https://www.instagram.com/imusafir.global/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                                <i class="fa-brands fa-instagram group-hover:rotate-y-[360deg] group-hover:scale-[1.2] !inline-block duration-[0.5s] group-hover:text-citrusyellow"></i>
+                            </a>
+                        </li>
+                        <li class="inline-flex size-10.5 bg-citrusyellow rounded-4xl justify-center items-center duration-500 hover:rounded-2lg group">
+                            <a class="inline-flex size-9 bg-primary rounded-4xl justify-center items-center duration-500 text-white text-lg group-hover:rounded-2lg" href="https://www.tiktok.com/@imusafir.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                                <i class="fa-brands fa-tiktok group-hover:rotate-y-[360deg] group-hover:scale-[1.2] !inline-block duration-[0.5s] group-hover:text-citrusyellow"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -416,23 +411,23 @@
                         <p class="sm:pr-12.5 mb-4 text-base text-white/50">iMusafir connects entrepreneurs, professionals, and investors through curated international business and luxury travel experiences. Travel with purpose. Connect with opportunity.</p>
 						<ul class="mt-5">
 							<li class="inline-flex xl:size-11.5 size-10.5 bg-citrusyellow xl:mr-2.5 mr-1.5 rounded-4xl justify-center items-center duration-500 hover:rounded-2lg group">
-								<a class="inline-flex size-9 bg-primary rounded-4xl justify-center items-center duration-500 text-white text-lg group-hover:rounded-2lg" href="https://www.x.com" target="_blank">
+								<a class="inline-flex size-9 bg-primary rounded-4xl justify-center items-center duration-500 text-white text-lg group-hover:rounded-2lg" href="https://x.com/iMusafirGlobal" target="_blank" rel="noopener noreferrer">
 									<i class="fa-brands fa-x-twitter group-hover:rotate-y-[360deg] group-hover:scale-[1.2] !inline-block duration-[0.5s] group-hover:text-citrusyellow"></i>
 								</a>
 							</li>
 							<li class="inline-flex xl:size-11.5 size-10.5 bg-citrusyellow xl:mr-2.5 mr-1.5 rounded-4xl justify-center items-center duration-500 hover:rounded-2lg group">
-								<a class="inline-flex size-9 bg-primary rounded-4xl justify-center items-center duration-500 text-white text-lg group-hover:rounded-2lg" href="https://www.facebook.com" target="_blank">
+								<a class="inline-flex size-9 bg-primary rounded-4xl justify-center items-center duration-500 text-white text-lg group-hover:rounded-2lg" href="https://www.facebook.com/profile.php?id=61590921115006" target="_blank" rel="noopener noreferrer">
 									<i class="fa-brands fa-facebook group-hover:rotate-y-[360deg] group-hover:scale-[1.2] !inline-block duration-[0.5s] group-hover:text-citrusyellow"></i>
 								</a>
 							</li>
 							<li class="inline-flex xl:size-11.5 size-10.5 bg-citrusyellow xl:mr-2.5 mr-1.5 rounded-4xl justify-center items-center duration-500 hover:rounded-2lg group">
-								<a class="inline-flex size-9 bg-primary rounded-4xl justify-center items-center duration-500 text-white text-lg group-hover:rounded-2lg" href="https://www.instagram.com" target="_blank">
+								<a class="inline-flex size-9 bg-primary rounded-4xl justify-center items-center duration-500 text-white text-lg group-hover:rounded-2lg" href="https://www.instagram.com/imusafir.global/" target="_blank" rel="noopener noreferrer">
 									<i class="fa-brands fa-instagram group-hover:rotate-y-[360deg] group-hover:scale-[1.2] !inline-block duration-[0.5s] group-hover:text-citrusyellow"></i>
 								</a>
 							</li>
 							<li class="inline-flex xl:size-11.5 size-10.5 bg-citrusyellow xl:mr-2.5 mr-1.5 rounded-4xl justify-center items-center duration-500 hover:rounded-2lg group">
-								<a class="inline-flex size-9 bg-primary rounded-4xl justify-center items-center duration-500 text-white text-lg group-hover:rounded-2lg" href="https://www.pinterest.com/" target="_blank">
-									<i class="fa-brands fa-pinterest group-hover:rotate-y-[360deg] group-hover:scale-[1.2] !inline-block duration-[0.5s] group-hover:text-citrusyellow"></i>
+								<a class="inline-flex size-9 bg-primary rounded-4xl justify-center items-center duration-500 text-white text-lg group-hover:rounded-2lg" href="https://www.tiktok.com/@imusafir.com" target="_blank" rel="noopener noreferrer">
+									<i class="fa-brands fa-tiktok group-hover:rotate-y-[360deg] group-hover:scale-[1.2] !inline-block duration-[0.5s] group-hover:text-citrusyellow"></i>
 								</a>
 							</li>
 						</ul>
@@ -503,7 +498,7 @@
             <h3 class="whitespace-nowrap mr-11.5 !text-white relative text-28 max-xl:mb-7.5">Follow Instagram</h3>
             <ul class="flex xl:gap-5 max-xl:gap-y-2.5 max-xl:gap-x-[2%] max-xl:flex-wrap">
                 <li class="xl:w-[15%] lg:w-[18%] sm:w-[30%] w-[48%]">
-					<a href="javascript:void(0);" class="relative rounded-2xl overflow-hidden flex items-center justify-center duration-500 bg-primary group">
+					<a href="https://www.instagram.com/imusafir.global/" target="_blank" rel="noopener noreferrer" class="relative rounded-2xl overflow-hidden flex items-center justify-center duration-500 bg-primary group">
 						<img src="assets/images/insta-gallery/pic1.jpg" alt="pic1" class="group-hover:opacity-80 group-hover:[filter:blur(3px)]" width="100" height="100" loading="lazy">
 						<span class="absolute top-1/2 left-1/2 table -translate-1/2 size-22.5 after:absolute after:block after:w-[0%] after:h-1.5 after:border-t after:border-b after:border-white after:opacity-80 after:top-1/2 after:-translate-y-1/2 after:duration-500 before:absolute before:block before:w-[0%] before:h-1.5 before:border-t before:border-b before:border-white before:opacity-80 before:top-1/2 before:-translate-y-1/2 before:duration-500 before:-right-3/5 after:-left-3/5 group-hover:opacity-100 group-hover:before:w-4/5 group-hover:after:w-4/5">
 							<i class="fa-brands fa-instagram absolute left-1/2 top-1/2 translate-1/2 text-white opacity-0 duration-500 group-hover:scale-[1.1] group-hover:-translate-1/2 group-hover:opacity-100"></i>
@@ -511,7 +506,7 @@
 					</a>
 				</li>
                 <li class="xl:w-[15%] lg:w-[18%] sm:w-[30%] w-[48%]">
-					<a href="javascript:void(0);" class="relative rounded-2xl overflow-hidden flex items-center justify-center duration-500 bg-primary group">
+					<a href="https://www.instagram.com/imusafir.global/" target="_blank" rel="noopener noreferrer" class="relative rounded-2xl overflow-hidden flex items-center justify-center duration-500 bg-primary group">
 						<img src="assets/images/insta-gallery/pic2.jpg" alt="pic2" class="group-hover:opacity-80 group-hover:[filter:blur(3px)]" width="100" height="100" loading="lazy">
 						<span class="absolute top-1/2 left-1/2 table -translate-1/2 size-22.5 after:absolute after:block after:w-[0%] after:h-1.5 after:border-t after:border-b after:border-white after:opacity-80 after:top-1/2 after:-translate-y-1/2 after:duration-500 before:absolute before:block before:w-[0%] before:h-1.5 before:border-t before:border-b before:border-white before:opacity-80 before:top-1/2 before:-translate-y-1/2 before:duration-500 before:-right-3/5 after:-left-3/5 group-hover:opacity-100 group-hover:before:w-4/5 group-hover:after:w-4/5">
 							<i class="fa-brands fa-instagram absolute left-1/2 top-1/2 translate-1/2 text-white opacity-0 duration-500 group-hover:scale-[1.1] group-hover:-translate-1/2 group-hover:opacity-100"></i>
@@ -519,7 +514,7 @@
 					</a>
 				</li>
                 <li class="xl:w-[15%] lg:w-[18%] sm:w-[30%] w-[48%]">
-					<a href="javascript:void(0);" class="relative rounded-2xl overflow-hidden flex items-center justify-center duration-500 bg-primary group">
+					<a href="https://www.instagram.com/imusafir.global/" target="_blank" rel="noopener noreferrer" class="relative rounded-2xl overflow-hidden flex items-center justify-center duration-500 bg-primary group">
 						<img src="assets/images/insta-gallery/pic3.jpg" alt="pic3" class="group-hover:opacity-80 group-hover:[filter:blur(3px)]" width="100" height="100" loading="lazy">
 						<span class="absolute top-1/2 left-1/2 table -translate-1/2 size-22.5 after:absolute after:block after:w-[0%] after:h-1.5 after:border-t after:border-b after:border-white after:opacity-80 after:top-1/2 after:-translate-y-1/2 after:duration-500 before:absolute before:block before:w-[0%] before:h-1.5 before:border-t before:border-b before:border-white before:opacity-80 before:top-1/2 before:-translate-y-1/2 before:duration-500 before:-right-3/5 after:-left-3/5 group-hover:opacity-100 group-hover:before:w-4/5 group-hover:after:w-4/5">
 							<i class="fa-brands fa-instagram absolute left-1/2 top-1/2 translate-1/2 text-white opacity-0 duration-500 group-hover:scale-[1.1] group-hover:-translate-1/2 group-hover:opacity-100"></i>
@@ -527,7 +522,7 @@
 					</a>
 				</li>
                 <li class="xl:w-[15%] lg:w-[18%] sm:w-[30%] w-[48%]">
-					<a href="javascript:void(0);" class="relative rounded-2xl overflow-hidden flex items-center justify-center duration-500 bg-primary group">
+					<a href="https://www.instagram.com/imusafir.global/" target="_blank" rel="noopener noreferrer" class="relative rounded-2xl overflow-hidden flex items-center justify-center duration-500 bg-primary group">
 						<img src="assets/images/insta-gallery/pic4.jpg" alt="pic4" class="group-hover:opacity-80 group-hover:[filter:blur(3px)]" width="100" height="100" loading="lazy">
 						<span class="absolute top-1/2 left-1/2 table -translate-1/2 size-22.5 after:absolute after:block after:w-[0%] after:h-1.5 after:border-t after:border-b after:border-white after:opacity-80 after:top-1/2 after:-translate-y-1/2 after:duration-500 before:absolute before:block before:w-[0%] before:h-1.5 before:border-t before:border-b before:border-white before:opacity-80 before:top-1/2 before:-translate-y-1/2 before:duration-500 before:-right-3/5 after:-left-3/5 group-hover:opacity-100 group-hover:before:w-4/5 group-hover:after:w-4/5">
 							<i class="fa-brands fa-instagram absolute left-1/2 top-1/2 translate-1/2 text-white opacity-0 duration-500 group-hover:scale-[1.1] group-hover:-translate-1/2 group-hover:opacity-100"></i>
@@ -535,7 +530,7 @@
 					</a>
 				</li>
                 <li class="xl:w-[15%] lg:w-[18%] sm:w-[30%] w-[48%]">
-					<a href="javascript:void(0);" class="relative rounded-2xl overflow-hidden flex items-center justify-center duration-500 bg-primary group">
+					<a href="https://www.instagram.com/imusafir.global/" target="_blank" rel="noopener noreferrer" class="relative rounded-2xl overflow-hidden flex items-center justify-center duration-500 bg-primary group">
 						<img src="assets/images/insta-gallery/pic5.jpg" alt="pic5" class="group-hover:opacity-80 group-hover:[filter:blur(3px)]" width="100" height="100" loading="lazy">
 						<span class="absolute top-1/2 left-1/2 table -translate-1/2 size-22.5 after:absolute after:block after:w-[0%] after:h-1.5 after:border-t after:border-b after:border-white after:opacity-80 after:top-1/2 after:-translate-y-1/2 after:duration-500 before:absolute before:block before:w-[0%] before:h-1.5 before:border-t before:border-b before:border-white before:opacity-80 before:top-1/2 before:-translate-y-1/2 before:duration-500 before:-right-3/5 after:-left-3/5 group-hover:opacity-100 group-hover:before:w-4/5 group-hover:after:w-4/5">
 							<i class="fa-brands fa-instagram absolute left-1/2 top-1/2 translate-1/2 text-white opacity-0 duration-500 group-hover:scale-[1.1] group-hover:-translate-1/2 group-hover:opacity-100"></i>
@@ -591,12 +586,8 @@
 <script defer src="assets/vendor/gsap/gsap.min.js"></script>
 <script defer src="assets/js/jquery-3.7.1.min.js"></script>
 <script defer src="assets/vendor/xmenu/xmenu.js"></script>
-<script defer src="assets/vendor/gsap/ScrollTrigger.min.js"></script>
-<script defer src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-<script defer src="assets/js/dz.carousel.js"></script>
 <script defer src="assets/vendor/group-slide/group-loop.js"></script>
 <script defer src="assets/js/lc_lightbox.lite.js"></script>
-<script defer src="assets/js/animation.js"></script>
 <script defer src="assets/js/custom.js?v=20260611"></script>
 </body>
 </html>

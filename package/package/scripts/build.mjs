@@ -9,11 +9,45 @@ const distDir = path.join(root, "dist");
 
 const STRIP_FROM_DIST = [
   "assets/vendor/lightgallery",
+  "assets/vendor/flatpickr",
+  "assets/vendor/masonry",
+  "assets/vendor/nouislider",
+  "assets/vendor/form-wizard",
+  "assets/vendor/wnumb",
+  "assets/vendor/magnific-popup",
+  "assets/vendor/imagesloaded",
+  "assets/icons/line-awesome",
+  "assets/icons/themify-icons",
+  "assets/icons/feather",
+  "assets/icons/flaticon",
+  "assets/fonts/Figtree",
+  "assets/fonts/Afacad",
   "assets/js/swiper-bundle.min.js",
+  "assets/js/magnific-popup.min.js",
+  "assets/js/owl.carousel.min.js",
+  "assets/js/isotope.pkgd.min.js",
+  "assets/js/theia-sticky-sidebar.js",
   "assets/vendor/gsap/ScrollSmoother.js",
   "assets/vendor/gsap/Draggable.min.js",
   "assets/vendor/gsap/InertiaPlugin.min.js",
   "assets/vendor/gsap/MotionPathPlugin.min.js",
+  "assets/images/main-slider",
+  "assets/images/trv-blog",
+  "assets/images/detail-slider",
+  "assets/images/tour",
+  "assets/images/tour-cat",
+  "assets/images/trv-guide",
+  "assets/images/trv-destinations",
+  "assets/images/trv-services",
+  "assets/images/trv-faq",
+  "assets/images/trv-gallery",
+  "assets/images/trv-mostfav",
+  "assets/images/trv-trend",
+  "assets/images/hpy-cus",
+  "assets/images/comment-author",
+  "assets/images/mask-pic",
+  "assets/images/search-icon",
+  "assets/images/trv-testimonial",
 ];
 
 async function walk(dir) {
@@ -25,6 +59,12 @@ async function walk(dir) {
     else files.push(full);
   }
   return files;
+}
+
+async function writeOptimizedImage(file, buffer) {
+  const tmp = `${file}.opt.tmp`;
+  await fs.writeFile(tmp, buffer);
+  await fs.rename(tmp, file);
 }
 
 async function optimizeDistImages() {
@@ -52,11 +92,14 @@ async function optimizeDistImages() {
       const size = (await fs.stat(file)).size;
       if (size < 40 * 1024) continue;
 
-      const image = sharp(file);
+      const inputBuffer = await fs.readFile(file);
+      const image = sharp(inputBuffer);
       const meta = await image.metadata();
       let pipeline = image;
-      if (meta.width && meta.width > 1920) {
-        pipeline = pipeline.resize(1920, null, { withoutEnlargement: true });
+      const isDestination = file.includes(`${path.sep}destinations${path.sep}`);
+      const maxWidth = isDestination ? 800 : 1920;
+      if (meta.width && meta.width > maxWidth) {
+        pipeline = pipeline.resize(maxWidth, null, { withoutEnlargement: true });
       }
 
       const ext = path.extname(file).toLowerCase();
@@ -66,7 +109,7 @@ async function optimizeDistImages() {
       } else {
         buffer = await pipeline.jpeg({ quality: 80, mozjpeg: true }).toBuffer();
       }
-      await fs.writeFile(file, buffer);
+      await writeOptimizedImage(file, buffer);
 
       const webp = file.replace(/\.(jpe?g|png)$/i, ".webp");
       await sharp(buffer).webp({ quality: 80 }).toFile(webp);

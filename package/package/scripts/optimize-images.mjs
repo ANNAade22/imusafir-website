@@ -5,19 +5,43 @@ import sharp from "sharp";
 const imagesDir = path.resolve("src/assets/images");
 
 const PRIORITY = [
+  { rel: "hero-jakarta.png", maxWidth: 1920, quality: 82 },
+  { rel: "adv-bg.png", maxWidth: 1600, quality: 78 },
+  { rel: "landscape-pic.png", maxWidth: 1200, quality: 80 },
+  { rel: "founder-simran.png", maxWidth: 800, quality: 80 },
+  { rel: "offer/pic1.png", maxWidth: 800, quality: 80 },
+  { rel: "Girl-Image.png", maxWidth: 800, quality: 80 },
+  { rel: "Left-Man-Image.png", maxWidth: 600, quality: 80 },
+  ...Array.from({ length: 4 }, (_, i) => ({
+    rel: `trv-testimonial2/pic${i + 1}.png`,
+    maxWidth: 600,
+    quality: 80,
+  })),
   { rel: "background/inr-banner.jpg", out: "background/inr-banner.jpg", maxWidth: 1920, quality: 78 },
   { rel: "image-cont.png", maxWidth: 1600, quality: 80 },
   { rel: "logo-dark.png", maxWidth: 400, quality: 85 },
   { rel: "butterfly.gif", maxWidth: 400 },
   { rel: "li-eye.gif", maxWidth: 200 },
   { rel: "Advertisment.png", maxWidth: 1200, quality: 80 },
-  { rel: "main-slider/slider1/Rock.png", maxWidth: 800, quality: 85 },
   ...Array.from({ length: 10 }, (_, i) => ({
     rel: `destinations/style1/pic${i + 1}.jpg`,
     maxWidth: 800,
     quality: 80,
   })),
+  ...Array.from({ length: 3 }, (_, i) => ({
+    rel: `trv-pricing/pic${i + 1}.png`,
+    maxWidth: 800,
+    quality: 80,
+  })),
+  { rel: "we-rec-pic.jpg", maxWidth: 1200, quality: 80 },
+  { rel: "we-rec-pic2.jpg", maxWidth: 1200, quality: 80 },
 ];
+
+async function writeOptimizedImage(file, buffer) {
+  const tmp = `${file}.opt.tmp`;
+  await fs.writeFile(tmp, buffer);
+  await fs.rename(tmp, file);
+}
 
 async function optimizeEntry(entry) {
   const input = path.join(imagesDir, entry.rel);
@@ -29,7 +53,8 @@ async function optimizeEntry(entry) {
   }
 
   const before = (await fs.stat(input)).size;
-  const image = sharp(input, { animated: entry.rel.endsWith(".gif") });
+  const inputBuffer = await fs.readFile(input);
+  const image = sharp(inputBuffer, { animated: entry.rel.endsWith(".gif") });
   const meta = await image.metadata();
   let pipeline = image;
   if (meta.width && meta.width > (entry.maxWidth ?? 1920)) {
@@ -48,7 +73,7 @@ async function optimizeEntry(entry) {
       .toBuffer();
   }
 
-  await fs.writeFile(output, buffer);
+  await writeOptimizedImage(output, buffer);
   const webpPath = output.replace(/\.(jpe?g|png|gif)$/i, ".webp");
   await sharp(buffer).webp({ quality: entry.quality ?? 80 }).toFile(webpPath);
 
