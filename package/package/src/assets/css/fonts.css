@@ -69,3 +69,11 @@
   font-display: swap;
   src: url("../fonts/kaushan-script-400.woff2") format("woff2");
 }
+
+@font-face {
+  font-family: "Great Vibes";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/great-vibes-400.woff2") format("woff2");
+}

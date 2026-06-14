@@ -21,6 +21,7 @@
 	"devDependencies": {
 		"@fontsource/afacad": "^5.2.5",
 		"@fontsource/figtree": "^5.2.5",
+		"@fontsource/great-vibes": "^5.2.8",
 		"@fontsource/kaushan-script": "^5.2.5",
 		"concurrently": "^10.0.0",
 		"serve": "^14.2.6",

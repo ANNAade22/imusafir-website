@@ -561,9 +561,9 @@
     letter-spacing: 0.03em;
 }
 .founder-vision__nameplate-signature {
-    @apply block w-auto max-h-10 sm:max-h-11 max-w-full;
-    filter: invert(1) brightness(1.15);
-    opacity: 0.95;
+    @apply block font-signature font-normal text-white leading-none;
+    font-size: clamp(2.125rem, 5vw, 2.875rem);
+    letter-spacing: 0.02em;
 }
 .founder-vision__story {
     @apply mb-2;

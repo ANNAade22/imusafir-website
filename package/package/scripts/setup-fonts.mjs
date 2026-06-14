@@ -17,6 +17,10 @@ const copies = [
     "node_modules/@fontsource/kaushan-script/files/kaushan-script-latin-400-normal.woff2",
     "kaushan-script-400.woff2",
   ],
+  [
+    "node_modules/@fontsource/great-vibes/files/great-vibes-latin-400-normal.woff2",
+    "great-vibes-400.woff2",
+  ],
 ];
 
 const css = `@font-face {
@@ -89,6 +93,14 @@ const css = `@font-face {
   font-weight: 400;
   font-display: swap;
   src: url("../fonts/kaushan-script-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Great Vibes";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/great-vibes-400.woff2") format("woff2");
 }
 `;
 
