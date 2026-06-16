@@ -44,6 +44,7 @@ const pageConfig = {
 <script defer src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 <script defer src="assets/js/dz.carousel.js"></script>
 <script defer src="assets/vendor/group-slide/group-loop.js"></script>
+<script defer src="assets/js/gallery.js"></script>
 <script defer src="assets/js/lc_lightbox.lite.js"></script>
 <script defer src="assets/js/animation.js"></script>`),
   },

@@ -120,6 +120,19 @@ async function optimizeDistImages() {
 }
 
 async function main() {
+  console.log("Generating gallery manifest and assets...");
+  const { spawn } = await import("child_process");
+  await new Promise((resolve, reject) => {
+    const child = spawn("node", ["scripts/generate-gallery.mjs"], {
+      cwd: root,
+      stdio: "inherit",
+      shell: true,
+    });
+    child.on("close", (code) =>
+      code === 0 ? resolve() : reject(new Error(`generate-gallery exited ${code}`))
+    );
+  });
+
   console.log("Copying src → dist...");
   await rm(distDir, { recursive: true, force: true });
   await cp(srcDir, distDir, { recursive: true });

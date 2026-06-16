@@ -44,12 +44,12 @@
     <meta name="format-detection" content="telephone=no">
     
 
-    <link rel="preload" as="image" href="assets/images/hero-jakarta.webp" type="image/webp" fetchpriority="high">
+    <link rel="preload" as="image" href="assets/images/hero-slide-nyc.webp" type="image/webp" fetchpriority="high">
     <link rel="preload" href="assets/fonts/figtree-600.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="assets/fonts/figtree-400.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="assets/fonts/great-vibes-400.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="assets/css/fonts.css">
-    <link rel="stylesheet" href="assets/css/style.css?v=20260624">
+    <link rel="stylesheet" href="assets/css/style.css?v=20260617c">
     <link rel="stylesheet" href="assets/icons/fontawesome/css/all.min.css">
     <link rel="preload" href="assets/vendor/swiper/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css"></noscript>
@@ -164,11 +164,23 @@
                 <div class="page-content">
                     <!-- Hero — Positioning First -->
                     <section class="hero-positioning min-h-svh overflow-hidden relative flex flex-col" aria-label="Hero">
-                        <picture>
-                            <source srcset="assets/images/hero-jakarta.webp" type="image/webp">
-                            <img src="assets/images/hero-jakarta.webp" alt="" class="hero-positioning__video absolute inset-0 size-full object-cover z-0" width="1920" height="1080" fetchpriority="high" decoding="async" sizes="100vw" aria-hidden="true">
-                        </picture>
+                        <div class="hero-positioning__bg" aria-hidden="true">
+                            <picture class="hero-positioning__bg-slide">
+                                <source srcset="assets/images/hero-slide-nyc.webp" type="image/webp">
+                                <img src="assets/images/hero-slide-nyc.png" alt="" width="900" height="506" fetchpriority="high" decoding="async">
+                            </picture>
+                        </div>
                         <div class="hero-positioning__overlay absolute inset-0 z-1" aria-hidden="true"></div>
+                        <div class="hero-positioning__cloud hero-positioning__cloud--lower pointer-events-none absolute inset-x-0 top-36 md:top-40 z-[1] overflow-hidden" aria-hidden="true">
+                            <div class="inline-block whitespace-nowrap animate-moveCloud">
+                                <img src="assets/images/cloud-1.png" alt="" class="w-auto max-w-none opacity-90" width="400" height="332" loading="lazy" decoding="async">
+                            </div>
+                        </div>
+                        <div class="hero-positioning__cloud hero-positioning__cloud--upper pointer-events-none absolute inset-x-0 top-0 z-[1] overflow-hidden" aria-hidden="true">
+                            <div class="inline-block whitespace-nowrap animate-moveCloud" style="animation-delay: -8s;">
+                                <img src="assets/images/cloud-2.png" alt="" class="w-auto max-w-none opacity-80" width="297" height="225" loading="lazy" decoding="async">
+                            </div>
+                        </div>
                         <div class="relative z-2 flex-1 flex flex-col justify-between w-full">
                             <div class="container mx-auto px-5 md:px-10 xl:px-17.5 pt-36 pb-12 md:pt-44 md:pb-16 lg:pt-48 lg:pb-20 flex-1 flex flex-col justify-center max-w-[90rem]">
                                 <p class="hero-positioning__eyebrow"><span class="hero-positioning__eyebrow-text">Curated global access</span></p>
@@ -1490,7 +1502,7 @@
 <script defer src="assets/vendor/xmenu/xmenu.js"></script>
 <script defer src="assets/vendor/gsap/ScrollTrigger.min.js"></script>
 <script defer src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-<script defer src="assets/js/dz.carousel.js"></script>
+<script defer src="assets/js/dz.carousel.js?v=20260617"></script>
 <script defer src="assets/js/animation.js"></script>
 <script defer src="assets/js/custom.js?v=20260611"></script>
 </body>

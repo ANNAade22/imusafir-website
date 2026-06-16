@@ -342,10 +342,32 @@
 }
 @keyframes hero-bg-drift {
   from {
-    transform: scale(1.02) translate(0, 0);
+    transform: scale(1.05) translate(0, 0);
   }
   to {
-    transform: scale(1.07) translate(-1.25%, -0.35%);
+    transform: scale(1.1) translate(-1.25%, -0.35%);
+  }
+}
+@keyframes hero-bg-fade-a {
+  0%, 42% {
+    opacity: 1;
+  }
+  50%, 92% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes hero-bg-fade-b {
+  0%, 42% {
+    opacity: 0;
+  }
+  50%, 92% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 @keyframes hero-overlay-in {

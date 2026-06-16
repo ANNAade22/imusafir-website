@@ -615,6 +615,9 @@ const Imusafir = (function () {
       handlePricingRedirect();
       applyContactFormParams();
       handleContactFormHelpers();
+      if (typeof Gallery !== "undefined") Gallery.init();
+      handleLightboxPopup();
+      handleTagSlider();
     },
     applyContactFormParams,
     buildContactSubject,

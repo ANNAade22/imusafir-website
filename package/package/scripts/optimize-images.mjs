@@ -6,6 +6,8 @@ const imagesDir = path.resolve("src/assets/images");
 
 const PRIORITY = [
   { rel: "hero-jakarta.png", maxWidth: 1920, quality: 82 },
+  { rel: "hero-slide-jakarta.png", maxWidth: 1920, quality: 82 },
+  { rel: "hero-slide-nyc.png", maxWidth: 1920, quality: 82 },
   { rel: "adv-bg.png", maxWidth: 1600, quality: 78 },
   { rel: "landscape-pic.png", maxWidth: 1200, quality: 80 },
   { rel: "founder-simran.png", maxWidth: 800, quality: 80 },

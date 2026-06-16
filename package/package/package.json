@@ -6,6 +6,7 @@
 		"setup:fonts": "node scripts/setup-fonts.mjs",
 		"optimize:images": "node scripts/optimize-images.mjs",
 		"optimize:destinations": "node scripts/optimize-destinations.mjs",
+		"build:gallery": "node scripts/generate-gallery.mjs",
 		"dev": "npx @tailwindcss/cli -i ./src/assets/css/tailwind.css -o ./src/assets/css/style.css --watch",
 		"serve": "npx serve src -l 3000",
 		"start": "npx concurrently \"npm run dev\" \"npm run serve\"",

@@ -881,11 +881,11 @@ const scheduleCarouselInit = (callback) => {
 
 const bootCarousels = () => {
   if (typeof Swiper === "undefined") return;
-  ImusafirCarousel().load();
+  scheduleCarouselInit(() => ImusafirCarousel().load());
 };
 
 if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", () => scheduleCarouselInit(bootCarousels));
+  document.addEventListener("DOMContentLoaded", bootCarousels);
 } else {
-  scheduleCarouselInit(bootCarousels);
+  bootCarousels();
 }
