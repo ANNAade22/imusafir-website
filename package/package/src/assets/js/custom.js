@@ -513,6 +513,7 @@ const Imusafir = (function () {
     "standard-delegate": "Standard Delegate ($2,997)",
     "executive-delegate": "Executive Delegate ($4,997)",
     "elite-founder-circle": "Elite Founder Circle ($7,997)",
+    "legacy-companion-pass": "Legacy Companion Pass ($1,997–$2,497)",
     "not-sure": "Not sure yet — help me choose",
   };
 
@@ -586,8 +587,18 @@ const Imusafir = (function () {
       }
     };
 
+    const updateCompanionPackageNote = () => {
+      const note = document.getElementById("companion-package-note");
+      if (!note || !packageSelect) return;
+      note.classList.toggle("hidden", packageSelect.value !== "legacy-companion-pass");
+    };
+
     interestSelect?.addEventListener("change", updateSubjectFromSelections);
-    packageSelect?.addEventListener("change", updateSubjectFromSelections);
+    packageSelect?.addEventListener("change", () => {
+      updateSubjectFromSelections();
+      updateCompanionPackageNote();
+    });
+    updateCompanionPackageNote();
   };
 
   return {
