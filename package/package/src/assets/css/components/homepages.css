@@ -630,6 +630,11 @@
         url("../images/adv-bg.png") type("image/png")
     );
 }
+
+#tagSlider,
+#tagSlider2 {
+    overflow: hidden;
+}
 @media (width < 992px) {
     .cursor,
     .cursor2 {

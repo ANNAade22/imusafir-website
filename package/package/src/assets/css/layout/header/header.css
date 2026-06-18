@@ -131,6 +131,13 @@
     box-shadow: -6px 0 18px rgba(0, 0, 0, 0.45);
 }
 
+@media (width < 992px) {
+    .info-tab-trigger {
+        min-width: 2.75rem;
+        padding-block: 0.75rem;
+    }
+}
+
 @media (width >= 992px) {
     .site-header .main-bar-wraper > .flex.bg-white > div:first-child {
         position: absolute;
