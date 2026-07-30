@@ -1,32 +1,38 @@
 :root{
 
-    /* Rich Antique Gold — deeper accent, reads premium on buttons & headers */
-    --primary: #9E7349;
+    /* Primary Gold — buttons, accents, hover states, highlights */
+    --primary: #C5A059;
 
-    /* Warm Champagne Sand — clearer surface tone for buttons & sticky nav */
-    --secondary: #D9CCBA;
+    /* Light Gold — subtle backgrounds, card accents, borders */
+    --secondary: #F5E6C8;
 
     /* RGB Gold */
-    --primary-rgb: 158, 115, 73;
+    --primary-rgb: 197, 160, 89;
 
-    /* Soft Beige — warm highlight backgrounds */
-    --primarylight: #EDE6DA;
+    /* Light Gold — soft highlight backgrounds */
+    --primarylight: #F5E6C8;
 
-    /* Warm Gray Text */
-    --body-color: #57524C;
+    /* Dark Gray — secondary text */
+    --body-color: #3D3833;
 
-    /* Main Website Background */
-    --body-bgcolor: #F8F5EF;
+    /* Warm cream — page background (brand light gold) */
+    --body-bgcolor: #F5E6C8;
 
-    /* Headings */
-    --heading-color: #1F1A17;
+    /* Warm espresso — headings, primary text on light */
+    --heading-color: #1C1915;
 
-    /* Card Background */
+    /* Card / surface */
     --light: #FFFFFF;
 
+    /* Warm charcoal — navbar, footer, dark sections (not pure black) */
+    --rich-black: #1C1915;
+
+    /* Footer bottom bar — one shade deeper */
+    --footer-bar: #141210;
+
     /* Loader dot palette — matches site gold brand */
-    --loader-dot-1: #9E7349;
-    --loader-dot-2: #C9A24D;
-    --loader-dot-3: #B8956A;
-    --loader-dot-4: #7A5A38;
+    --loader-dot-1: #C5A059;
+    --loader-dot-2: #D4B87A;
+    --loader-dot-3: #A8884A;
+    --loader-dot-4: #8A6F3E;
 }

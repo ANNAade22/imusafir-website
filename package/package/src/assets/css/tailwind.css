@@ -11,6 +11,7 @@
 
 @import "./components/component.css";
 @import "./components/homepages.css";
+@import "./components/women-strategy-stories.css";
 @import "./components/accordions.css";
 @import "./components/btn.css";
 @import "./components/swiper.css";
@@ -23,10 +24,10 @@
     --spacing: .25rem;
 
     /* FONT FAMILY */
-    --font-display: "Kaushan Script", "cursive";
+    --font-display: "Playfair Display", "Georgia", "serif";
     --font-signature: "Great Vibes", "cursive";
-    --font-title: "Afacad", "sans-serif";
-    --font-base: "Figtree", "sans-serif";
+    --font-title: "Playfair Display", "Georgia", "serif";
+    --font-base: "Montserrat", "Helvetica Neue", "sans-serif";
 
     /* COLORS */
     --color-bodycolor: var(--body-color);
@@ -36,23 +37,27 @@
 
     --color-primary: var(--primary);
     --color-secondary: var(--secondary);
-    --color-lightturquoise:#EFFFFF;
-    --color-emeraldblue:#066168;
-    --color-citrusyellow:#C9A24D;
-    --color-citrusyellowlight:rgba(201, 162, 77, 0.32);
-    --color-paleaqua:#DBEEEE;
-    --color-aquamist:#7FC7CE;
-    --color-caribbeanblue:#1DB7BE;
-	--color-eggshell:#FFF8EB;
-    --color-eggshelllight:rgba(201, 162, 77, 0.16);
-    --color-caribbeanlight:rgba(6, 97, 104, 0.3098039216);
-    --color-bluelight:rgba(41, 137, 145, 0.1);
-    --color-amber:rgba(201, 162, 77, 0.1);
-    --color-aquagray:rgba(6, 97, 104, 0.2);
-	--color-middlegray:#8b8b8b;
-	--color-skyblue:#53A4C0;
-	--color-darkcyan:#066168;
-	--color-input:#9d9d9d;
+    --color-richblack: var(--rich-black);
+    --color-lightgold: #F5E6C8;
+    --color-darkgray: #2A2A2A;
+    --color-footerbar: var(--footer-bar);
+    --color-lightturquoise:#F5E6C8;
+    --color-emeraldblue:#1C1915;
+    --color-citrusyellow:#C5A059;
+    --color-citrusyellowlight:rgba(197, 160, 89, 0.32);
+    --color-paleaqua:#F5E6C8;
+    --color-aquamist:#C5A059;
+    --color-caribbeanblue:#C5A059;
+	--color-eggshell:#F5E6C8;
+    --color-eggshelllight:rgba(197, 160, 89, 0.16);
+    --color-caribbeanlight:rgba(197, 160, 89, 0.31);
+    --color-bluelight:rgba(197, 160, 89, 0.1);
+    --color-amber:rgba(197, 160, 89, 0.1);
+    --color-aquagray:rgba(28, 25, 21, 0.2);
+	--color-middlegray:#3D3833;
+	--color-skyblue:#C5A059;
+	--color-darkcyan:#1C1915;
+	--color-input:#3D3833;
 
     /* FONTSIZE */
     --text-tiny: 10px;
@@ -123,26 +128,25 @@
     --bg1-gradient: 0deg, rgba(0, 0, 0, 0.56) 0%, rgba(255, 255, 255, 0) 90%;
     --bg2-gradient: to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.76) 73%;
     --bg3-gradient: 180deg, #FFFFFF 24.65%, #E0E0E0 100%;
-    --bg4-gradient: 180deg, rgba(12, 192, 206, 0) 40%, #066168 100%;
-    --st-blue-gradient: to bottom, rgb(83, 164, 192) 45%, rgb(255, 255, 255) 100%;
-    --st-pink-gradient: to bottom, rgb(255, 162, 182) 55%, rgb(255, 255, 255) 100%;
-    --st-green-gradient: to bottom, rgb(6, 97, 104) 46%, rgb(255, 255, 255) 100%;
-    --heading-gradient: 90deg, rgba(255, 170, 13, 0.1) 0%, rgba(6, 97, 104, 0.2) 100%;
-	--st-paleaqua-gradient: 90deg, rgba(255, 170, 13, 0.1) 0%, rgba(6, 97, 104, 0.2) 100%;
-	--st-paleaqua-gradient: 90deg, rgba(255, 170, 13, 0.1) 0%, rgba(6, 97, 104, 0.2) 100%;
+    --bg4-gradient: 180deg, rgba(197, 160, 89, 0) 40%, #1C1915 100%;
+    --st-blue-gradient: to bottom, rgb(197, 160, 89) 45%, rgb(255, 255, 255) 100%;
+    --st-pink-gradient: to bottom, rgb(245, 230, 200) 55%, rgb(255, 255, 255) 100%;
+    --st-green-gradient: to bottom, rgb(28, 25, 21) 46%, rgb(255, 255, 255) 100%;
+    --heading-gradient: 90deg, rgba(197, 160, 89, 0.1) 0%, rgba(28, 25, 21, 0.12) 100%;
+	--st-paleaqua-gradient: 90deg, rgba(197, 160, 89, 0.1) 0%, rgba(28, 25, 21, 0.12) 100%;
 
 
     /* SHADOW */
     --shadow-1: 0px 4px 4px rgba(0, 0, 0, 0.25);
     --shadow-2: 0px 4px 10px rgba(0, 0, 0, 0.25);
-    --shadow-step-bx1: 0px 28px 36px rgba(41, 137, 145, 0.2);
+    --shadow-step-bx1: 0px 28px 36px rgba(28, 25, 21, 0.12);
     --shadow-step-bx4: 0px 15px 8px -4px rgba(0, 0, 0, 0.05);
-    --shadow-circle-bx2: 0px 27px 35.9px rgba(41, 137, 145, 0.2);
-    --shadow-guide-bx1: 0px 18px 18px rgba(0, 106, 114, 0.1);
+    --shadow-circle-bx2: 0px 27px 35.9px rgba(28, 25, 21, 0.12);
+    --shadow-guide-bx1: 0px 18px 18px rgba(28, 25, 21, 0.08);
     --shadow-video-icon: 0 5px 10px 0 rgba(255, 255, 255, 0.5);
-    --shadow-trv-content: 0px 18px 18px rgba(0, 106, 114, 0.15);
-    --shadow-header: 0px 10px 30px 5px rgba(41, 137, 145, 0.13);
-    --shadow-trv-content3: 0px 18px 18px rgba(0, 106, 114, 0.15);
+    --shadow-trv-content: 0px 18px 18px rgba(28, 25, 21, 0.1);
+    --shadow-header: 0px 10px 30px 5px rgba(28, 25, 21, 0.18);
+    --shadow-trv-content3: 0px 18px 18px rgba(28, 25, 21, 0.1);
     
     --bld-num-drop-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 

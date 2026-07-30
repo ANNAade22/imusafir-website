@@ -18,18 +18,14 @@
     width: auto;
     z-index: 999;
     overflow: hidden;
-    border-radius: var(--radius-3xl);
-    background: linear-gradient(
-        180deg,
-        rgba(31, 26, 23, 0.78) 0%,
-        rgba(var(--primary-rgb), 0.68) 100%
-    );
-    backdrop-filter: blur(20px) saturate(180%);
-    -webkit-backdrop-filter: blur(20px) saturate(180%);
-    border: none;
+    border-radius: 1rem;
+    background: rgba(28, 25, 21, 0.42);
+    backdrop-filter: blur(18px) saturate(160%);
+    -webkit-backdrop-filter: blur(18px) saturate(160%);
+    border: 1px solid rgba(255, 255, 255, 0.14);
     box-shadow:
-        0 8px 32px rgba(31, 26, 23, 0.28),
-        0 2px 8px rgba(31, 26, 23, 0.12);
+        0 12px 40px rgba(28, 25, 21, 0.18),
+        0 2px 8px rgba(28, 25, 21, 0.08);
     transition:
         top 0.45s ease,
         left 0.45s ease,
@@ -44,20 +40,20 @@
         top: 1.25rem;
         left: 2.1875rem;
         right: 2.1875rem;
-        border-radius: var(--radius-4xl);
+        border-radius: 1.25rem;
     }
 }
 .site-header.sticky-header.is-fixed .main-bar-wraper > div {
     border-radius: inherit;
 }
 .site-header.sticky-header.is-fixed .navbar-nav a {
-    color: #fff;
+    color: #ffffff;
 }
 .site-header.sticky-header.is-fixed .navbar-nav a:hover {
-    color: var(--secondary);
+    color: var(--primary);
 }
 .site-header.sticky-header.is-fixed .quick-search {
-    color: #fff;
+    color: #ffffff;
 }
 .header-style-1.is-fixed {
     @apply fixed top-0 left-8.75 right-8.75 z-999;
@@ -106,6 +102,113 @@
     @apply h-10 sm:h-11 lg:h-12 w-auto max-w-none object-contain;
 }
 
+/* Brand wordmark (navbar) */
+.brand-lockup {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1;
+    text-decoration: none;
+}
+.brand-wordmark {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(1.15rem, 1.8vw, 1.5rem);
+    letter-spacing: 0.08em;
+    color: var(--heading-color);
+    text-transform: none;
+}
+.site-footer .brand-wordmark,
+.header-nav .brand-wordmark {
+    color: #ffffff;
+}
+.brand-global {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(0.55rem, 0.85vw, 0.7rem);
+    letter-spacing: 0.35em;
+    color: var(--primary);
+    text-transform: uppercase;
+    margin-top: 0.2rem;
+}
+.brand-lockup--center {
+    align-items: center;
+    text-align: center;
+}
+.brand-lockup--footer .brand-wordmark {
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+}
+.brand-lockup--footer .brand-global {
+    font-size: clamp(0.65rem, 1vw, 0.8rem);
+}
+.brand-tagline {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.625rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-top: 0.75rem;
+}
+
+.site-header.site-header--brand {
+    left: 0.75rem;
+    right: 0.75rem;
+    top: 0.75rem;
+    width: auto;
+    border-radius: 1rem;
+    background: rgba(28, 25, 21, 0.42);
+    backdrop-filter: blur(18px) saturate(160%);
+    -webkit-backdrop-filter: blur(18px) saturate(160%);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    box-shadow:
+        0 12px 40px rgba(28, 25, 21, 0.18),
+        0 2px 8px rgba(28, 25, 21, 0.08);
+    overflow: hidden;
+}
+@media (min-width: 992px) {
+    .site-header.site-header--brand {
+        left: 2.1875rem;
+        right: 2.1875rem;
+        top: 2.1875rem;
+        border-radius: 1.25rem;
+    }
+}
+.site-header.site-header--brand .main-bar-wraper > div {
+    border-radius: inherit;
+    min-height: 4.5rem;
+}
+.site-header.site-header--brand .brand-wordmark {
+    color: #ffffff;
+}
+.site-header.site-header--brand .xmenu-toggler span {
+    background-color: #ffffff;
+}
+.site-header.site-header--brand .navbar-nav a {
+    color: #ffffff !important;
+    font-size: 0.875rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.site-header.site-header--brand .navbar-nav a:hover {
+    color: var(--primary) !important;
+}
+.site-header.site-header--brand .header-nav {
+    background: transparent;
+}
+@media (max-width: 991px) {
+    .site-header.site-header--brand .header-nav {
+        background: var(--rich-black) !important;
+        border-radius: 0;
+    }
+    .site-header.site-header--brand .navbar-nav li {
+        border-color: rgba(255, 255, 255, 0.1) !important;
+    }
+    .site-header.site-header--brand .navbar-nav a {
+        color: #fff !important;
+    }
+}
+
 .info-tab-trigger {
     @apply fixed top-1/2 z-[99999] cursor-pointer normal-case font-title font-medium border-0 duration-500;
     right: 0;
@@ -116,19 +219,19 @@
     padding-inline: 1.25rem;
     font-size: 0.625rem;
     letter-spacing: 0.06em;
-    color: #C9A24D;
-    background: rgba(15, 12, 10, 0.72);
+    color: #C5A059;
+    background: rgba(28, 25, 21, 0.88);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border-left: 1px solid rgba(201, 162, 77, 0.35);
-    border-radius: 6px 0 0 6px;
-    box-shadow: -4px 0 14px rgba(0, 0, 0, 0.35);
+    border-left: 1px solid rgba(197, 160, 89, 0.35);
+    border-radius: 2px 0 0 2px;
+    box-shadow: -4px 0 14px rgba(28, 25, 21, 0.35);
 }
 .info-tab-trigger:hover {
-    color: #E8C872;
-    background: rgba(15, 12, 10, 0.85);
-    border-left-color: rgba(201, 162, 77, 0.6);
-    box-shadow: -6px 0 18px rgba(0, 0, 0, 0.45);
+    color: #D4B87A;
+    background: rgba(28, 25, 21, 0.96);
+    border-left-color: rgba(197, 160, 89, 0.6);
+    box-shadow: -6px 0 18px rgba(28, 25, 21, 0.45);
 }
 
 @media (width < 992px) {

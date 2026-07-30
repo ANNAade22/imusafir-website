@@ -1,5 +1,6 @@
 .site-button {
-    @apply outline-none text-black font-medium py-3.75 px-7.5 relative overflow-hidden cursor-pointer inline-flex bg-secondary border-0 text-lg duration-500 whitespace-nowrap  rounded-full;
+    @apply outline-none text-richblack font-medium py-3.75 px-7.5 relative overflow-hidden cursor-pointer inline-flex bg-primary border-0 text-sm duration-300 whitespace-nowrap uppercase tracking-[0.12em];
+    border-radius: 2px;
 }
 .site-button.butn-bg-shape:after {
     @apply content-[''] bg-white h-40 opacity-0 absolute -top-12.5 rotate-[35deg] w-10;
@@ -11,37 +12,35 @@
     @apply -left-full;
 }
 .site-button:hover, .site-button:active {
-    @apply -translate-y-0.75 text-white shadow-[0_10px_20px_0_rgba(0,0,0,0.3)]; 
+    @apply bg-richblack text-primary;
 }
 .site-button.butn-bg-shape:hover:after {
     @apply left-[200%] opacity-60;
 }
 .site-button.outline {
-    @apply bg-transparent text-primary rounded-full border-2 border-secondary py-2 px-6.25 text-sm;
+    @apply bg-transparent text-primary border border-primary py-2.5 px-6.25 text-sm;
+    border-radius: 2px;
 }
 .site-button.outline:after {
-    @apply content-[''] bg-secondary h-40 opacity-0 absolute -top-12.5 rotate-[35deg] duration-[900ms] w-10;
+    @apply content-[''] bg-primary h-40 opacity-0 absolute -top-12.5 rotate-[35deg] duration-[900ms] w-10;
 }
 .site-button.outline:after {
     @apply -left-full;
 }
 .site-button.outline:hover {
-	@apply text-citrusyellow border-white;
+	@apply bg-primary text-richblack border-primary;
 }
 .site-button.outline:hover::after {
-    @apply left-[200%] opacity-60;
-}
-.site-button:hover, .site-button:active {
-    @apply -translate-y-0.75 text-white shadow-[0_10px_20px_0_rgba(0,0,0,0.3)];
+    @apply left-[200%] opacity-40;
 }
 button.scroltop {
-    @apply size-10 bg-[#1d1b18] border-none fixed right-3.75 bottom-3.75 uppercase m-0 p-0 cursor-pointer text-center z-999 !text-white;
+    @apply size-10 bg-richblack border border-primary/40 fixed right-3.75 bottom-3.75 uppercase m-0 p-0 cursor-pointer text-center z-999 !text-primary;
 }
 button.scroltop span {
     @apply block text-2xl;
 }
 .site-button.btn-white {
-    @apply text-primary bg-white;
+    @apply text-richblack bg-white;
 }
 .site-button.btn-white.butn-bg-shape:after {
     @apply content-[''] bg-secondary h-40 opacity-0 absolute -top-12.5 rotate-[35deg] w-10;
@@ -51,4 +50,27 @@ button.scroltop span {
 }
 .site-button.btn-white.butn-bg-shape:hover:after {
     @apply opacity-60;
+}
+.site-button.btn-white:hover {
+    @apply bg-richblack text-primary;
+}
+
+/* Animated gold underline for content links */
+.brand-link {
+    @apply relative text-inherit no-underline;
+}
+.brand-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 1px;
+    background: var(--primary);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s ease;
+}
+.brand-link:hover::after {
+    transform: scaleX(1);
 }

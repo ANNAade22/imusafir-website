@@ -1,0 +1,137 @@
+/* Scoped to .women-strategy-stories — brand gold / espresso */
+
+.women-strategy-stories {
+    --wss-bg: #f5e6c8;
+    --wss-heading: #1c1915;
+    --wss-panel-idle: #ffffff;
+    --wss-panel-active: #1c1915;
+    --wss-gold: #c5a059;
+    --wss-label: #1c1915;
+    font-family: "Inter", "Montserrat", sans-serif;
+    background-color: var(--wss-bg) !important;
+}
+
+.women-strategy-stories__heading {
+    font-family: "Playfair Display", "Georgia", serif;
+}
+
+.women-strategy-stories__eyebrow {
+    font-family: "Playfair Display", "Georgia", serif;
+}
+
+.women-strategy-stories__card {
+    width: 220px;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: width 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: width;
+}
+
+.women-strategy-stories__card.is-active {
+    width: 520px;
+}
+
+.women-strategy-stories__card:focus-visible {
+    outline: 2px solid var(--wss-gold);
+    outline-offset: 4px;
+    border-radius: 24px;
+}
+
+.women-strategy-stories__panel {
+    background-color: var(--wss-panel-idle);
+    transition: background-color 0.45s ease;
+}
+
+.women-strategy-stories__card.is-active .women-strategy-stories__panel {
+    background-color: var(--wss-panel-active);
+}
+
+.women-strategy-stories__role {
+    color: var(--wss-gold) !important;
+}
+
+.women-strategy-stories__label {
+    color: var(--wss-label) !important;
+}
+
+.women-strategy-stories__badge-icon {
+    color: var(--wss-gold) !important;
+}
+
+.women-strategy-stories__content {
+    flex: 0 0 0;
+    width: 0;
+    min-width: 0;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(40px);
+    transition:
+        opacity 0.5s cubic-bezier(0.23, 1, 0.32, 1),
+        transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.women-strategy-stories__card.is-active .women-strategy-stories__content {
+    flex: 1 1 0;
+    width: auto;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0);
+}
+
+@media (max-width: 1023px) {
+    .women-strategy-stories__card,
+    .women-strategy-stories__card.is-active {
+        width: min(520px, 100%);
+        max-width: 520px;
+    }
+
+    .women-strategy-stories__row {
+        width: 100%;
+    }
+
+    .women-strategy-stories__panel {
+        height: auto;
+        min-height: 240px;
+    }
+
+    .women-strategy-stories__image {
+        height: 220px;
+        width: 100% !important;
+    }
+
+    .women-strategy-stories__content {
+        flex: 0 0 auto;
+        width: 100%;
+        max-height: 0;
+        opacity: 0;
+        transform: translateY(16px);
+    }
+
+    .women-strategy-stories__card.is-active .women-strategy-stories__panel {
+        min-height: 420px;
+    }
+
+    .women-strategy-stories__card.is-active .women-strategy-stories__content {
+        max-height: 320px;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .women-strategy-stories__card.is-active .women-strategy-stories__panel {
+        height: 420px;
+        min-height: 420px;
+    }
+
+    .women-strategy-stories__card.is-active .women-strategy-stories__image {
+        height: 100%;
+        width: 196px !important;
+    }
+
+    .women-strategy-stories__card.is-active .women-strategy-stories__content {
+        max-height: none;
+        width: auto;
+    }
+}

@@ -54,7 +54,7 @@ input[type=number] {
 }
 #contact-form select.contact-field {
   @apply appearance-none cursor-pointer pr-10 bg-no-repeat bg-[length:0.65rem] bg-[position:right_1rem_center];
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%23047881' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%23C5A059' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
 }
 #contact-form textarea.contact-field {
   @apply min-h-28 h-auto py-3 resize-y leading-relaxed;

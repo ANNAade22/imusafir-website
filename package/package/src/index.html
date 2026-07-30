@@ -45,11 +45,12 @@
     
 
     <link rel="preload" as="image" href="assets/images/hero-slide-nyc.webp" type="image/webp" fetchpriority="high">
-    <link rel="preload" href="assets/fonts/figtree-600.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="assets/fonts/figtree-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/montserrat-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/montserrat-600.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/playfair-display-600.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="assets/fonts/great-vibes-400.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="assets/css/fonts.css">
-    <link rel="stylesheet" href="assets/css/style.css?v=20260617c">
+    <link rel="stylesheet" href="assets/css/style.css?v=20260731a">
     <link rel="stylesheet" href="assets/icons/fontawesome/css/all.min.css">
     <link rel="preload" href="assets/vendor/swiper/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css"></noscript>
@@ -68,89 +69,63 @@
 <button type="button" class="info-tab-trigger toggle-nav-btn" data-drawer="#offcanvas-right" data-drawer-placement="right" aria-label="Open invitation panel">Info</button>
 	<div class="page-wraper">
 	
-        <header class="site-header sticky-header absolute lg:left-8.75 lg:right-8.75 lg:top-8.75 left-0 right-0 top-0 duration-500 z-999 [.site-header.is-fixed]:animate-header-scroll-animation">
+        <header class="site-header site-header--brand sticky-header absolute left-3 right-3 top-3 lg:left-8.75 lg:right-8.75 lg:top-8.75 duration-500 z-999">
     <div class="main-bar-wraper">
-        <div class="w-full lg:min-h-30 min-h-20 lg:ps-8.75 px-4 lg:pe-13.75 duration-500 rounded-5xl flex items-center justify-between">
-            <div class="flex relative w-full">
-                <div class="flex items-center relative z-9 h-20 lg:w-auto w-auto shrink-0">
-                    <a href="index.html" class="table-cell align-middle">
-                        <img src="assets/images/logo-dark.png" alt="logo" class="object-contain duration-500" fetchpriority="high" width="193" height="81">
+        <div class="w-full min-h-18 lg:min-h-20 px-4 lg:px-10 flex items-center justify-between">
+            <div class="flex relative w-full items-center">
+                <div class="flex items-center relative z-9 h-16 lg:h-20 shrink-0">
+                    <a href="index.html" class="brand-lockup" aria-label="iMUSAFIR GLOBAL home">
+                        <span class="brand-wordmark">iMUSAFIR</span>
+                        <span class="brand-global">GLOBAL</span>
                     </a>
                 </div>
-                <button class="xmenu-toggler lg:hidden float-right mt-4.5 mb-4 md:ml-7 ml-4 size-11 bg-dark-600 relative cursor-pointer max-lg:order-1 max-lg:ms-auto" type="button">
-                    <span class="block absolute left-2.5 h-0.5 rounded-px bg-white duration-300 top-3.25 w-5.5"></span>
-                    <span class="block absolute left-2.5 h-0.5 rounded-px bg-white duration-0 top-5.5 w-6.25"></span>
-                    <span class="block absolute left-2.5 h-0.5 rounded-px bg-white duration-300 top-8 w-4"></span>
+                <button class="xmenu-toggler lg:hidden float-right mt-2 mb-2 md:ml-7 ml-4 size-11 relative cursor-pointer max-lg:order-1 max-lg:ms-auto" type="button" aria-label="Open menu">
+                    <span class="block absolute left-2.5 h-0.5 rounded-px bg-heading duration-300 top-3.25 w-5.5"></span>
+                    <span class="block absolute left-2.5 h-0.5 rounded-px bg-heading duration-0 top-5.5 w-6.25"></span>
+                    <span class="block absolute left-2.5 h-0.5 rounded-px bg-heading duration-300 top-8 w-4"></span>
                 </button>
                 <div class="lg:hidden fixed top-0 left-0 bg-black size-full duration-300 z-999 opacity-0 visible pointer-events-none menu-close fade-overlay"></div>
-                <div class="flex lg:justify-center lg:basis-auto lg:grow max-lg:flex-col justify-start font-base max-lg:fixed max-lg:h-screen max-lg:px-5 max-lg:top-0 max-lg:-left-75 max-lg:z-9999 max-lg:bg-white max-lg:w-72 max-lg:overflow-auto max-lg:duration-700 header-nav custom-scroll">
+                <div class="flex lg:justify-center lg:basis-auto lg:grow max-lg:flex-col justify-start font-base max-lg:fixed max-lg:h-screen max-lg:px-5 max-lg:top-0 max-lg:-left-75 max-lg:z-9999 max-lg:bg-richblack max-lg:w-72 max-lg:overflow-auto max-lg:duration-700 header-nav custom-scroll">
                     <div class="flex items-center relative z-9 py-6.25 lg:hidden">
-                        <a href="index.html" class="table-cell align-middle">
-                            <img src="assets/images/logo-dark.png" alt="" class="object-contain duration-500">
+                        <a href="index.html" class="brand-lockup" aria-label="iMUSAFIR GLOBAL home">
+                            <span class="brand-wordmark">iMUSAFIR</span>
+                            <span class="brand-global">GLOBAL</span>
                         </a>
                     </div>
                     <ul class="lg:flex flex-wrap navbar-nav">
-                        <li class="lg:inline-block block max-lg:border-b max-lg:border-gray-200 relative group">
-                            <a class="lg:py-7.5 py-2 xl:px-5 lg:px-2 relative lg:inline-block block text-lg font-medium lg:text-white text-primary hover:text-secondary" href="index.html">
+                        <li class="lg:inline-block block max-lg:border-b max-lg:border-white/10 relative group">
+                            <a class="lg:py-6 py-3 xl:px-5 lg:px-3 relative lg:inline-block block" href="index.html">
                                 <span class="inline-block">Home</span>
                             </a>
                         </li>
-                        <li class="lg:inline-block block max-lg:border-b max-lg:border-gray-200 relative group">
-                            <a class="lg:py-7.5 py-2 xl:px-5 lg:px-2 relative lg:inline-block block text-lg font-medium lg:text-white text-primary hover:text-secondary" href="gallery.html">
+                        <li class="lg:inline-block block max-lg:border-b max-lg:border-white/10 relative group">
+                            <a class="lg:py-6 py-3 xl:px-5 lg:px-3 relative lg:inline-block block" href="gallery.html">
                                 <span class="inline-block">Gallery</span>
                             </a>
                         </li>
-<li class="lg:inline-block block max-lg:border-b max-lg:border-gray-200 relative group">
-                            <a class="lg:py-7.5 py-2 xl:px-5 lg:px-2 relative lg:inline-block block text-lg font-medium lg:text-white text-primary hover:text-secondary" href="indonesia-2026.html">
+                        <li class="lg:inline-block block max-lg:border-b max-lg:border-white/10 relative group">
+                            <a class="lg:py-6 py-3 xl:px-5 lg:px-3 relative lg:inline-block block" href="indonesia-2026.html">
                                 <span class="inline-block">Indonesia 2026</span>
                             </a>
                         </li>
-<li class="lg:inline-block block max-lg:border-b max-lg:border-gray-200 relative group">
-                            <a class="lg:py-7.5 py-2 xl:px-5 lg:px-2 relative lg:inline-block block text-lg font-medium lg:text-white text-primary hover:text-secondary" href="contact.html">
+                        <li class="lg:inline-block block max-lg:border-b max-lg:border-white/10 relative group">
+                            <a class="lg:py-6 py-3 xl:px-5 lg:px-3 relative lg:inline-block block" href="contact.html">
                                 <span class="inline-block">Contact</span>
                             </a>
                         </li>
                     </ul>
                     <div class="lg:hidden block max-lg:p-5 text-center mt-auto">
-                        <ul>
-                            <li class="inline-block mx-0.5">
-                                <a class="size-10 !leading-10 border border-black/10 text-center text-primary fab fa-facebook-f" target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/profile.php?id=61590921115006"></a>
-                            </li>
-                            <li class="inline-block mx-0.5">
-                                <a class="size-10 !leading-10 border border-black/10 text-center text-primary fab fa-x-twitter" target="_blank" rel="noopener noreferrer" href="https://x.com/iMusafirGlobal"></a>
-                            </li>
-                            <li class="inline-block mx-0.5">
-                                <a class="size-10 !leading-10 border border-black/10 text-center text-primary fab fa-tiktok" target="_blank" rel="noopener noreferrer" href="https://www.tiktok.com/@imusafir.com"></a>
-                            </li>
-                            <li class="inline-block mx-0.5">
-                                <a class="size-10 !leading-10 border border-black/10 text-center text-primary fab fa-instagram" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/imusafir.global/"></a>
-                            </li>
+                        <a href="contact.html" class="site-button butn-bg-shape w-full justify-center">Join the Network</a>
+                        <ul class="site-footer__social mt-6 justify-center">
+                            <li><a href="https://www.facebook.com/profile.php?id=61590921115006" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href="https://x.com/iMusafirGlobal" target="_blank" rel="noopener noreferrer" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a></li>
+                            <li><a href="https://www.tiktok.com/@imusafir.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a></li>
+                            <li><a href="https://www.instagram.com/imusafir.global/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="hidden lg:flex items-center shrink-0 z-9 h-20 xl:pl-6 ml-auto">
-                    <ul class="flex items-center">
-                        <li class="inline-flex size-10.5 bg-citrusyellow mr-1.5 rounded-4xl justify-center items-center duration-500 hover:rounded-2lg group">
-                            <a class="inline-flex size-9 bg-primary rounded-4xl justify-center items-center duration-500 text-white text-lg group-hover:rounded-2lg" href="https://x.com/iMusafirGlobal" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
-                                <i class="fa-brands fa-x-twitter group-hover:rotate-y-[360deg] group-hover:scale-[1.2] !inline-block duration-[0.5s] group-hover:text-citrusyellow"></i>
-                            </a>
-                        </li>
-                        <li class="inline-flex size-10.5 bg-citrusyellow mr-1.5 rounded-4xl justify-center items-center duration-500 hover:rounded-2lg group">
-                            <a class="inline-flex size-9 bg-primary rounded-4xl justify-center items-center duration-500 text-white text-lg group-hover:rounded-2lg" href="https://www.facebook.com/profile.php?id=61590921115006" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                                <i class="fa-brands fa-facebook group-hover:rotate-y-[360deg] group-hover:scale-[1.2] !inline-block duration-[0.5s] group-hover:text-citrusyellow"></i>
-                            </a>
-                        </li>
-                        <li class="inline-flex size-10.5 bg-citrusyellow mr-1.5 rounded-4xl justify-center items-center duration-500 hover:rounded-2lg group">
-                            <a class="inline-flex size-9 bg-primary rounded-4xl justify-center items-center duration-500 text-white text-lg group-hover:rounded-2lg" href="https://www.instagram.com/imusafir.global/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                                <i class="fa-brands fa-instagram group-hover:rotate-y-[360deg] group-hover:scale-[1.2] !inline-block duration-[0.5s] group-hover:text-citrusyellow"></i>
-                            </a>
-                        </li>
-                        <li class="inline-flex size-10.5 bg-citrusyellow rounded-4xl justify-center items-center duration-500 hover:rounded-2lg group">
-                            <a class="inline-flex size-9 bg-primary rounded-4xl justify-center items-center duration-500 text-white text-lg group-hover:rounded-2lg" href="https://www.tiktok.com/@imusafir.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
-                                <i class="fa-brands fa-tiktok group-hover:rotate-y-[360deg] group-hover:scale-[1.2] !inline-block duration-[0.5s] group-hover:text-citrusyellow"></i>
-                            </a>
-                        </li>
-                    </ul>
+                    <a href="contact.html" class="site-button butn-bg-shape">Join the Network</a>
                 </div>
             </div>
         </div>
@@ -162,7 +137,7 @@
 		    <div>
                 <!-- CONTENT START -->
                 <div class="page-content">
-                    <!-- Hero — Positioning First -->
+                    <!-- Hero �� Positioning First -->
                     <section class="hero-positioning min-h-svh overflow-hidden relative flex flex-col" aria-label="Hero">
                         <div class="hero-positioning__bg" aria-hidden="true">
                             <picture class="hero-positioning__bg-slide">
@@ -181,56 +156,53 @@
                                 <img src="assets/images/cloud-2.png" alt="" class="w-auto max-w-none opacity-80" width="297" height="225" loading="lazy" decoding="async">
                             </div>
                         </div>
-                        <div class="relative z-2 flex-1 flex flex-col justify-between w-full">
-                            <div class="container mx-auto px-5 md:px-10 xl:px-17.5 pt-36 pb-12 md:pt-44 md:pb-16 lg:pt-48 lg:pb-20 flex-1 flex flex-col justify-center max-w-[90rem]">
-                                <p class="hero-positioning__eyebrow"><span class="hero-positioning__eyebrow-text">Curated global access</span></p>
+                        <div class="relative z-2 flex-1 flex flex-col justify-center w-full">
+                            <div class="container mx-auto px-5 md:px-10 xl:px-17.5 pt-36 pb-8 md:pt-44 md:pb-10 lg:pt-48 lg:pb-12 flex-1 flex flex-col justify-center max-w-[90rem]">
+                                <span class="hero-positioning__gold-rule" aria-hidden="true"></span>
                                 <h1 class="hero-positioning__headline">
                                     <span class="hero-positioning__headline-line" style="--line-delay: 0.05s">Access the people, places, and</span>
                                     <span class="hero-positioning__headline-line" style="--line-delay: 0.1s"><span class="hero-positioning__headline-accent">opportunities</span> shaping tomorrow</span>
                                 </h1>
+                                <span class="hero-positioning__gold-rule mb-8" aria-hidden="true"></span>
                                 <p class="hero-positioning__subheadline">We connect entrepreneurs, investors, professionals, and communities through curated international experiences that create relationships, partnerships, and opportunities across borders.</p>
                                 <div class="hero-positioning__actions">
-                                    <a href="contact.html" class="site-button butn-bg-shape">Request access</a>
+                                    <a href="contact.html" class="site-button butn-bg-shape">Join the Network</a>
                                     <a href="#experiences" class="hero-positioning__cta-secondary">View experiences</a>
                                 </div>
                             </div>
-                            <div class="hero-positioning__scroll" aria-hidden="true">
-                                <span class="hero-positioning__scroll-text">Explore</span>
-                                <span class="hero-positioning__scroll-line"></span>
-                            </div>
-                            <div class="hero-positioning__stats">
-                                <div class="container mx-auto px-5 md:px-10 xl:px-17.5 max-w-[90rem]">
-                                    <div class="hero-positioning__stats-grid">
-                                        <div class="hero-stat">
-                                            <span class="hero-stat__value">25+</span>
-                                            <span class="hero-stat__label">Countries</span>
-                                        </div>
-                                        <div class="hero-stat">
-                                            <span class="hero-stat__value">500+</span>
-                                            <span class="hero-stat__label">Connections created</span>
-                                        </div>
-                                        <div class="hero-stat">
-                                            <span class="hero-stat__value">Global</span>
-                                            <span class="hero-stat__label">Experiences</span>
-                                        </div>
-                                        <div class="hero-stat">
-                                            <span class="hero-stat__value">Private</span>
-                                            <span class="hero-stat__label">Access</span>
-                                        </div>
+                        </div>
+                        <div class="brand-stats brand-stats--hero relative z-2" aria-label="Key figures">
+                            <div class="container mx-auto px-5 md:px-10 xl:px-17.5 max-w-[90rem]">
+                                <div class="brand-stats__grid">
+                                    <div>
+                                        <span class="brand-stats__value">25+</span>
+                                        <span class="brand-stats__label">Countries</span>
+                                    </div>
+                                    <div>
+                                        <span class="brand-stats__value">500+</span>
+                                        <span class="brand-stats__label">Connections created</span>
+                                    </div>
+                                    <div>
+                                        <span class="brand-stats__value">Global</span>
+                                        <span class="brand-stats__label">Experiences</span>
+                                    </div>
+                                    <div>
+                                        <span class="brand-stats__value">Private</span>
+                                        <span class="brand-stats__label">Access</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </section>
                     <!-- Hero End -->
-                    
+
                     <!--POPULAR DESTINATION SECTION START-->
-                    <div id="experiences" class="relative overflow-hidden md:pb-22.5 pb-10 md:pt-30 pt-17.5 bg-contain bg-[bottom_center] bg-repeat-x bg-[url(../images/background/Cloud-bg.png)]">
+                    <div id="experiences" class="relative overflow-hidden section-pad section-light section-divider bg-contain bg-[bottom_center] bg-repeat-x">
     <div class="container">
         <!-- TITLE START-->
         <div class="text-center max-w-150 mx-auto md:mb-15 mb-7.5">
             <h2 class="xl:text-46 md:text-40 text-3xl mb-2.5"><span class="text-citrusyellow">Global </span>Destinations</h2>
-            <p class="text-base">Curated business delegations across the world's most dynamic markets</p>
+            <p class="text-base text-bodycolor">Curated business delegations across the world's most dynamic markets</p>
             <div class="-mt-7">
                 <img src="assets/images/background/Title-Separator.png" alt="Image" class="w-117.5 inline-block" width="470" height="70">
             </div>
@@ -379,24 +351,24 @@
     <div class="absolute -right-13.75 top-2/5 w-27.5 animate-slide-top"><img src="assets/images/hotballon-right.png" alt="image"  width="110" height="166"></div>
 </div>
                     <!--POPULAR DESTINATION SECTION END-->
-                    
+
                     <!--WE RECOMMEND SECTION START-->
-                    <div class="bg-paleaqua lg:pt-30">
+                    <div class="section-light section-pad section-divider lg:pt-30 !pb-0">
     <div class="container">
         <div class="grid grid-cols-12">
             <div class="xl:col-span-5 lg:col-span-7 col-span-12 px-3.75 max-lg:mb-40">
                 <div class="2xl:mb-30 mb-10 relative">
                     <!-- TITLE START-->
-                    <div class="text-left 2xl:mb-15 mb-10">
-                        <h2 class="xl:text-46 md:text-40 text-3xl mb-2.5">Travel With <span class="text-citrusyellow">Purpose</span>. Connect With Opportunity.</h2>
-                        <p class="2xl:mb-12.5 mb-7 sm:pr-8.75 text-base">iMusafir connects entrepreneurs, professionals, and investors through curated international business and luxury travel experiences. We help people discover opportunities, build global connections, and explore the world with purpose.
+                    <div class="text-left mb-0">
+                        <h2 class="xl:text-46 md:text-40 text-3xl">Travel With <span class="text-citrusyellow">Purpose</span>. Connect With Opportunity.</h2>
+                        <p class="mb-5 sm:pr-8.75 text-base">iMusafir connects entrepreneurs, professionals, and investors through curated international business and luxury travel experiences. We help people discover opportunities, build global connections, and explore the world with purpose.
                         </p>
                     </div>
                     <!-- TITLE END-->
                     <div class="mb-5 flex max-sm:flex-wrap">
                         <div class="sm:w-35 w-full sm:h-51 h-40 p-2.25 bg-white rounded-3xl flex min-w-35 sm:mr-7.5 max-sm:mb-10">
                             <div class="bg-primary shadow-[0px_4px_4px_rgba(0,0,0,0.25)] p-2.5 rounded-2xxl text-center flex flex-col items-center justify-center w-full">
-                                <span class="text-38 text-citrusyellow font-black block">24/7</span>
+                                <span class="text-38 text-richblack font-black block">24/7</span>
                                 <span class="text-white text-2xl font-title font-medium block">Guide Support</span>
                             </div> 
                         </div>
@@ -472,8 +444,8 @@
                     <!--WE RECOMMEND SECTION END-->
                     
                     <!-- CLIENT LOGO SECTION START -->
-                    <div class="p-5 bg-paleaqua">
-    <div class="py-5 bg-white border-4 border-dashed border-paleaqua">
+                    <div class="p-5 section-gold">
+    <div class="py-5">
         <div class="container">
             <div class="grid grid-cols-12 items-center">
                 <div class="xl:col-span-3 col-span-12">
@@ -486,52 +458,52 @@
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="text-center">
-                                    <a href="contact.html"><img src="assets/images/client-logo/dark/1.png" class="w-auto h-11.25 mx-auto opacity-40" alt="img" width="339" height="82" loading="lazy"></a>
+                                    <a href="contact.html" aria-label="Minken Africa"><img src="assets/images/client-logo/dark/minken-africa.png" class="w-auto h-11.25 mx-auto opacity-70 transition-opacity hover:opacity-100" alt="Minken Africa" width="568" height="185" loading="lazy"></a>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="text-center">
-                                    <a href="contact.html"><img src="assets/images/client-logo/dark/2.png" class="w-auto h-11.25 mx-auto opacity-40" alt="img" width="232" height="91" loading="lazy"></a>
+                                    <a href="contact.html" aria-label="Ministry of Trade, Republic of Indonesia"><img src="assets/images/client-logo/dark/ministry-trade-indonesia.png" class="w-auto h-11.25 mx-auto opacity-70 transition-opacity hover:opacity-100" alt="Ministry of Trade, Republic of Indonesia" width="715" height="228" loading="lazy"></a>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="text-center">
-                                    <a href="contact.html"><img src="assets/images/client-logo/dark/3.png" class="w-auto h-11.25 mx-auto opacity-40" alt="img" width="389" height="91" loading="lazy"></a>
+                                    <a href="contact.html" aria-label="AHERO — Accelerating Her Rights Organization"><img src="assets/images/client-logo/dark/ahero.png" class="w-auto h-14 mx-auto opacity-70 transition-opacity hover:opacity-100" alt="AHERO — Accelerating Her Rights Organization" width="794" height="696" loading="lazy"></a>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="text-center">
-                                    <a href="contact.html"><img src="assets/images/client-logo/dark/4.png" class="w-auto h-11.25 mx-auto opacity-40" alt="img" width="219" height="91" loading="lazy"></a>
+                                    <a href="contact.html" aria-label="Saitaj Naturals"><img src="assets/images/client-logo/dark/saitaj-naturals.png" class="w-auto h-11.25 mx-auto opacity-70 transition-opacity hover:opacity-100" alt="Saitaj Naturals" width="642" height="192" loading="lazy"></a>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="text-center">
-                                    <a href="contact.html"><img src="assets/images/client-logo/dark/5.png" class="w-auto h-11.25 mx-auto opacity-40" alt="img" width="211" height="91" loading="lazy"></a>
+                                    <a href="contact.html" aria-label="Himil"><img src="assets/images/client-logo/dark/himil.png" class="w-auto h-11.25 mx-auto opacity-70 transition-opacity hover:opacity-100" alt="Himil" width="823" height="240" loading="lazy"></a>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="text-center">
-                                    <a href="contact.html"><img src="assets/images/client-logo/dark/1.png" class="w-auto h-11.25 mx-auto opacity-40" alt="img" width="339" height="81" loading="lazy"></a>
+                                    <a href="contact.html" aria-label="Minken Africa"><img src="assets/images/client-logo/dark/minken-africa.png" class="w-auto h-11.25 mx-auto opacity-70 transition-opacity hover:opacity-100" alt="Minken Africa" width="568" height="185" loading="lazy"></a>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="text-center">
-                                    <a href="contact.html"><img src="assets/images/client-logo/dark/2.png" class="w-auto h-11.25 mx-auto opacity-40" alt="img" width="232" height="91" loading="lazy"></a>
+                                    <a href="contact.html" aria-label="Ministry of Trade, Republic of Indonesia"><img src="assets/images/client-logo/dark/ministry-trade-indonesia.png" class="w-auto h-11.25 mx-auto opacity-70 transition-opacity hover:opacity-100" alt="Ministry of Trade, Republic of Indonesia" width="715" height="228" loading="lazy"></a>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="text-center">
-                                    <a href="contact.html"><img src="assets/images/client-logo/dark/3.png" class="w-auto h-11.25 mx-auto opacity-40" alt="img" width="339" height="91" loading="lazy"></a>
+                                    <a href="contact.html" aria-label="AHERO — Accelerating Her Rights Organization"><img src="assets/images/client-logo/dark/ahero.png" class="w-auto h-14 mx-auto opacity-70 transition-opacity hover:opacity-100" alt="AHERO — Accelerating Her Rights Organization" width="794" height="696" loading="lazy"></a>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="text-center">
-                                    <a href="contact.html"><img src="assets/images/client-logo/dark/4.png" class="w-auto h-11.25 mx-auto opacity-40" alt="img" width="219" height="91" loading="lazy"></a>
+                                    <a href="contact.html" aria-label="Saitaj Naturals"><img src="assets/images/client-logo/dark/saitaj-naturals.png" class="w-auto h-11.25 mx-auto opacity-70 transition-opacity hover:opacity-100" alt="Saitaj Naturals" width="642" height="192" loading="lazy"></a>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="text-center">
-                                    <a href="contact.html"><img src="assets/images/client-logo/dark/5.png" class="w-auto h-11.25 mx-auto opacity-40" alt="img" width="211" height="91" loading="lazy"></a>
+                                    <a href="contact.html" aria-label="Himil"><img src="assets/images/client-logo/dark/himil.png" class="w-auto h-11.25 mx-auto opacity-70 transition-opacity hover:opacity-100" alt="Himil" width="823" height="240" loading="lazy"></a>
                                 </div>
                             </div>
                         </div>
@@ -544,7 +516,7 @@
                     <!-- CLIENT LOGO  SECTION End -->
                     
                     <!--WE OFFER SERVICES SECTION START-->
-                    <div class="bg-primary relative overflow-hidden sm:pb-22.5 pb-10 sm:pt-30 pt-17.5 before:absolute before:left-0 before:right-0 before:bottom-0 before:z-0 2xl:before:h-55 sm:before:h-40 before:h-0 before:bg-lightturquoise">
+                    <div class="section-light section-pad !pb-0 -mb-8 md:-mb-12 section-divider relative overflow-hidden before:absolute before:left-0 before:right-0 before:bottom-0 before:z-0 2xl:before:h-40 sm:before:h-28 before:h-0 before:bg-body-bg">
     <div class="container">
         <div class="relative z-1">
             <div class="grid grid-cols-12">
@@ -561,8 +533,8 @@
                 <div class="lg:col-span-7 col-span-12 px-3.75">
                     <div class="trv-we-off-content">
                         <div class="lg:mr-22.5 text-left mb-15">
-                            <h2 class="!text-white xl:text-46 md:text-40 text-3xl mb-2.5">We Offer Best <span class="text-citrusyellow">Services</span></h2>
-                            <p class="text-paleaqua mb-12.5 text-base">Unlocking Global Business Through Meaningful Travel. iMusafir delivers curated international business and luxury travel experiences for entrepreneurs and investors.</p>
+                            <h2 class="xl:text-46 md:text-40 text-3xl mb-2.5">We Offer Best <span class="text-citrusyellow">Services</span></h2>
+                            <p class="text-bodycolor mb-12.5 text-base">Unlocking Global Business Through Meaningful Travel. iMusafir delivers curated international business and luxury travel experiences for entrepreneurs and investors.</p>
                         </div>
                         <div class="grid grid-cols-12 gap-7.5">
                             <div class="xl:col-span-4 md:col-span-6 col-span-12 mb-10">
@@ -576,8 +548,8 @@
                                         <h4 class="mb-3.75 text-2xl">Business Immersion</h4>
                                         <p class="p-text">Hands-on exposure to international markets, suppliers, and business ecosystems.</p>
                                     </div>
-                                    <div class="relative after:absolute after:-left-7 after:-top-10.25 after:size-0 after:border-t-[12px] after:border-t-transparent after:border-r-[12px] after:border-r-[#297BD4] after:border-b-[12px] after:border-b-transparent">
-                                        <div class="absolute -left-7 -bottom-15 size-0 border-b-[90px] border-b-[#489CF6] border-r-[80px] border-r-transparent">
+                                    <div class="relative after:absolute after:-left-7 after:-top-10.25 after:size-0 after:border-t-[12px] after:border-t-transparent after:border-r-[12px] after:border-r-[#A8884A] after:border-b-[12px] after:border-b-transparent">
+                                        <div class="absolute -left-7 -bottom-15 size-0 border-b-[90px] border-b-[#C5A059] border-r-[80px] border-r-transparent">
                                             <span class="trv-service-badge-label">Service</span>
                                             <div class="text-2xl font-black text-white pl-2.5">01</div>
                                         </div>
@@ -595,10 +567,10 @@
                                         <h4 class="mb-3.75 text-2xl">Executive Networking</h4>
                                         <p class="p-text">Connect with founders, investors, and industry leaders through curated events.</p>
                                     </div>
-                                    <div class="relative after:absolute after:-left-7 after:-top-10.25 after:size-0 after:border-t-[12px] after:border-t-transparent after:border-r-[12px] after:border-r-[#BA7D0A] after:border-b-[12px] after:border-b-transparent">
-                                        <div class="absolute -left-7 -bottom-15 size-0 border-b-[90px] border-b-[#FFAA0D] border-r-[80px] border-r-transparent">
+                                    <div class="relative after:absolute after:-left-7 after:-top-10.25 after:size-0 after:border-t-[12px] after:border-t-transparent after:border-r-[12px] after:border-r-[#8A6F3E] after:border-b-[12px] after:border-b-transparent">
+                                        <div class="absolute -left-7 -bottom-15 size-0 border-b-[90px] border-b-[#D4B87A] border-r-[80px] border-r-transparent">
                                             <span class="trv-service-badge-label">Service</span>
-                                            <div class="text-2xl font-black text-white pl-2.5">02</div>
+                                            <div class="text-2xl font-black text-richblack pl-2.5">02</div>
                                         </div>
                                     </div>
                                 </div>
@@ -614,8 +586,8 @@
                                         <h4 class="mb-3.75 text-2xl">VIP Experiences</h4>
                                         <p class="p-text">Premium travel, hospitality, and exclusive access throughout every delegation.</p>
                                     </div>
-                                    <div class="relative after:absolute after:-left-7 after:-top-10.25 after:size-0 after:border-t-[12px] after:border-t-transparent after:border-r-[12px] after:border-r-[#568603] after:border-b-[12px] after:border-b-transparent">
-                                        <div class="absolute -left-7 -bottom-15 size-0 border-b-[90px] border-b-[#85D200] border-r-[80px] border-r-transparent">
+                                    <div class="relative after:absolute after:-left-7 after:-top-10.25 after:size-0 after:border-t-[12px] after:border-t-transparent after:border-r-[12px] after:border-r-[#6B5630] after:border-b-[12px] after:border-b-transparent">
+                                        <div class="absolute -left-7 -bottom-15 size-0 border-b-[90px] border-b-[#A8884A] border-r-[80px] border-r-transparent">
                                             <span class="trv-service-badge-label">Service</span>
                                             <div class="text-2xl font-black text-white pl-2.5">03</div>
                                         </div>
@@ -633,8 +605,8 @@
                                         <h4 class="mb-3.75 text-2xl">Global Market Access</h4>
                                         <p class="p-text">Entry into emerging markets across Africa, America, and Asia.</p>
                                     </div>
-                                    <div class="relative after:absolute after:-left-7 after:-top-10.25 after:size-0 after:border-t-[12px] after:border-t-transparent after:border-r-[12px] after:border-r-[#297BD4] after:border-b-[12px] after:border-b-transparent">
-                                        <div class="absolute -left-7 -bottom-15 size-0 border-b-[90px] border-b-[#489CF6] border-r-[80px] border-r-transparent">
+                                    <div class="relative after:absolute after:-left-7 after:-top-10.25 after:size-0 after:border-t-[12px] after:border-t-transparent after:border-r-[12px] after:border-r-[#A8884A] after:border-b-[12px] after:border-b-transparent">
+                                        <div class="absolute -left-7 -bottom-15 size-0 border-b-[90px] border-b-[#C5A059] border-r-[80px] border-r-transparent">
                                             <span class="trv-service-badge-label">Service</span>
                                             <div class="text-2xl font-black text-white pl-2.5">04</div>
                                         </div>
@@ -652,10 +624,10 @@
                                         <h4 class="mb-3.75 text-2xl">Entrepreneur Delegations</h4>
                                         <p class="p-text">Organized group journeys designed for founders seeking global growth.</p>
                                     </div>
-                                    <div class="relative after:absolute after:-left-7 after:-top-10.25 after:size-0 after:border-t-[12px] after:border-t-transparent after:border-r-[12px] after:border-r-[#BA7D0A] after:border-b-[12px] after:border-b-transparent">
-                                        <div class="absolute -left-7 -bottom-15 size-0 border-b-[90px] border-b-[#FFAA0D] border-r-[80px] border-r-transparent">
+                                    <div class="relative after:absolute after:-left-7 after:-top-10.25 after:size-0 after:border-t-[12px] after:border-t-transparent after:border-r-[12px] after:border-r-[#8A6F3E] after:border-b-[12px] after:border-b-transparent">
+                                        <div class="absolute -left-7 -bottom-15 size-0 border-b-[90px] border-b-[#D4B87A] border-r-[80px] border-r-transparent">
                                             <span class="trv-service-badge-label">Service</span>
-                                            <div class="text-2xl font-black text-white pl-2.5">05</div>
+                                            <div class="text-2xl font-black text-richblack pl-2.5">05</div>
                                         </div>
                                     </div>
                                 </div>
@@ -671,8 +643,8 @@
                                         <h4 class="mb-3.75 text-2xl">Luxury Hospitality</h4>
                                         <p class="p-text">Five-star accommodations and seamless logistics from arrival to departure.</p>
                                     </div>
-                                    <div class="relative after:absolute after:-left-7 after:-top-10.25 after:size-0 after:border-t-[12px] after:border-t-transparent after:border-r-[12px] after:border-r-[#568603] after:border-b-[12px] after:border-b-transparent">
-                                        <div class="absolute -left-7 -bottom-15 size-0 border-b-[90px] border-b-[#85D200] border-r-[80px] border-r-transparent">
+                                    <div class="relative after:absolute after:-left-7 after:-top-10.25 after:size-0 after:border-t-[12px] after:border-t-transparent after:border-r-[12px] after:border-r-[#6B5630] after:border-b-[12px] after:border-b-transparent">
+                                        <div class="absolute -left-7 -bottom-15 size-0 border-b-[90px] border-b-[#A8884A] border-r-[80px] border-r-transparent">
                                             <span class="trv-service-badge-label">Service</span>
                                             <div class="text-2xl font-black text-white pl-2.5">06</div>
                                         </div>
@@ -680,7 +652,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="rounded-full 2xl:h-50 2xl:mb-7.5 overflow-hidden ">
+                        <div class="rounded-full 2xl:h-50 overflow-hidden">
                             <picture>
                                 <source srcset="assets/images/landscape-pic.webp" type="image/webp">
                                 <img src="assets/images/landscape-pic.png" alt="image" class="w-full" width="726" height="199" loading="lazy">
@@ -696,198 +668,9 @@
 </div>
                     <!--WE OFFER SERVICES SECTION END-->
 
-                    <!--POPULAR SEARCH DESTINATION START-->
-                    <div class="bg-eggshell">
-    <div class="pt-10 pb-1.25">
-        <div class="swiper popular-places-logo-swiper">
-			<div class="swiper-wrapper">
-				<div class="swiper-slide">
-					<div class="text-center">
-						<div class="text-xs leading-3.5 text-primary inline-flex py-1.5 px-2.5 bg-white border border-primary/20 rounded-2lg">
-							<i class="fa-regular fa-flag mr-1"></i>Delegation
-						</div>
-						<a href="contact.html" class="font-title font-semibold text-40 text-citrusyellow leading-14.5 block hover:text-secondary duration-500">Dubai</a>
-					</div>
-				</div>
-				<div class="swiper-slide">
-					<div class="text-center">
-						<div class="text-xs leading-3.5 text-primary inline-flex py-1.5 px-2.5 bg-white border border-primary/20 rounded-2lg">
-							<i class="fa-regular fa-flag mr-1"></i>Delegation
-						</div>
-						<a href="contact.html" class="font-title font-semibold text-40 text-primary leading-14.5 block hover:text-secondary duration-500">Singapore</a>
-					</div>
-				</div>
-				<div class="swiper-slide">
-					<div class="text-center">
-						<div class="text-xs leading-3.5 text-primary inline-flex py-1.5 px-2.5 bg-white border border-primary/20 rounded-2lg">
-							<i class="fa-regular fa-flag mr-1"></i>Delegation
-						</div>
-						<a href="contact.html" class="font-title font-semibold text-40 text-citrusyellow leading-14.5 block hover:text-secondary duration-500">Indonesia</a>
-					</div>
-				</div>
-				<div class="swiper-slide">
-					<div class="text-center">
-						<div class="text-xs leading-3.5 text-primary inline-flex py-1.5 px-2.5 bg-white border border-primary/20 rounded-2lg">
-							<i class="fa-regular fa-flag mr-1"></i>Delegation
-						</div>
-						<a href="contact.html" class="font-title font-semibold text-40 text-primary leading-14.5 block hover:text-secondary duration-500">Shanghai</a>
-					</div>
-				</div>
-				<div class="swiper-slide">
-					<div class="text-center">
-						<div class="text-xs leading-3.5 text-primary inline-flex py-1.5 px-2.5 bg-white border border-primary/20 rounded-2lg">
-							<i class="fa-regular fa-flag mr-1"></i>Delegation
-						</div>
-						<a href="contact.html" class="font-title font-semibold text-40 text-citrusyellow leading-14.5 block hover:text-secondary duration-500">China</a>
-					</div>
-				</div>
-				<div class="swiper-slide">
-					<div class="text-center">
-						<div class="text-xs leading-3.5 text-primary inline-flex py-1.5 px-2.5 bg-white border border-primary/20 rounded-2lg">
-							<i class="fa-regular fa-flag mr-1"></i>Delegation
-						</div>
-						<a href="contact.html" class="font-title font-semibold text-40 text-primary leading-14.5 block hover:text-secondary duration-500">Thailand</a>
-					</div>
-				</div>
-				<div class="swiper-slide">
-					<div class="text-center">
-						<div class="text-xs leading-3.5 text-primary inline-flex py-1.5 px-2.5 bg-white border border-primary/20 rounded-2lg">
-							<i class="fa-regular fa-flag mr-1"></i>Delegation
-						</div>
-						<a href="contact.html" class="font-title font-semibold text-40 text-citrusyellow leading-14.5 block hover:text-secondary duration-500">Turkey</a>
-					</div>
-				</div>
-				<div class="swiper-slide">
-					<div class="text-center">
-						<div class="text-xs leading-3.5 text-primary inline-flex py-1.5 px-2.5 bg-white border border-primary/20 rounded-2lg">
-							<i class="fa-regular fa-flag mr-1"></i>Delegation
-						</div>
-						<a href="contact.html" class="font-title font-semibold text-40 text-primary leading-14.5 block hover:text-secondary duration-500">Albania</a>
-					</div>
-				</div>
-				<div class="swiper-slide">
-					<div class="text-center">
-						<div class="text-xs leading-3.5 text-primary inline-flex py-1.5 px-2.5 bg-white border border-primary/20 rounded-2lg">
-							<i class="fa-regular fa-flag mr-1"></i>Delegation
-						</div>
-						<a href="contact.html" class="font-title font-semibold text-40 text-citrusyellow leading-14.5 block hover:text-secondary duration-500">Kenya</a>
-					</div>
-				</div>
-				<div class="swiper-slide">
-					<div class="text-center">
-						<div class="text-xs leading-3.5 text-primary inline-flex py-1.5 px-2.5 bg-white border border-primary/20 rounded-2lg">
-							<i class="fa-regular fa-flag mr-1"></i>Delegation
-						</div>
-						<a href="contact.html" class="font-title font-semibold text-40 text-primary leading-14.5 block hover:text-secondary duration-500">Nigeria</a>
-					</div>
-				</div>
-				<div class="swiper-slide">
-					<div class="text-center">
-						<div class="text-xs leading-3.5 text-primary inline-flex py-1.5 px-2.5 bg-white border border-primary/20 rounded-2lg">
-							<i class="fa-regular fa-flag mr-1"></i>Delegation
-						</div>
-						<a href="contact.html" class="font-title font-semibold text-40 text-citrusyellow leading-14.5 block hover:text-secondary duration-500">Dubai</a>
-					</div>
-				</div>
-				<div class="swiper-slide">
-					<div class="text-center">
-						<div class="text-xs leading-3.5 text-primary inline-flex py-1.5 px-2.5 bg-white border border-primary/20 rounded-2lg">
-							<i class="fa-regular fa-flag mr-1"></i>Delegation
-						</div>
-						<a href="contact.html" class="font-title font-semibold text-40 text-primary leading-14.5 block hover:text-secondary duration-500">Singapore</a>
-					</div>
-				</div>
-				<div class="swiper-slide">
-					<div class="text-center">
-						<div class="text-xs leading-3.5 text-primary inline-flex py-1.5 px-2.5 bg-white border border-primary/20 rounded-2lg">
-							<i class="fa-regular fa-flag mr-1"></i>Delegation
-						</div>
-						<a href="contact.html" class="font-title font-semibold text-40 text-citrusyellow leading-14.5 block hover:text-secondary duration-500">Indonesia</a>
-					</div>
-				</div>
-				<div class="swiper-slide">
-					<div class="text-center">
-						<div class="text-xs leading-3.5 text-primary inline-flex py-1.5 px-2.5 bg-white border border-primary/20 rounded-2lg">
-							<i class="fa-regular fa-flag mr-1"></i>Delegation
-						</div>
-						<a href="contact.html" class="font-title font-semibold text-40 text-primary leading-14.5 block hover:text-secondary duration-500">Shanghai</a>
-					</div>
-				</div>
-				<div class="swiper-slide">
-					<div class="text-center">
-						<div class="text-xs leading-3.5 text-primary inline-flex py-1.5 px-2.5 bg-white border border-primary/20 rounded-2lg">
-							<i class="fa-regular fa-flag mr-1"></i>Delegation
-						</div>
-						<a href="contact.html" class="font-title font-semibold text-40 text-citrusyellow leading-14.5 block hover:text-secondary duration-500">China</a>
-					</div>
-				</div>
-				<div class="swiper-slide">
-					<div class="text-center">
-						<div class="text-xs leading-3.5 text-primary inline-flex py-1.5 px-2.5 bg-white border border-primary/20 rounded-2lg">
-							<i class="fa-regular fa-flag mr-1"></i>Delegation
-						</div>
-						<a href="contact.html" class="font-title font-semibold text-40 text-primary leading-14.5 block hover:text-secondary duration-500">Thailand</a>
-					</div>
-				</div>
-				<div class="swiper-slide">
-					<div class="text-center">
-						<div class="text-xs leading-3.5 text-primary inline-flex py-1.5 px-2.5 bg-white border border-primary/20 rounded-2lg">
-							<i class="fa-regular fa-flag mr-1"></i>Delegation
-						</div>
-						<a href="contact.html" class="font-title font-semibold text-40 text-citrusyellow leading-14.5 block hover:text-secondary duration-500">Turkey</a>
-					</div>
-				</div>
-				<div class="swiper-slide">
-					<div class="text-center">
-						<div class="text-xs leading-3.5 text-primary inline-flex py-1.5 px-2.5 bg-white border border-primary/20 rounded-2lg">
-							<i class="fa-regular fa-flag mr-1"></i>Delegation
-						</div>
-						<a href="contact.html" class="font-title font-semibold text-40 text-primary leading-14.5 block hover:text-secondary duration-500">Albania</a>
-					</div>
-				</div>
-				<div class="swiper-slide">
-					<div class="text-center">
-						<div class="text-xs leading-3.5 text-primary inline-flex py-1.5 px-2.5 bg-white border border-primary/20 rounded-2lg">
-							<i class="fa-regular fa-flag mr-1"></i>Delegation
-						</div>
-						<a href="contact.html" class="font-title font-semibold text-40 text-citrusyellow leading-14.5 block hover:text-secondary duration-500">Kenya</a>
-					</div>
-				</div>
-				<div class="swiper-slide">
-					<div class="text-center">
-						<div class="text-xs leading-3.5 text-primary inline-flex py-1.5 px-2.5 bg-white border border-primary/20 rounded-2lg">
-							<i class="fa-regular fa-flag mr-1"></i>Delegation
-						</div>
-						<a href="contact.html" class="font-title font-semibold text-40 text-primary leading-14.5 block hover:text-secondary duration-500">Nigeria</a>
-					</div>
-				</div>
-			</div>
-        </div>
-    </div>
-    
-    <div class="container">
-        <div>
-            <div class="grid grid-cols-12">
-                <div class="md:col-span-5 col-span-12 px-3.75">
-                    <div class="media">
-                        <img src="assets/images/pop-search-left-pic.png" alt="Image" width="510" height="184" loading="lazy">
-                    </div>
-                </div>
-                <div class="md:col-span-7 col-span-12 px-3.75">
-                    <div class="md:ml-12.5">
-                        <span class="text-primary block font-title font-bold text-28 mb-3.75">Popular!</span>
-                        <h2 class="2xl:!text-40xl lg:!text-30xl sm:!text-90 !text-6xl !leading-[0.75] normal-case !text-eggshelllight !font-black !font-base mb-2.5">Search</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-</div>
-                    <!--POPULAR SEARCH DESTINATION END-->
 
                     <!--3 STEP SECTION START-->
-                    <div class="bg-white md:pt-30 pt-17.5 pb-12 sm:pb-16 lg:pb-20 relative overflow-hidden">
+                    <div class="section-light section-pad section-divider relative overflow-hidden">
     <div class="absolute w-150 h-137.5 -left-75 top-1/2 bg-amber [filter:blur(100px)]"></div>
     <div class="absolute w-150 h-125 -right-75 top-1/2 bg-bluelight [filter:blur(100px)]"></div>
     <div class="absolute w-150 h-125 left-1/2 -translate-x-1/2 -top-50 bg-amber [filter:blur(100px)]"></div>
@@ -910,27 +693,27 @@
                                             <img src="assets/images/offer/pic1.png" alt="Image" class="md:w-59 w-[calc(100%_-_12px)] h-66.5 object-cover object-center rounded-xl" width="236" height="266" loading="lazy">
                                         </picture>
 									</div>
-                                    <div class="rounded-xl md:max-w-59 max-w-[inherit] p-5 pt-15 ml-3 -mt-11 bg-citrusyellow max-md:text-center max-md:mb-7.5">
-                                        <span class="text-primary font-semibold text-lg leading-6 block pb-2.5">Limited Availability</span>
+                                    <div class="rounded-xl md:max-w-59 max-w-[inherit] p-5 pt-15 ml-3 -mt-11 bg-primary max-md:text-center max-md:mb-7.5">
+                                        <span class="text-richblack font-semibold text-lg leading-6 block pb-2.5">Limited Availability</span>
                                         <div class="flex max-md:justify-center items-end">
-                                            <h2 class="!text-white !text-95 !leading-[0.75] !font-black !font-base shrink-0">20</h2>
-                                            <div class="block text-lg text-primary normal-case font-black leading-5 -ml-4 mb-1 shrink-0">Founders only</div>
+                                            <h2 class="!text-richblack !text-95 !leading-[0.75] !font-black !font-base shrink-0">20</h2>
+                                            <div class="block text-lg text-richblack/80 normal-case font-black leading-5 -ml-4 mb-1 shrink-0">Founders only</div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="md:mr-6.25">
                                     <div class="mb-5 bg-white border border-paleaqua p-2.5 sm:pl-12.5 pl-10.5 shadow-[0px_27px_35.9px_rgba(41,137,145,0.2)] rounded-tr-50xl rounded-br-50xl relative sm:ml-12.5 ml-6.5">
                                         <div class="flex items-center justify-between">
-                                            <div class="sm:size-20 size-15 sm:min-w-20 min-w-15 items-center justify-center flex bg-primary rounded-xl font-base sm:text-42 text-36 text-white font-black absolute sm:-left-12.5 -left-8.5 top-1/2 -translate-y-1/2">
+                                            <div class="sm:size-20 size-15 sm:min-w-20 min-w-15 items-center justify-center flex bg-primary rounded-xl font-base sm:text-42 text-36 text-richblack font-black absolute sm:-left-12.5 -left-8.5 top-1/2 -translate-y-1/2">
                                                 01
                                             </div>
                                             <div>
-                                                <div class="font-title text-primary lg:text-2xl text-xl font-medium leading-[1.2] mb-2.5">Request access</div>
-                                                <p class="text-primary">Submit your application to join an upcoming delegation.</p>
+                                                <div class="font-title text-heading lg:text-2xl text-xl font-medium leading-[1.2] mb-2.5">Request access</div>
+                                                <p class="text-bodycolor">Submit your application to join an upcoming delegation.</p>
                                             </div>
-                                            <div class="sm:size-25 size-15 sm:min-w-25 min-w-15 bg-citrusyellow rounded-full flex items-center justify-center mr-0">
-                                                <div class="bg-white sm:size-22.5 size-12.5 sm:min-w-22.5 min-w-12.5 flex items-center justify-center rounded-full">
-                                                    <img src="assets/images/trv-icon/destination.png" alt="image" class="sm:max-w-12 max-w-7 w-full" style="filter: brightness(0) saturate(100%) invert(25%) sepia(21%) saturate(4469%) hue-rotate(154deg) brightness(93%) contrast(95%)"  width="48" height="48" loading="lazy">
+                                            <div class="sm:size-25 size-15 sm:min-w-25 min-w-15 bg-primary rounded-full flex items-center justify-center mr-0">
+                                                <div class="bg-richblack sm:size-22.5 size-12.5 sm:min-w-22.5 min-w-12.5 flex items-center justify-center rounded-full">
+                                                    <img src="assets/images/trv-icon/destination.png" alt="image" class="sm:max-w-12 max-w-7 w-full icon-gold" width="48" height="48" loading="lazy">
                                                 </div>
                                             </div>
                                         </div>
@@ -938,16 +721,16 @@
 									
 									<div class="mb-5 bg-white border border-paleaqua p-2.5 sm:pl-12.5 pl-10.5 shadow-[0px_27px_35.9px_rgba(41,137,145,0.2)] rounded-tr-50xl rounded-br-50xl relative sm:ml-12.5 ml-6.5">
                                         <div class="flex items-center justify-between">
-                                            <div class="sm:size-20 size-15 sm:min-w-20 min-w-15 items-center justify-center flex bg-primary rounded-xl font-base sm:text-42 text-36 text-white font-black absolute sm:-left-12.5 -left-8.5 top-1/2 -translate-y-1/2">
+                                            <div class="sm:size-20 size-15 sm:min-w-20 min-w-15 items-center justify-center flex bg-primary rounded-xl font-base sm:text-42 text-36 text-richblack font-black absolute sm:-left-12.5 -left-8.5 top-1/2 -translate-y-1/2">
                                                 02
                                             </div>
                                             <div>
-                                                <div class="font-title text-primary lg:text-2xl text-xl font-medium leading-[1.2] mb-2.5">Get Matched</div>
-                                                <p class="text-primary">We connect you with the right market, partners, and itinerary.</p>
+                                                <div class="font-title text-heading lg:text-2xl text-xl font-medium leading-[1.2] mb-2.5">Get Matched</div>
+                                                <p class="text-bodycolor">We connect you with the right market, partners, and itinerary.</p>
                                             </div>
-                                            <div class="sm:size-25 size-15 sm:min-w-25 min-w-15 bg-citrusyellow rounded-full flex items-center justify-center mr-0">
-                                                <div class="bg-white sm:size-22.5 size-12.5 sm:min-w-22.5 min-w-12.5 flex items-center justify-center rounded-full">
-                                                    <img src="assets/images/trv-icon/make-payment.png" alt="image" class="sm:max-w-12 max-w-7 w-full" style="filter: brightness(0) saturate(100%) invert(25%) sepia(21%) saturate(4469%) hue-rotate(154deg) brightness(93%) contrast(95%)" width="48" height="48" loading="lazy">
+                                            <div class="sm:size-25 size-15 sm:min-w-25 min-w-15 bg-primary rounded-full flex items-center justify-center mr-0">
+                                                <div class="bg-richblack sm:size-22.5 size-12.5 sm:min-w-22.5 min-w-12.5 flex items-center justify-center rounded-full">
+                                                    <img src="assets/images/trv-icon/make-payment.png" alt="image" class="sm:max-w-12 max-w-7 w-full icon-gold" width="48" height="48" loading="lazy">
                                                 </div>
                                             </div>
                                         </div>
@@ -955,16 +738,16 @@
 									
 									<div class="mb-5 bg-white border border-paleaqua p-2.5 sm:pl-12.5 pl-10.5 shadow-[0px_27px_35.9px_rgba(41,137,145,0.2)] rounded-tr-50xl rounded-br-50xl relative sm:ml-12.5 ml-6.5">
                                         <div class="flex items-center justify-between">
-                                            <div class="sm:size-20 size-15 sm:min-w-20 min-w-15 items-center justify-center flex bg-primary rounded-xl font-base sm:text-42 text-36 text-white font-black absolute sm:-left-12.5 -left-8.5 top-1/2 -translate-y-1/2">
+                                            <div class="sm:size-20 size-15 sm:min-w-20 min-w-15 items-center justify-center flex bg-primary rounded-xl font-base sm:text-42 text-36 text-richblack font-black absolute sm:-left-12.5 -left-8.5 top-1/2 -translate-y-1/2">
                                                 03
                                             </div>
                                             <div>
-                                                <div class="font-title text-primary lg:text-2xl text-xl font-medium leading-[1.2] mb-2.5">Travel &amp; Connect</div>
-                                                <p class="text-primary">Experience curated business meetings, networking, and luxury travel.</p>
+                                                <div class="font-title text-heading lg:text-2xl text-xl font-medium leading-[1.2] mb-2.5">Travel &amp; Connect</div>
+                                                <p class="text-bodycolor">Experience curated business meetings, networking, and luxury travel.</p>
                                             </div>
-                                            <div class="sm:size-25 size-15 sm:min-w-25 min-w-15 bg-citrusyellow rounded-full flex items-center justify-center mr-0">
-                                                <div class="bg-white sm:size-22.5 size-12.5 sm:min-w-22.5 min-w-12.5 flex items-center justify-center rounded-full">
-                                                    <img src="assets/images/trv-icon/travelling.png" alt="image" class="sm:max-w-12 max-w-7 w-full" style="filter: brightness(0) saturate(100%) invert(25%) sepia(21%) saturate(4469%) hue-rotate(154deg) brightness(93%) contrast(95%)" width="48" height="48" loading="lazy">
+                                            <div class="sm:size-25 size-15 sm:min-w-25 min-w-15 bg-primary rounded-full flex items-center justify-center mr-0">
+                                                <div class="bg-richblack sm:size-22.5 size-12.5 sm:min-w-22.5 min-w-12.5 flex items-center justify-center rounded-full">
+                                                    <img src="assets/images/trv-icon/travelling.png" alt="image" class="sm:max-w-12 max-w-7 w-full icon-gold" width="48" height="48" loading="lazy">
                                                 </div>
                                             </div>
                                         </div>
@@ -993,45 +776,45 @@
             </div>
         </div>
 
-        <div class="overflow-hidden rounded-br-25xl rounded-bl-25xl bg-primary pt-27.5 pb-17.5 bg-[url(../images/w-cho-top.png),url(../images/w-cho-btm.png)] bg-no-repeat [background-position:top_left,bottom_left] flex flex-wrap items-center justify-between">
-            <div class="max-w-122.5 xl:ml-45 ml-10 mb-7.5">
+        <div class="why-choose overflow-hidden rounded-br-25xl rounded-bl-25xl pt-27.5 pb-17.5 flex flex-wrap items-center justify-between">
+            <div class="max-w-122.5 xl:ml-45 ml-10 mb-7.5 relative z-1">
                 <h3 class="!font-display !text-40 mb-7.5 !text-white">
                     Why Leading Entrepreneurs Choose iMUSAFIR
                 </h3>
                 <div class="mb-3.75">
                     <ul class="sm:flex text-white flex-wrap">
                         <li class="font-title font-medium text-lg text-white sm:w-1/2 pr-2.5 flex mb-5">
-                            <i class="size-7.5 max-w-7.5 mr-6 rounded-full bg-citrusyellow !flex items-center justify-center text-white fa-solid fa-check"></i>
+                            <i class="size-7.5 max-w-7.5 mr-6 rounded-full bg-[#C9A24D] !flex items-center justify-center text-white fa-solid fa-check"></i>
                             <span>High-Value Business Connections</span>
                         </li>
                         <li class="font-title font-medium text-lg text-white sm:w-1/2 pr-2.5 flex mb-5">
-                            <i class="size-7.5 max-w-7.5 mr-6 rounded-full bg-citrusyellow !flex items-center justify-center text-white fa-solid fa-check"></i>
+                            <i class="size-7.5 max-w-7.5 mr-6 rounded-full bg-[#C9A24D] !flex items-center justify-center text-white fa-solid fa-check"></i>
                             <span>Exclusive International Delegation</span>
                         </li>
                         <li class="font-title font-medium text-lg text-white sm:w-1/2 pr-2.5 flex mb-5">
-                            <i class="size-7.5 max-w-7.5 mr-6 rounded-full bg-citrusyellow !flex items-center justify-center text-white fa-solid fa-check"></i>
+                            <i class="size-7.5 max-w-7.5 mr-6 rounded-full bg-[#C9A24D] !flex items-center justify-center text-white fa-solid fa-check"></i>
                             <span>Curated Supplier Introductions</span>
                         </li>
                         <li class="font-title font-medium text-lg text-white sm:w-1/2 pr-2.5 flex mb-5">
-                            <i class="size-7.5 max-w-7.5 mr-6 rounded-full bg-citrusyellow !flex items-center justify-center text-white fa-solid fa-check"></i>
+                            <i class="size-7.5 max-w-7.5 mr-6 rounded-full bg-[#C9A24D] !flex items-center justify-center text-white fa-solid fa-check"></i>
                             <span>Premium Networking Experiences</span>
                         </li>
                         <li class="font-title font-medium text-lg text-white sm:w-1/2 pr-2.5 flex mb-5">
-                            <i class="size-7.5 max-w-7.5 mr-6 rounded-full bg-citrusyellow !flex items-center justify-center text-white fa-solid fa-check"></i>
+                            <i class="size-7.5 max-w-7.5 mr-6 rounded-full bg-[#C9A24D] !flex items-center justify-center text-white fa-solid fa-check"></i>
                             <span>Luxury Travel Coordination</span>
                         </li>
                         <li class="font-title font-medium text-lg text-white sm:w-1/2 pr-2.5 flex mb-5">
-                            <i class="size-7.5 max-w-7.5 mr-6 rounded-full bg-citrusyellow !flex items-center justify-center text-white fa-solid fa-check"></i>
+                            <i class="size-7.5 max-w-7.5 mr-6 rounded-full bg-[#C9A24D] !flex items-center justify-center text-white fa-solid fa-check"></i>
                             <span>Global Community of Founders</span>
                         </li>
                     </ul>
                 </div>
-                <a href="contact.html" class="site-button butn-bg-shape">Reserve Your Seat</a>
+                <a href="contact.html" class="site-button btn-white butn-bg-shape">Reserve Your Seat</a>
             </div>
-            <div class="mx-auto lg:mr-40 max-lg:text-center max-w-100 px-5">
+            <div class="mx-auto lg:mr-40 max-lg:text-center max-w-100 px-5 relative z-1">
                 <div>
-                    <h3 class="!font-black xl:!text-40 !text-28 !leading-[1.1] mb-2.5 normal-case !text-secondary !font-base">Limited to 20 founders</h3>
-                    <span class="block font-bold xl:text-28 text-xl leading-[1.2] normal-case text-white mb-2.5">Africa &times; America &times; Indonesia</span>
+                    <h3 class="!font-black xl:!text-40 !text-28 !leading-[1.1] mb-2.5 uppercase !text-secondary !font-base">Limited to 20 Founders</h3>
+                    <span class="block font-bold xl:text-28 text-xl leading-[1.2] uppercase text-white mb-2.5">Africa &times; America &times; Indonesia</span>
                     <p class="text-white/80 text-lg font-title">Where Global Connections Meet Luxury Experiences</p>
                 </div>
             </div>
@@ -1041,13 +824,13 @@
                     <!--3 STEP SECTION END-->
 
                     <!--FOUNDER'S VISION SECTION START-->
-                    <div id="founders-vision" class="founder-vision bg-body-bg sm:pt-30 pt-17.5 sm:pb-22.5 pb-10 relative overflow-x-hidden">
+                    <div id="founders-vision" class="founder-vision section-light section-pad !pt-0 relative overflow-x-hidden">
     <div class="absolute w-150 h-137.5 -left-75 top-1/4 bg-amber [filter:blur(100px)] opacity-40 pointer-events-none"></div>
     <div class="absolute w-150 h-125 -right-75 bottom-1/4 bg-bluelight [filter:blur(100px)] opacity-40 pointer-events-none"></div>
     <div class="container relative z-1">
         <div class="grid grid-cols-12 items-start gap-y-12 lg:gap-y-0 lg:gap-x-6">
             <div class="lg:col-span-5 col-span-12 px-3.75">
-                <div class="founder-vision__portrait relative max-w-125 mx-auto lg:mx-0 lg:sticky lg:top-24">
+                <div class="founder-vision__portrait relative max-w-125 mx-auto lg:mx-0">
                     <picture>
                         <source srcset="assets/images/founder-simran.webp" type="image/webp">
                         <img src="assets/images/founder-simran.png" alt="Simran, Founder and CEO of iMusafir" class="founder-vision__photo rounded-3xl w-full object-cover aspect-[3/4]" width="600" height="800" loading="lazy" decoding="async">
@@ -1055,6 +838,36 @@
                     <div class="founder-vision__nameplate">
                         <span class="founder-vision__nameplate-role">Founder &amp; CEO</span>
                         <span class="founder-vision__nameplate-signature">Simran</span>
+                    </div>
+                </div>
+                <div class="founder-vision__meta max-w-125 mx-auto lg:mx-0 mt-8 md:mt-10">
+                    <blockquote class="founder-vision__quote">"The right connection doesn't just change your life. It changes the game."</blockquote>
+                    <div class="founder-vision__stats">
+                        <div class="founder-vision__stat">
+                            <span class="founder-vision__stat-icon"><i class="fa-solid fa-globe" aria-hidden="true"></i></span>
+                            <div class="min-w-0">
+                                <span class="founder-vision__stat-label">Years of Connection</span>
+                                <span class="founder-vision__stat-value">13+ Across Continents</span>
+                            </div>
+                        </div>
+                        <div class="founder-vision__stat">
+                            <span class="founder-vision__stat-icon"><i class="fa-solid fa-user-group" aria-hidden="true"></i></span>
+                            <div class="min-w-0">
+                                <span class="founder-vision__stat-label">Meaningful Connections</span>
+                                <span class="founder-vision__stat-value">500+ Introductions</span>
+                            </div>
+                        </div>
+                        <div class="founder-vision__stat">
+                            <span class="founder-vision__stat-icon"><i class="fa-solid fa-handshake" aria-hidden="true"></i></span>
+                            <div class="min-w-0">
+                                <span class="founder-vision__stat-label">Strategic Partnerships</span>
+                                <span class="founder-vision__stat-value">Endless Opportunities</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="founder-vision__actions">
+                        <a href="contact.html" class="site-button butn-bg-shape">Request access</a>
+                        <a href="#experiences" class="founder-vision__cta-secondary">Explore Experiences <i class="fa-solid fa-arrow-right ml-2 text-sm" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>
@@ -1072,34 +885,6 @@
                     <p><strong class="text-primary font-semibold">From refugee to founder. From invisible to unstoppable.</strong></p>
                     <p>This isn't my story anymore.<br>This is yours.<br>Welcome to iMusafir.</p>
                 </div>
-                <blockquote class="founder-vision__quote">"The right connection doesn't just change your life. It changes the game."</blockquote>
-                <div class="founder-vision__stats">
-                    <div class="founder-vision__stat">
-                        <span class="founder-vision__stat-icon"><i class="fa-solid fa-globe" aria-hidden="true"></i></span>
-                        <div class="min-w-0">
-                            <span class="founder-vision__stat-label">Years of Connection</span>
-                            <span class="founder-vision__stat-value">13+ Across Continents</span>
-                        </div>
-                    </div>
-                    <div class="founder-vision__stat">
-                        <span class="founder-vision__stat-icon"><i class="fa-solid fa-user-group" aria-hidden="true"></i></span>
-                        <div class="min-w-0">
-                            <span class="founder-vision__stat-label">Meaningful Connections</span>
-                            <span class="founder-vision__stat-value">500+ Introductions</span>
-                        </div>
-                    </div>
-                    <div class="founder-vision__stat">
-                        <span class="founder-vision__stat-icon"><i class="fa-solid fa-handshake" aria-hidden="true"></i></span>
-                        <div class="min-w-0">
-                            <span class="founder-vision__stat-label">Strategic Partnerships</span>
-                            <span class="founder-vision__stat-value">Endless Opportunities</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="founder-vision__actions">
-                    <a href="contact.html" class="site-button butn-bg-shape">Request access</a>
-                    <a href="#experiences" class="founder-vision__cta-secondary">Explore Experiences <i class="fa-solid fa-arrow-right ml-2 text-sm" aria-hidden="true"></i></a>
-                </div>
             </div>
         </div>
     </div>
@@ -1107,7 +892,7 @@
                     <!--FOUNDER'S VISION SECTION END-->
                     
                     <!--TESTIMONIAL SECTION START-->
-                    <div class="sm:py-22.5 py-10 relative overflow-hidden bg-white">
+                    <div class="section-gold section-pad section-divider relative overflow-hidden">
     <div class="container">
         <div class="text-center max-w-150 mx-auto xl:mb-15 mb-0">
             <h2 class="xl:text-46 md:text-40 text-3xl mb-2.5">Our Client<span class="text-citrusyellow"> Says!</span></h2>
@@ -1117,9 +902,9 @@
             </div>
         </div>
         <div>
-            <div class="text-center relative font-bold 2xl:text-40xl/48 xl:text-30xl/48 lg:text-80 max-lg:mb-7.5 sm:text-6xl text-40 tracking-[0.12em] normal-case bg-primary-gradient bg-clip-text 
+            <div class="text-center relative font-bold 2xl:text-40xl/48 xl:text-30xl/48 lg:text-80 max-lg:mb-7.5 sm:text-6xl text-40 tracking-[0.12em] normal-case bg-clip-text 
 			[-webkit-text-fill-color:transparent] 
-			bg-[linear-gradient(to_bottom,#066168_15%,rgba(255,170,13,0.3019607843)_60%,#fff_85%)]">
+			bg-[linear-gradient(to_bottom,#1C1915_15%,rgba(197,160,89,0.45)_60%,#F5E6C8_85%)]">
                 Testimonial
                 <img src="assets/images/airplane-takeoff1.png" alt="Image" class="absolute xl:-top-5 sm:-top-6 top-0 left-1/2 -translate-x-1/2 max-xl:w-[40%] max-md:w-[60%]" width="493" height="116" loading="lazy">
             </div>
@@ -1127,7 +912,7 @@
                 <div class="swiper testimonial-content-sld">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <div class="md:flex items-center bg-white">
+                            <div class="md:flex items-center">
                                 <div class="mb-0 relative lg:max-w-93.75 max-w-62.5 z-1 lg:mr-23.75 md:mr-7.5 max-md:mx-auto max-md:mb-7.5 before:absolute before:size-95 before:rounded-full before:bg-citrusyellow before:opacity-10 before:-right-23.5 before:top-1/2 before:-translate-y-1/2 before:-z-1 after:absolute after:size-82.5 after:rounded-full after:bg-primary after:-right-10.5 after:top-1/2 after:-translate-y-1/2 after:-z-1 max-lg:after:hidden max-lg:before:hidden">
                                     <picture>
                                         <source srcset="assets/images/trv-testimonial2/pic1.webp" type="image/webp">
@@ -1137,14 +922,14 @@
                                 <div class="lg:max-w-122.5 max-w-85 ml-auto max-lg:mr-auto max-md:mx-auto">
                                     <div class="flex items-center justify-between mb-6.25 max-sm:flex-col max-sm:text-center sm:items-start">
                                         <div>
-                                            <h4 class="!font-title lg:!text-36 !text-28 !font-semibold text-primary mb-0">Safa Ali</h4>
+                                            <h4 class="!font-title lg:!text-36 !text-28 !font-semibold text-heading mb-0">Safa Ali</h4>
                                             <span class="font-title text-xl font-medium text-citrusyellow inline-block">Entrepreneur</span>
                                         </div>
                                         <div>
                                             <img src="assets/images/trv-icon/Quote.png" alt="Quote" class="lg:max-w-17.5 max-w-11 max-h-14.5 w-full" style="filter: brightness(0) saturate(100%) invert(25%) sepia(21%) saturate(4469%) hue-rotate(154deg) brightness(93%) contrast(95%)" width="70" height="58" loading="lazy">
                                         </div>
                                     </div>
-                                    <p class="font-title lg:text-2xl text-lg text-primary mb-5 max-lg:pr-7.5 max-md:pr-0">
+                                    <p class="font-title lg:text-2xl text-lg text-heading mb-5 max-lg:pr-7.5 max-md:pr-0">
                                         Before joining iMusafir, I had been struggling to find reliable suppliers for my business. The business matchmaking sessions saved me months of research. I met several manufacturers, built valuable relationships, and left Indonesia with real opportunities for growth. The networking events and luxury experiences made the trip unforgettable.
                                     </p>
                                     <div class="md:float-right text-citrusyellow text-base mr-0.75">
@@ -1158,7 +943,7 @@
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="md:flex items-center bg-white">
+                            <div class="md:flex items-center">
                                 <div class="mb-0 relative lg:max-w-93.75 max-w-62.5 z-1 lg:mr-23.75 md:mr-7.5 max-md:mx-auto max-md:mb-7.5 before:absolute before:size-95 before:rounded-full before:bg-citrusyellow before:opacity-10 before:-right-23.5 before:top-1/2 before:-translate-y-1/2 before:-z-1 after:absolute after:size-82.5 after:rounded-full after:bg-primary after:-right-10.5 after:top-1/2 after:-translate-y-1/2 after:-z-1 max-lg:after:hidden max-lg:before:hidden">
                                     <picture>
                                         <source srcset="assets/images/trv-testimonial2/pic2.webp" type="image/webp">
@@ -1168,14 +953,14 @@
                                 <div class="lg:max-w-122.5 max-w-85 ml-auto max-lg:mr-auto max-md:mx-auto">
                                     <div class="flex items-center justify-between mb-6.25 max-sm:flex-col max-sm:text-center sm:items-start">
                                         <div>
-                                            <h4 class="!font-title lg:!text-36 !text-28 !font-semibold text-primary mb-0">Safa Siraj</h4>
+                                            <h4 class="!font-title lg:!text-36 !text-28 !font-semibold text-heading mb-0">Safa Siraj</h4>
                                             <span class="font-title text-xl font-medium text-citrusyellow inline-block">Entrepreneur</span>
                                         </div>
                                         <div>
                                             <img src="assets/images/trv-icon/Quote.png" alt="Quote" class="lg:max-w-17.5 max-w-11 max-h-14.5 w-full" style="filter: brightness(0) saturate(100%) invert(25%) sepia(21%) saturate(4469%) hue-rotate(154deg) brightness(93%) contrast(95%)" width="70" height="58" loading="lazy">
                                         </div>
                                     </div>
-                                    <p class="font-title lg:text-2xl text-lg text-primary mb-5 max-lg:pr-7.5 max-md:pr-0">
+                                    <p class="font-title lg:text-2xl text-lg text-heading mb-5 max-lg:pr-7.5 max-md:pr-0">
                                         One of the best investments I've made in my business this year. The connections I built through iMusafir opened doors to suppliers, distributors, and potential partners I would never have met on my own. The experience was professional, organized, and highly valuable.
                                     </p>
                                     <div class="md:float-right text-citrusyellow text-base mr-0.75">
@@ -1189,7 +974,7 @@
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="md:flex items-center bg-white">
+                            <div class="md:flex items-center">
                                 <div class="mb-0 relative lg:max-w-93.75 max-w-62.5 z-1 lg:mr-23.75 md:mr-7.5 max-md:mx-auto max-md:mb-7.5 before:absolute before:size-95 before:rounded-full before:bg-citrusyellow before:opacity-10 before:-right-23.5 before:top-1/2 before:-translate-y-1/2 before:-z-1 after:absolute after:size-82.5 after:rounded-full after:bg-primary after:-right-10.5 after:top-1/2 after:-translate-y-1/2 after:-z-1 max-lg:after:hidden max-lg:before:hidden">
                                     <picture>
                                         <source srcset="assets/images/trv-testimonial2/pic3.webp" type="image/webp">
@@ -1199,14 +984,14 @@
                                 <div class="lg:max-w-122.5 max-w-85 ml-auto max-lg:mr-auto max-md:mx-auto">
                                     <div class="flex items-center justify-between mb-6.25 max-sm:flex-col max-sm:text-center sm:items-start">
                                         <div>
-                                            <h4 class="!font-title lg:!text-36 !text-28 !font-semibold text-primary mb-0">Mohamed Abdiaziz</h4>
+                                            <h4 class="!font-title lg:!text-36 !text-28 !font-semibold text-heading mb-0">Mohamed Abdiaziz</h4>
                                             <span class="font-title text-xl font-medium text-citrusyellow inline-block">Entrepreneur</span>
                                         </div>
                                         <div>
                                             <img src="assets/images/trv-icon/Quote.png" alt="Quote" class="lg:max-w-17.5 max-w-11 max-h-14.5 w-full" style="filter: brightness(0) saturate(100%) invert(25%) sepia(21%) saturate(4469%) hue-rotate(154deg) brightness(93%) contrast(95%)" width="70" height="58" loading="lazy">
                                         </div>
                                     </div>
-                                    <p class="font-title lg:text-2xl text-lg text-primary mb-5 max-lg:pr-7.5 max-md:pr-0">
+                                    <p class="font-title lg:text-2xl text-lg text-heading mb-5 max-lg:pr-7.5 max-md:pr-0">
                                         The organization was exceptional from arrival to departure. Every detail was handled professionally, from airport pickup to business meetings. What impressed me most was the quality of the entrepreneurs in the delegation. I made connections across Africa, America, and Asia that I believe will benefit my business for years to come.
                                     </p>
                                     <div class="md:float-right text-citrusyellow text-base mr-0.75">
@@ -1220,7 +1005,7 @@
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="md:flex items-center bg-white">
+                            <div class="md:flex items-center">
                                 <div class="mb-0 relative lg:max-w-93.75 max-w-62.5 z-1 lg:mr-23.75 md:mr-7.5 max-md:mx-auto max-md:mb-7.5 before:absolute before:size-95 before:rounded-full before:bg-citrusyellow before:opacity-10 before:-right-23.5 before:top-1/2 before:-translate-y-1/2 before:-z-1 after:absolute after:size-82.5 after:rounded-full after:bg-primary after:-right-10.5 after:top-1/2 after:-translate-y-1/2 after:-z-1 max-lg:after:hidden max-lg:before:hidden">
                                     <picture>
                                         <source srcset="assets/images/trv-testimonial2/pic4.webp" type="image/webp">
@@ -1230,14 +1015,14 @@
                                 <div class="lg:max-w-122.5 max-w-85 ml-auto max-lg:mr-auto max-md:mx-auto">
                                     <div class="flex items-center justify-between mb-6.25 max-sm:flex-col max-sm:text-center sm:items-start">
                                         <div>
-                                            <h4 class="!font-title lg:!text-36 !text-28 !font-semibold text-primary mb-0">Zamzam Kabayare</h4>
+                                            <h4 class="!font-title lg:!text-36 !text-28 !font-semibold text-heading mb-0">Zamzam Kabayare</h4>
                                             <span class="font-title text-xl font-medium text-citrusyellow inline-block">Entrepreneur</span>
                                         </div>
                                         <div>
                                             <img src="assets/images/trv-icon/Quote.png" alt="Quote" class="lg:max-w-17.5 max-w-11 max-h-14.5 w-full" style="filter: brightness(0) saturate(100%) invert(25%) sepia(21%) saturate(4469%) hue-rotate(154deg) brightness(93%) contrast(95%)" width="70" height="58" loading="lazy">
                                         </div>
                                     </div>
-                                    <p class="font-title lg:text-2xl text-lg text-primary mb-5 max-lg:pr-7.5 max-md:pr-0">
+                                    <p class="font-title lg:text-2xl text-lg text-heading mb-5 max-lg:pr-7.5 max-md:pr-0">
                                         iMusafir delivered much more than a business trip. The combination of networking, supplier introductions, cultural experiences, and professional content creation was incredible. I returned home with new partnerships, valuable business contacts, and content that helped elevate my brand online.
                                     </p>
                                     <div class="md:float-right text-citrusyellow text-base mr-0.75">
@@ -1299,170 +1084,181 @@
 </div>
                     <!--TESTIMONIAL SECTION End-->
                     
-                    <!-- ADVENTURE SECTION START -->
-                    <div class="py-22.5 bg-cover bg-center bg-no-repeat relative text-center overflow-hidden trv-adventure-st1">
-    <div class="rounded-full inline-block relative mb-0 circle-text2">
-        <div class="bg-primary rounded-full sm:size-55 size-50 flex items-center justify-center emblem-wrap">
-            <div class="font-base text-xs font-normal tracking-[0.08em] normal-case mx-auto sm:size-50 size-45 rounded-full text-white text-center bg-transparent animate-spinZ emblem">Global delegations · business travel · iMusafir ·</div>
-            <i class="mx-auto sm:size-31 size-25 text-center flex items-center justify-center rounded-full bg-[#0A747C] absolute left-1/2 top-1/2 -translate-1/2 overflow-hidden"><img src="assets/images/advanture-st1.png" alt="In Circle Pic" class="h-auto sm:max-w-18.5 max-w-15.5" width="74" height="74" loading="lazy"></i>
+<!-- WOMEN STRATEGY STORIES START -->
+<section id="women-strategy-stories" class="women-strategy-stories bg-body-bg px-4 pt-10 pb-12 md:px-10 md:pt-12 md:pb-14 lg:px-20" aria-labelledby="women-strategy-heading">
+    <div class="mx-auto max-w-[1440px]">
+        <header class="mb-8 md:mb-10 text-center max-w-3xl mx-auto">
+            <h2 id="women-strategy-heading" class="women-strategy-stories__heading xl:text-46 md:text-40 text-3xl font-title font-semibold leading-[1.15] text-[#1C1915]">
+                Women Behind <span class="text-citrusyellow">iMUSAFIR</span>
+            </h2>
+            <div class="mt-3">
+                <img src="assets/images/background/Title-Separator.png" alt="" class="w-72 max-w-full inline-block" width="288" height="43" loading="lazy" aria-hidden="true">
+            </div>
+        </header>
+
+        <div class="women-strategy-stories__row flex flex-col items-center gap-4 lg:flex-row lg:justify-center" data-women-stories>
+            <article class="women-strategy-stories__card is-active flex flex-col gap-3" data-story-index="0" tabindex="0">
+                <div class="women-strategy-stories__panel relative h-[420px] w-full overflow-hidden rounded-[24px] p-3">
+                    <div class="flex h-full w-full flex-col md:flex-row">
+                        <div class="women-strategy-stories__image relative h-full w-full flex-shrink-0 overflow-hidden rounded-[16px] md:w-[196px]">
+                            <picture>
+                                <source srcset="assets/images/founder-simran.webp" type="image/webp">
+                                <img src="assets/images/founder-simran.png" alt="Simran" class="h-full w-full object-cover" width="196" height="396" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+                            </picture>
+                            <div class="absolute bottom-4 left-4 flex h-10 w-10 items-center justify-center rounded-[10px] bg-white shadow-sm" aria-hidden="true">
+                                <i class="fa-solid fa-table-cells women-strategy-stories__badge-icon text-[1.05rem]"></i>
+                            </div>
+                        </div>
+                        <div class="women-strategy-stories__content flex-1 overflow-hidden">
+                            <div class="women-strategy-stories__content-inner flex h-full flex-col p-6 text-white">
+                                <p class="mb-6 line-clamp-6 text-[16px] font-normal leading-[1.6] opacity-90">"I didn't have a network. So I built one. For 13 years I traveled across continents connecting founders to investors, immigrants to employers, and strangers to partners — because women-led strategy starts with opening doors."</p>
+                                <div class="mt-auto">
+                                    <h4 class="text-[16px] font-semibold whitespace-nowrap">Simran</h4>
+                                    <p class="women-strategy-stories__role text-[13px] whitespace-nowrap">Founder &amp; CEO</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-1 text-center">
+                    <h3 class="women-strategy-stories__label text-[14px] font-medium">Leadership</h3>
+                </div>
+            </article>
+
+            <article class="women-strategy-stories__card flex flex-col gap-3" data-story-index="1" tabindex="0">
+                <div class="women-strategy-stories__panel relative h-[420px] w-full overflow-hidden rounded-[24px] p-3">
+                    <div class="flex h-full w-full flex-col md:flex-row">
+                        <div class="women-strategy-stories__image relative h-full w-full flex-shrink-0 overflow-hidden rounded-[16px] md:w-[196px]">
+                            <picture>
+                                <source srcset="assets/images/team-ismahan.webp" type="image/webp">
+                                <img src="assets/images/team-ismahan.png" alt="Ismahan" class="h-full w-full object-cover object-top" width="196" height="396" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+                            </picture>
+                            <div class="absolute bottom-4 left-4 flex h-10 w-10 items-center justify-center rounded-[10px] bg-white shadow-sm" aria-hidden="true">
+                                <i class="fa-solid fa-bookmark women-strategy-stories__badge-icon text-[1.05rem]"></i>
+                            </div>
+                        </div>
+                        <div class="women-strategy-stories__content flex-1 overflow-hidden">
+                            <div class="women-strategy-stories__content-inner flex h-full flex-col p-6 text-white">
+                                <p class="mb-6 line-clamp-6 text-[16px] font-normal leading-[1.6] opacity-90">"Operations is where vision becomes reality. Every delegation, partnership, and founder experience we deliver is built on precision, care, and a team of women who treat excellence as the standard — not the exception."</p>
+                                <div class="mt-auto">
+                                    <h4 class="text-[16px] font-semibold whitespace-nowrap">Ismahan</h4>
+                                    <p class="women-strategy-stories__role text-[13px] whitespace-nowrap">Chief Operating Officer (COO)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-1 text-center">
+                    <h3 class="women-strategy-stories__label text-[14px] font-medium">Operations</h3>
+                </div>
+            </article>
+
+            <article class="women-strategy-stories__card flex flex-col gap-3" data-story-index="2" tabindex="0">
+                <div class="women-strategy-stories__panel relative h-[420px] w-full overflow-hidden rounded-[24px] p-3">
+                    <div class="flex h-full w-full flex-col md:flex-row">
+                        <div class="women-strategy-stories__image relative h-full w-full flex-shrink-0 overflow-hidden rounded-[16px] md:w-[196px]">
+                            <picture>
+                                <source srcset="assets/images/team-hibo.webp" type="image/webp">
+                                <img src="assets/images/team-hibo.png" alt="Hibo" class="h-full w-full object-cover object-top" width="196" height="396" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+                            </picture>
+                            <div class="absolute bottom-4 left-4 flex h-10 w-10 items-center justify-center rounded-[10px] bg-white shadow-sm" aria-hidden="true">
+                                <i class="fa-solid fa-leaf women-strategy-stories__badge-icon text-[1.05rem]"></i>
+                            </div>
+                        </div>
+                        <div class="women-strategy-stories__content flex-1 overflow-hidden">
+                            <div class="women-strategy-stories__content-inner flex h-full flex-col p-6 text-white">
+                                <p class="mb-6 line-clamp-6 text-[16px] font-normal leading-[1.6] opacity-90">"Partnerships across East Africa are the bridge between ambition and access. I work to open doors for founders, align the right allies, and turn introductions into lasting opportunities that strengthen our global strategy."</p>
+                                <div class="mt-auto">
+                                    <h4 class="text-[16px] font-semibold whitespace-nowrap">Hibo</h4>
+                                    <p class="women-strategy-stories__role text-[13px] whitespace-nowrap">Dir. EA Partnerships</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-1 text-center">
+                    <h3 class="women-strategy-stories__label text-[14px] font-medium">Partnerships</h3>
+                </div>
+            </article>
         </div>
     </div>
-    <h2 class="!font-title !font-semibold leading-[1] xl:!text-50xl md:!text-30xl sm:!text-80 !text-40 px-7.5 !text-white max-sm:mt-7.5">Global Delegations</h2>
-    <p class="font-title normal-case xl:text-50 sm:text-3xl text-22 leading-[1.2] font-medium text-white sm:mb-7.5 max-sm:my-2.5">It's time to connect</p>
-    <a href="contact.html" class="site-button butn-bg-shape">Reserve Your Seat</a>
-</div>
-                    <!-- ADVENTURE SECTION END -->
+</section>
+<!-- WOMEN STRATEGY STORIES END -->
+
                 </div>
                 <!-- CONTENT END -->
                 
                 <!-- FOOTER START -->
-                <footer class="bg-primary bg-cover bg-[url(../images/background/ftr-dark-bg.png)]">
-    <!-- FOOTER BLOCKES START -->  
-    <div class="container">
-        <div class="sm:pt-20 pt-10 text-white/06 border-b border-primary">
-            <div class="grid grid-cols-12">
-                <div class="lg:col-span-3 col-span-12 sm:px-3.75">
-                    <div class="mb-10">
-                        <div class="mb-10 text-center block max-w-48.25 after:table after:clear-both">
-                            <a href="index.html"><img src="assets/images/logo-dark.png" alt="logo" width="193" height="81" loading="lazy"></a>
-                        </div>
-                        <p class="sm:pr-12.5 mb-4 text-base text-white/50">iMusafir connects entrepreneurs, professionals, and investors through curated international business and luxury travel experiences. Travel with purpose. Connect with opportunity.</p>
-						<ul class="mt-5">
-							<li class="inline-flex xl:size-11.5 size-10.5 bg-citrusyellow xl:mr-2.5 mr-1.5 rounded-4xl justify-center items-center duration-500 hover:rounded-2lg group">
-								<a class="inline-flex size-9 bg-primary rounded-4xl justify-center items-center duration-500 text-white text-lg group-hover:rounded-2lg" href="https://x.com/iMusafirGlobal" target="_blank" rel="noopener noreferrer">
-									<i class="fa-brands fa-x-twitter group-hover:rotate-y-[360deg] group-hover:scale-[1.2] !inline-block duration-[0.5s] group-hover:text-citrusyellow"></i>
-								</a>
-							</li>
-							<li class="inline-flex xl:size-11.5 size-10.5 bg-citrusyellow xl:mr-2.5 mr-1.5 rounded-4xl justify-center items-center duration-500 hover:rounded-2lg group">
-								<a class="inline-flex size-9 bg-primary rounded-4xl justify-center items-center duration-500 text-white text-lg group-hover:rounded-2lg" href="https://www.facebook.com/profile.php?id=61590921115006" target="_blank" rel="noopener noreferrer"> 
-									<i class="fa-brands fa-facebook group-hover:rotate-y-[360deg] group-hover:scale-[1.2] !inline-block duration-[0.5s] group-hover:text-citrusyellow"></i>
-								</a>
-							</li>
-							<li class="inline-flex xl:size-11.5 size-10.5 bg-citrusyellow xl:mr-2.5 mr-1.5 rounded-4xl justify-center items-center duration-500 hover:rounded-2lg group">
-								<a class="inline-flex size-9 bg-primary rounded-4xl justify-center items-center duration-500 text-white text-lg group-hover:rounded-2lg" href="https://www.instagram.com/imusafir.global/" target="_blank" rel="noopener noreferrer">
-									<i class="fa-brands fa-instagram group-hover:rotate-y-[360deg] group-hover:scale-[1.2] !inline-block duration-[0.5s] group-hover:text-citrusyellow"></i>
-								</a>
-							</li>
-							<li class="inline-flex xl:size-11.5 size-10.5 bg-citrusyellow xl:mr-2.5 mr-1.5 rounded-4xl justify-center items-center duration-500 hover:rounded-2lg group">
-								<a class="inline-flex size-9 bg-primary rounded-4xl justify-center items-center duration-500 text-white text-lg group-hover:rounded-2lg" href="https://www.tiktok.com/@imusafir.com" target="_blank" rel="noopener noreferrer">
-									<i class="fa-brands fa-tiktok group-hover:rotate-y-[360deg] group-hover:scale-[1.2] !inline-block duration-[0.5s] group-hover:text-citrusyellow"></i>
-								</a>
-							</li>
-						</ul>
-                    </div>    
+                <footer class="site-footer">
+    <div class="site-footer__brand">
+        <a href="index.html" class="site-footer__monogram" aria-label="iMUSAFIR GLOBAL">
+            <img src="assets/images/logo-dark.png" alt="iMUSAFIR monogram" width="88" height="88" loading="lazy">
+        </a>
+        <a href="index.html" class="brand-lockup brand-lockup--center brand-lockup--footer">
+            <span class="brand-wordmark">iMUSAFIR</span>
+            <span class="brand-global">GLOBAL</span>
+        </a>
+        <p class="brand-tagline">Experiences. Connections. Legacy.</p>
+        <ul class="site-footer__social">
+            <li><a href="https://x.com/iMusafirGlobal" target="_blank" rel="noopener noreferrer" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=61590921115006" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+            <li><a href="https://www.instagram.com/imusafir.global/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="https://www.tiktok.com/@imusafir.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a></li>
+        </ul>
+    </div>
+    <div class="container site-footer__grid">
+        <div class="grid grid-cols-12 gap-y-8">
+            <div class="lg:col-span-3 col-span-12 sm:px-3.75 site-footer__links">
+                <h3>Explore</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="indonesia-2026.html">Indonesia 2026</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="lg:col-span-3 col-span-6 sm:px-3.75 site-footer__links">
+                <h3>Destinations</h3>
+                <ul>
+                    <li><a href="contact.html">Dubai</a></li>
+                    <li><a href="contact.html">Singapore</a></li>
+                    <li><a href="contact.html">Indonesia</a></li>
+                    <li><a href="contact.html">Kenya</a></li>
+                    <li><a href="contact.html">Nigeria</a></li>
+                </ul>
+            </div>
+            <div class="lg:col-span-3 col-span-6 sm:px-3.75 site-footer__links">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Terms &amp; Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="contact.html">Help</a></li>
+                </ul>
+            </div>
+            <div class="lg:col-span-3 col-span-12 sm:px-3.75">
+                <div class="site-footer__links">
+                    <h3>Contact</h3>
                 </div>
-                <div class="lg:col-span-2 col-span-6 mb-5 sm:px-3.75">
-                    <div class="mb-10">
-                        <h3 class="!text-white mb-7.5 relative xl:text-28 text-2xl">Explore</h3>
-                        <ul>
-                            <li class="block w-full py-0.5 overflow-hidden"><a class="pb-1.5 block duration-500 text-base text-paleaqua font-semibold hover:text-citrusyellow" href="#">FAQ's</a></li>
-                            <li class="block w-full py-0.5 overflow-hidden"><a class="pb-1.5 block duration-500 text-base text-paleaqua font-semibold hover:text-citrusyellow" href="contact.html">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-				<div class="lg:col-span-2 col-span-6 mb-5 sm:px-3.75">
-                    <div class="mb-10">
-                        <h3 class="!text-white mb-7.5 relative xl:text-28 text-2xl">Destinations</h3>
-                        <ul>
-                            <li class="block w-full py-0.5 overflow-hidden"><a class="pb-1.5 block duration-500 text-base text-paleaqua font-semibold hover:text-citrusyellow" href="contact.html">Dubai</a></li>
-                            <li class="block w-full py-0.5 overflow-hidden"><a class="pb-1.5 block duration-500 text-base text-paleaqua font-semibold hover:text-citrusyellow" href="contact.html">Singapore</a></li>
-                            <li class="block w-full py-0.5 overflow-hidden"><a class="pb-1.5 block duration-500 text-base text-paleaqua font-semibold hover:text-citrusyellow" href="contact.html">Indonesia</a></li>
-                            <li class="block w-full py-0.5 overflow-hidden"><a class="pb-1.5 block duration-500 text-base text-paleaqua font-semibold hover:text-citrusyellow" href="contact.html">Kenya</a></li>
-                            <li class="block w-full py-0.5 overflow-hidden"><a class="pb-1.5 block duration-500 text-base text-paleaqua font-semibold hover:text-citrusyellow" href="contact.html">Nigeria</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="lg:col-span-2 col-span-6 mb-5 sm:px-3.75">
-                    <div class="mb-10">
-                        <h3 class="!text-white mb-7.5 relative xl:text-28 text-2xl">Legal</h3>
-                        <ul>
-                            <li class="block w-full py-0.5 overflow-hidden"><a class="pb-1.5 block duration-500 text-base text-paleaqua font-semibold hover:text-citrusyellow" href="#">Terms & Conditions</a></li>
-                            <li class="block w-full py-0.5 overflow-hidden"><a class="pb-1.5 block duration-500 text-base text-paleaqua font-semibold hover:text-citrusyellow" href="#">Privacy Policy</a></li>
-                            <li class="block w-full py-0.5 overflow-hidden"><a class="pb-1.5 block duration-500 text-base text-paleaqua font-semibold hover:text-citrusyellow" href="contact.html">Contact</a></li>
-                            <li class="block w-full py-0.5 overflow-hidden"><a class="pb-1.5 block duration-500 text-base text-paleaqua font-semibold hover:text-citrusyellow" href="#">Help</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="lg:col-span-3 sm:col-span-6 col-span-12 sm:px-3.75">
-                    <div class="mb-10">
-                        <ul> 
-                            <li class="mb-2.5 relative flex items-center">
-                                <div class="xl:size-14 size-12 xl:min-w-14 min-w-12 rounded-full mr-3.5 bg-white/40 flex items-center justify-center">
-									<i class="fa-solid fa-phone text-xl text-white"></i>
-								</div>
-                                <a href="tel:+16127077177">
-									<span class="xl:text-3xl text-2xl text-citrusyellow font-normal font-display whitespace-nowrap">+1 (612) 707-7177</span>
-								</a>
-                            </li>
-                            <li class="mb-2.5 relative flex items-center">
-                                <div class="xl:size-14 size-12 xl:min-w-14 min-w-12 rounded-full mr-3.5 bg-white/40 flex items-center justify-center">
-									<i class="fa-solid fa-envelope text-xl text-white"></i>
-								</div>
-                                <a class="black text-paleaqua font-semibold xl:text-lg text-sm font-base" href="mailto:info@imusafir.com">info@imusafir.com</a>
-                            </li>
-                            <li class="relative flex items-center">
-                                <div class="xl:size-14 size-12 xl:min-w-14 min-w-12 rounded-full mr-3.5 bg-white/40 flex items-center justify-center">
-									<i class="fa-solid fa-house text-xl text-white"></i>
-								</div>
-                                <span class="black text-paleaqua font-semibold xl:text-lg text-sm font-base">12425 River Ridge Blvd #2, Burnsville, MN 55337</span>
-                            </li>
-                        </ul>  
-                    </div>
-                </div>
+                <ul class="site-footer__contact">
+                    <li>
+                        <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                        <a href="tel:+16127077177">+1 (612) 707-7177</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                        <a href="mailto:info@imusafir.com">info@imusafir.com</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                        <span>12425 River Ridge Blvd #2, Burnsville, MN 55337</span>
+                    </li>
+                </ul>
             </div>
         </div>
-        <div class="xl:py-10 py-1.25 xl:flex items-center">
-            <h3 class="whitespace-nowrap mr-11.5 !text-white relative text-28 max-xl:mb-7.5">Follow Instagram</h3>
-            <ul class="flex xl:gap-5 gap-y-2.5 gap-x-[2%] flex-wrap">
-                <li class="xl:w-[15%] lg:w-[18%] sm:w-[30%] w-[48%]">
-					<a href="https://www.instagram.com/imusafir.global/" target="_blank" rel="noopener noreferrer" class="relative rounded-2xl overflow-hidden flex items-center justify-center duration-500 bg-primary group">
-						<img src="assets/images/insta-gallery/pic1.jpg" alt="pic1" class="group-hover:opacity-80 group-hover:[filter:blur(3px)]" width="100" height="100" loading="lazy">
-						<span class="absolute top-1/2 left-1/2 table -translate-1/2 size-22.5 after:absolute after:block after:w-[0%] after:h-1.5 after:border-t after:border-b after:border-white after:opacity-80 after:top-1/2 after:-translate-y-1/2 after:duration-500 before:absolute before:block before:w-[0%] before:h-1.5 before:border-t before:border-b before:border-white before:opacity-80 before:top-1/2 before:-translate-y-1/2 before:duration-500 before:-right-3/5 after:-left-3/5 group-hover:opacity-100 group-hover:before:w-4/5 group-hover:after:w-4/5">
-							<i class="fa-brands fa-instagram absolute left-1/2 top-1/2 translate-1/2 text-white opacity-0 duration-500 group-hover:scale-[1.1] group-hover:-translate-1/2 group-hover:opacity-100"></i>
-						</span>
-					</a>
-				</li>
-                <li class="xl:w-[15%] lg:w-[18%] sm:w-[30%] w-[48%]">
-					<a href="https://www.instagram.com/imusafir.global/" target="_blank" rel="noopener noreferrer" class="relative rounded-2xl overflow-hidden flex items-center justify-center duration-500 bg-primary group">
-						<img src="assets/images/insta-gallery/pic2.jpg" alt="pic2" class="group-hover:opacity-80 group-hover:[filter:blur(3px)]" width="100" height="100" loading="lazy">
-						<span class="absolute top-1/2 left-1/2 table -translate-1/2 size-22.5 after:absolute after:block after:w-[0%] after:h-1.5 after:border-t after:border-b after:border-white after:opacity-80 after:top-1/2 after:-translate-y-1/2 after:duration-500 before:absolute before:block before:w-[0%] before:h-1.5 before:border-t before:border-b before:border-white before:opacity-80 before:top-1/2 before:-translate-y-1/2 before:duration-500 before:-right-3/5 after:-left-3/5 group-hover:opacity-100 group-hover:before:w-4/5 group-hover:after:w-4/5">
-							<i class="fa-brands fa-instagram absolute left-1/2 top-1/2 translate-1/2 text-white opacity-0 duration-500 group-hover:scale-[1.1] group-hover:-translate-1/2 group-hover:opacity-100"></i>
-						</span>
-					</a>
-				</li>
-                <li class="xl:w-[15%] lg:w-[18%] sm:w-[30%] w-[48%]">
-					<a href="https://www.instagram.com/imusafir.global/" target="_blank" rel="noopener noreferrer" class="relative rounded-2xl overflow-hidden flex items-center justify-center duration-500 bg-primary group">
-						<img src="assets/images/insta-gallery/pic3.jpg" alt="pic3" class="group-hover:opacity-80 group-hover:[filter:blur(3px)]" width="100" height="100" loading="lazy">
-						<span class="absolute top-1/2 left-1/2 table -translate-1/2 size-22.5 after:absolute after:block after:w-[0%] after:h-1.5 after:border-t after:border-b after:border-white after:opacity-80 after:top-1/2 after:-translate-y-1/2 after:duration-500 before:absolute before:block before:w-[0%] before:h-1.5 before:border-t before:border-b before:border-white before:opacity-80 before:top-1/2 before:-translate-y-1/2 before:duration-500 before:-right-3/5 after:-left-3/5 group-hover:opacity-100 group-hover:before:w-4/5 group-hover:after:w-4/5">
-							<i class="fa-brands fa-instagram absolute left-1/2 top-1/2 translate-1/2 text-white opacity-0 duration-500 group-hover:scale-[1.1] group-hover:-translate-1/2 group-hover:opacity-100"></i>
-						</span>
-					</a>
-				</li>
-                <li class="xl:w-[15%] lg:w-[18%] sm:w-[30%] w-[48%]">
-					<a href="https://www.instagram.com/imusafir.global/" target="_blank" rel="noopener noreferrer" class="relative rounded-2xl overflow-hidden flex items-center justify-center duration-500 bg-primary group">
-						<img src="assets/images/insta-gallery/pic4.jpg" alt="pic4" class="group-hover:opacity-80 group-hover:[filter:blur(3px)]" width="100" height="100" loading="lazy">
-						<span class="absolute top-1/2 left-1/2 table -translate-1/2 size-22.5 after:absolute after:block after:w-[0%] after:h-1.5 after:border-t after:border-b after:border-white after:opacity-80 after:top-1/2 after:-translate-y-1/2 after:duration-500 before:absolute before:block before:w-[0%] before:h-1.5 before:border-t before:border-b before:border-white before:opacity-80 before:top-1/2 before:-translate-y-1/2 before:duration-500 before:-right-3/5 after:-left-3/5 group-hover:opacity-100 group-hover:before:w-4/5 group-hover:after:w-4/5">
-							<i class="fa-brands fa-instagram absolute left-1/2 top-1/2 translate-1/2 text-white opacity-0 duration-500 group-hover:scale-[1.1] group-hover:-translate-1/2 group-hover:opacity-100"></i>
-						</span>
-					</a>
-				</li>
-                <li class="xl:w-[15%] lg:w-[18%] sm:w-[30%] w-[48%]">
-					<a href="https://www.instagram.com/imusafir.global/" target="_blank" rel="noopener noreferrer" class="relative rounded-2xl overflow-hidden flex items-center justify-center duration-500 bg-primary group">
-						<img src="assets/images/insta-gallery/pic5.jpg" alt="pic5" class="group-hover:opacity-80 group-hover:[filter:blur(3px)]" width="100" height="100" loading="lazy">
-						<span class="absolute top-1/2 left-1/2 table -translate-1/2 size-22.5 after:absolute after:block after:w-[0%] after:h-1.5 after:border-t after:border-b after:border-white after:opacity-80 after:top-1/2 after:-translate-y-1/2 after:duration-500 before:absolute before:block before:w-[0%] before:h-1.5 before:border-t before:border-b before:border-white before:opacity-80 before:top-1/2 before:-translate-y-1/2 before:duration-500 before:-right-3/5 after:-left-3/5 group-hover:opacity-100 group-hover:before:w-4/5 group-hover:after:w-4/5">
-							<i class="fa-brands fa-instagram absolute left-1/2 top-1/2 translate-1/2 text-white opacity-0 duration-500 group-hover:scale-[1.1] group-hover:-translate-1/2 group-hover:opacity-100"></i>
-						</span>
-					</a>
-				</li>
-            </ul>
-        </div>
-		<div class="py-10 text-white relative z-1 font-normal after:absolute after:bg-primary after:max-w-135 after:h-px after:left-1/2 after:top-0 after:-translate-x-1/2">
-			<div class="container">
-				<p class="copyrights-text text-center text-sm font-semibold">© <span class="current-year">2026</span> <span class="inline-block text-citrusyellow normal-case text-center text-sm font-semibold">iMUSAFIR</span>. All Rights Reserved.</p>
-			</div>
-		</div>		
     </div>
-    <!-- FOOTER COPYRIGHT -->
+    <div class="site-footer__bar">
+        <p>&copy; <span class="current-year">2026</span> iMUSAFIR GLOBAL. All Rights Reserved.</p>
+    </div>
 </footer>
                 <!-- FOOTER END -->
             </div>
@@ -1472,25 +1268,25 @@
         <button class="scroltop"><span class="fa fa-angle-up  relative" id="btn-vibrate"></span></button>
     </div>
 
-<div id="offcanvas-right" class="fixed top-0 right-0 z-[9999999] h-screen w-88 sm:w-125 max-w-full translate-x-full transition-transform duration-500 ease-out overflow-y-auto bg-[#0a0a0a] text-white shadow-[-8px_0_40px_rgba(0,0,0,0.5)]" role="dialog" aria-label="Private invitation">
-	<button type="button" class="absolute right-8 top-8 z-20 size-9 flex items-center justify-center text-[#C9A24D] border border-[#C9A24D]/40 rounded-full cursor-pointer hover:bg-[#C9A24D]/10" data-drawer-hide="offcanvas-right" aria-label="Close">
+<div id="offcanvas-right" class="fixed top-0 right-0 z-[9999999] h-screen w-88 sm:w-125 max-w-full translate-x-full transition-transform duration-500 ease-out overflow-y-auto bg-[#1C1915] text-white shadow-[-8px_0_40px_rgba(0,0,0,0.5)]" role="dialog" aria-label="Private invitation">
+	<button type="button" class="absolute right-8 top-8 z-20 size-9 flex items-center justify-center text-[#C5A059] border border-[#C5A059]/40 rounded-full cursor-pointer hover:bg-[#C5A059]/10" data-drawer-hide="offcanvas-right" aria-label="Close">
 		<i class="fa-solid fa-xmark text-sm" aria-hidden="true"></i>
 	</button>
 	<div class="relative z-10 flex flex-col min-h-full pt-24 pb-16 px-10 sm:px-12">
-		<span class="block w-10 h-px bg-[#C9A24D] mb-8" aria-hidden="true"></span>
-		<p class="font-title text-xs normal-case tracking-[0.04em] text-[#C9A24D] mb-6 font-medium">Invitation only</p>
-		<p role="heading" aria-level="2" class="font-title text-[clamp(1.75rem,3.5vw,2.625rem)] normal-case tracking-[0.02em] !text-white font-semibold mb-8 leading-[1.15] bg-transparent selection:bg-[#C9A24D]/25 selection:!text-white">Limited to 20 founders &amp; investors</p>
-		<span class="block w-12 h-px bg-[#C9A24D]/50 mb-10" aria-hidden="true"></span>
+		<span class="block w-10 h-px bg-[#C5A059] mb-8" aria-hidden="true"></span>
+		<p class="font-title text-xs normal-case tracking-[0.04em] text-[#C5A059] mb-6 font-medium">Invitation only</p>
+		<p role="heading" aria-level="2" class="font-title text-[clamp(1.75rem,3.5vw,2.625rem)] normal-case tracking-[0.02em] !text-white font-semibold mb-8 leading-[1.15] bg-transparent selection:bg-[#C5A059]/25 selection:!text-white">Limited to 20 founders &amp; investors</p>
+		<span class="block w-12 h-px bg-[#C5A059]/50 mb-10" aria-hidden="true"></span>
 		<p class="font-base text-base sm:text-lg text-white/80 leading-relaxed mb-12 max-w-md">Gain direct access to entrepreneurs, investors, and decision-makers through a curated business delegation designed to create meaningful relationships and global opportunities.</p>
 		<div class="flex flex-col gap-4 mb-14">
 			<a href="contact.html" class="site-button butn-bg-shape justify-center w-full sm:w-auto text-center">Request access</a>
-			<a href="indonesia-2026.html" class="inline-flex items-center justify-center py-3.5 px-7 text-base font-medium text-white/90 border border-white/25 rounded-full hover:border-[#C9A24D]/50 hover:bg-white/5 w-full sm:w-auto text-center">Explore Indonesia 2026</a>
+			<a href="indonesia-2026.html" class="inline-flex items-center justify-center py-3.5 px-7 text-base font-medium text-white/90 border border-white/25 rounded-full hover:border-[#C5A059]/50 hover:bg-white/5 w-full sm:w-auto text-center">Explore Indonesia 2026</a>
 		</div>
 		<p class="mt-auto pt-8 border-t border-white/10 font-title text-[0.7rem] normal-case tracking-[0.03em] text-white/45 flex flex-wrap gap-x-3 gap-y-1">
 			<span>Entrepreneurs</span>
-			<span class="text-[#C9A24D]/60" aria-hidden="true">•</span>
+			<span class="text-[#C5A059]/60" aria-hidden="true">&bull;</span>
 			<span>Investors</span>
-			<span class="text-[#C9A24D]/60" aria-hidden="true">•</span>
+			<span class="text-[#C5A059]/60" aria-hidden="true">&bull;</span>
 			<span>Executives</span>
 		</p>
 	</div>
@@ -1505,5 +1301,6 @@
 <script defer src="assets/js/dz.carousel.js?v=20260617"></script>
 <script defer src="assets/js/animation.js"></script>
 <script defer src="assets/js/custom.js?v=20260611"></script>
+<script defer src="assets/js/women-strategy-stories.js"></script>
 </body>
 </html>
