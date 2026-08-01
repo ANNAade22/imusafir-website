@@ -132,7 +132,8 @@ const Gallery = (function () {
       const hasMore = renderedCount < manifest.photos.length;
       loadMoreBtn.classList.toggle("hidden", !hasMore);
       if (hasMore) {
-        loadMoreBtn.textContent = `Load more (${manifest.photos.length - renderedCount} photos)`;
+        const label = loadMoreBtn.querySelector(".jelly-label") || loadMoreBtn;
+        label.textContent = `Load more (${manifest.photos.length - renderedCount} photos)`;
       }
     }
   }

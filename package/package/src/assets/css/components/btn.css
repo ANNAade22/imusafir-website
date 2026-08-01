@@ -1,58 +1,166 @@
+/* Shared gooey filter host (injected by jelly-explore-button.js) */
+.jelly-filter-svg {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
 .site-button {
-    @apply outline-none text-richblack font-medium py-3.75 px-7.5 relative overflow-hidden cursor-pointer inline-flex bg-primary border-0 text-sm duration-300 whitespace-nowrap uppercase tracking-[0.12em];
-    border-radius: 2px;
+    --jelly-color: var(--primary);
+    --jelly-label-color: var(--rich-black);
+    @apply outline-none font-medium relative cursor-pointer inline-flex items-center justify-center border-0 text-sm duration-300 whitespace-nowrap uppercase tracking-[0.12em];
+    color: var(--jelly-label-color);
+    background-color: var(--jelly-color);
+    border-radius: 9999px;
+    overflow: visible;
+    z-index: 20;
+    min-height: 3.25rem;
+    padding: 0.95rem 1.9rem;
+    isolation: isolate;
 }
+
 .site-button.butn-bg-shape:after {
-    @apply content-[''] bg-white h-40 opacity-0 absolute -top-12.5 rotate-[35deg] w-10;
+    content: none;
 }
-.site-button.butn-bg-shape:after {
-	transition: all 3000ms cubic-bezier(0.19, 1, 0.22, 1);
+
+.site-button:hover,
+.site-button:active {
+    @apply bg-transparent;
+    color: var(--jelly-label-color);
 }
-.site-button.butn-bg-shape:after {
-    @apply -left-full;
-}
-.site-button:hover, .site-button:active {
-    @apply bg-richblack text-primary;
-}
-.site-button.butn-bg-shape:hover:after {
-    @apply left-[200%] opacity-60;
-}
+
 .site-button.outline {
+    --jelly-color: var(--primary);
+    --jelly-label-color: var(--primary);
     @apply bg-transparent text-primary border border-primary py-2.5 px-6.25 text-sm;
-    border-radius: 2px;
+    border-radius: 9999px;
 }
+
 .site-button.outline:after {
-    @apply content-[''] bg-primary h-40 opacity-0 absolute -top-12.5 rotate-[35deg] duration-[900ms] w-10;
+    content: none;
 }
-.site-button.outline:after {
-    @apply -left-full;
-}
+
 .site-button.outline:hover {
-	@apply bg-primary text-richblack border-primary;
+    @apply bg-transparent text-primary border-primary;
 }
-.site-button.outline:hover::after {
-    @apply left-[200%] opacity-40;
+
+.site-button.btn-white {
+    --jelly-color: #ffffff;
+    --jelly-label-color: var(--rich-black);
+    color: var(--jelly-label-color);
 }
+
+.site-button.btn-white:hover {
+    color: var(--jelly-label-color);
+}
+
+.site-button.jelly-explore {
+    text-decoration: none;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.site-button.jelly-explore .jelly-shadow {
+    position: absolute;
+    width: 90%;
+    height: 80%;
+    background: rgba(0, 0, 0, 0.8);
+    filter: blur(25px);
+    border-radius: 9999px;
+    z-index: -1;
+    transform: translateY(12px);
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.site-button.jelly-explore .jelly-gooey {
+    position: absolute;
+    inset: -80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.site-button.jelly-explore .jelly-body,
+.site-button.jelly-explore .jelly-body-overlay {
+    position: absolute;
+    border-radius: 9999px;
+    background-color: var(--jelly-color);
+    pointer-events: none;
+    will-change: transform;
+}
+
+.site-button.jelly-explore .jelly-body-overlay {
+    z-index: 10;
+    overflow: hidden;
+}
+
+.site-button.jelly-explore .jelly-blob {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70px;
+    height: 70px;
+    border-radius: 9999px;
+    background-color: var(--jelly-color);
+    pointer-events: none;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+    will-change: transform, opacity;
+    transition: opacity 0.15s ease;
+}
+
+.site-button.jelly-explore .jelly-label {
+    position: relative;
+    z-index: 20;
+    color: var(--jelly-label-color);
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    user-select: none;
+    pointer-events: none;
+    will-change: transform;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.18));
+}
+
+.site-button.jelly-explore--outline .jelly-body,
+.site-button.jelly-explore--outline .jelly-blob {
+    background-color: transparent;
+    box-shadow: inset 0 0 0 1.5px var(--jelly-color);
+}
+
+.site-button.jelly-explore--outline .jelly-body-overlay {
+    background-color: transparent;
+}
+
+.site-button.jelly-explore--outline .jelly-shadow {
+    opacity: 0.25;
+}
+
+.site-button.jelly-explore--outline:hover .jelly-body,
+.site-button.jelly-explore--outline:hover .jelly-blob {
+    background-color: var(--jelly-color);
+}
+
+.site-button.jelly-explore--outline:hover {
+    --jelly-label-color: var(--rich-black);
+}
+
+.site-button.jelly-explore:disabled,
+.site-button.jelly-explore.disabled,
+.site-button.jelly-explore[aria-disabled="true"] {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
 button.scroltop {
     @apply size-10 bg-richblack border border-primary/40 fixed right-3.75 bottom-3.75 uppercase m-0 p-0 cursor-pointer text-center z-999 !text-primary;
 }
 button.scroltop span {
     @apply block text-2xl;
-}
-.site-button.btn-white {
-    @apply text-richblack bg-white;
-}
-.site-button.btn-white.butn-bg-shape:after {
-    @apply content-[''] bg-secondary h-40 opacity-0 absolute -top-12.5 rotate-[35deg] w-10;
-}
-.site-button.btn-white.butn-bg-shape:after {
-	transition: all 3000ms cubic-bezier(0.19, 1, 0.22, 1);
-}
-.site-button.btn-white.butn-bg-shape:hover:after {
-    @apply opacity-60;
-}
-.site-button.btn-white:hover {
-    @apply bg-richblack text-primary;
 }
 
 /* Animated gold underline for content links */

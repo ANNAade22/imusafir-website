@@ -387,30 +387,6 @@
 .hero-positioning__gold-rule.mb-8 {
     margin-bottom: 1rem;
 }
-.hero-positioning__actions .site-button {
-    transition:
-        transform 0.55s cubic-bezier(0.16, 1, 0.3, 1),
-        box-shadow 0.55s cubic-bezier(0.16, 1, 0.3, 1),
-        color 0.45s ease,
-        background-color 0.45s ease;
-}
-.hero-positioning__actions .site-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(197, 160, 89, 0.25);
-}
-.hero-positioning__cta-secondary {
-    @apply inline-flex items-center justify-center py-3.75 px-7.5 text-sm font-medium text-primary border border-primary uppercase tracking-[0.12em] duration-300 whitespace-nowrap hover:bg-primary hover:text-richblack;
-    border-radius: 2px;
-    transition:
-        transform 0.55s cubic-bezier(0.16, 1, 0.3, 1),
-        background-color 0.45s ease,
-        border-color 0.45s ease,
-        color 0.45s ease,
-        box-shadow 0.55s cubic-bezier(0.16, 1, 0.3, 1);
-}
-.hero-positioning__cta-secondary:hover {
-    transform: translateY(-2px);
-}
 .hero-positioning__scroll {
     @apply absolute left-1/2 -translate-x-1/2 bottom-10 md:bottom-14 max-lg:hidden flex flex-col items-center gap-2 pointer-events-none;
     animation: hero-scroll-cue 2.4s ease-in-out 0.8s infinite;
@@ -798,6 +774,11 @@
     max-width: 11rem;
     margin-inline: auto;
     justify-content: center;
+}
+.trv-pricing-matrix__tfoot .site-button .jelly-label {
+    white-space: normal;
+    line-height: 1.3;
+    text-align: center;
 }
 @media (width >= 768px) {
     .trv-pricing-matrix__tfoot .site-button {

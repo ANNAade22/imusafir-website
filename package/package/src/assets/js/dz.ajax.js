@@ -65,17 +65,22 @@ function ensureContactSubject(form) {
   }
 }
 
+function getButtonLabelTarget(button) {
+  return button.querySelector('.jelly-label') || button;
+}
+
 function setSubmitButtonState(form, isSubmitting) {
   const button = form.querySelector('[type="submit"]');
   if (!button) return;
 
+  const label = getButtonLabelTarget(button);
   button.disabled = isSubmitting;
   button.setAttribute('aria-busy', isSubmitting ? 'true' : 'false');
   if (isSubmitting) {
-    button.dataset.originalText = button.textContent;
-    button.textContent = 'Sending...';
+    button.dataset.originalText = label.textContent;
+    label.textContent = 'Sending...';
   } else if (button.dataset.originalText) {
-    button.textContent = button.dataset.originalText;
+    label.textContent = button.dataset.originalText;
   }
 }
 
