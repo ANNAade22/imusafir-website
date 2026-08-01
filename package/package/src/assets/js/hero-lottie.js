@@ -1,26 +1,32 @@
 (function () {
 	'use strict';
 
+	var TRANSITION_MS = 700;
+
 	function initHeroLottie() {
 		if (typeof lottie === 'undefined' || typeof Swiper === 'undefined') return;
 
 		var stage = document.querySelector('.hero-lottie-swiper');
 		if (!stage) return;
 
-		var nodes = stage.querySelectorAll('[data-lottie]');
-		if (!nodes.length) return;
+		var sourceNodes = stage.querySelectorAll('[data-lottie]');
+		if (!sourceNodes.length) return;
 
 		var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-		var animations = [];
+		var slideCount = sourceNodes.length;
+		var animationsByEl = new Map();
 		var ready = 0;
+		var totalToLoad = 0;
 		var swiper = null;
 
 		function playActive() {
 			if (!swiper) return;
-			var active = swiper.activeIndex;
-			animations.forEach(function (anim, i) {
-				if (!anim) return;
-				if (i === active) {
+			var activeSlide = swiper.slides[swiper.activeIndex];
+			if (!activeSlide) return;
+
+			var activeEl = activeSlide.querySelector('[data-lottie]');
+			animationsByEl.forEach(function (anim, el) {
+				if (el === activeEl) {
 					anim.goToAndPlay(0, true);
 				} else {
 					anim.stop();
@@ -29,10 +35,11 @@
 			});
 		}
 
-		nodes.forEach(function (el, i) {
+		function bindLottie(el) {
 			var path = el.getAttribute('data-lottie');
-			if (!path) return;
+			if (!path || animationsByEl.has(el)) return;
 
+			totalToLoad += 1;
 			var anim = lottie.loadAnimation({
 				container: el,
 				renderer: 'svg',
@@ -41,45 +48,43 @@
 				path: path,
 			});
 
-			animations[i] = anim;
+			animationsByEl.set(el, anim);
 
 			anim.addEventListener('DOMLoaded', function () {
 				ready += 1;
 				if (reduceMotion) {
-					if (i === 0) anim.goToAndStop(0, true);
+					if (ready === 1) anim.goToAndStop(0, true);
 					return;
 				}
-				if (ready === nodes.length && swiper) {
+				if (ready === totalToLoad && swiper) {
 					playActive();
 				}
 			});
 
 			anim.addEventListener('complete', function () {
-				if (reduceMotion || !swiper) return;
-				if (animations.length === 1) {
-					anim.goToAndPlay(0, true);
-					return;
-				}
-				if (swiper.activeIndex !== i) return;
-				if (swiper.activeIndex >= animations.length - 1) {
-					swiper.slideTo(0);
-				} else {
-					swiper.slideNext();
-				}
+				if (reduceMotion || !swiper || slideCount < 2) return;
+
+				var activeSlide = swiper.slides[swiper.activeIndex];
+				var activeEl = activeSlide && activeSlide.querySelector('[data-lottie]');
+				if (activeEl !== el) return;
+
+				swiper.slideNext();
 			});
-		});
+		}
 
 		swiper = new Swiper(stage, {
 			direction: 'vertical',
 			effect: 'slide',
-			speed: 700,
-			loop: false,
-			rewind: true,
+			speed: TRANSITION_MS,
+			loop: slideCount > 1,
 			allowTouchMove: true,
 			slidesPerView: 1,
 			spaceBetween: 0,
 			watchOverflow: true,
 			on: {
+				init: function () {
+					stage.querySelectorAll('[data-lottie]').forEach(bindLottie);
+				},
 				slideChangeTransitionEnd: function () {
 					if (reduceMotion) return;
 					playActive();
@@ -87,8 +92,8 @@
 			},
 		});
 
-		if (!reduceMotion && ready === nodes.length) {
-			playActive();
+		if (!totalToLoad) {
+			stage.querySelectorAll('[data-lottie]').forEach(bindLottie);
 		}
 	}
 

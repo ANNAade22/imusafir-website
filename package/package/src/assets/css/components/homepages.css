@@ -268,12 +268,12 @@
     @apply relative flex flex-col items-center gap-4 w-full lg:flex-row lg:items-center lg:justify-between lg:gap-8 min-h-0;
 }
 .hero-positioning__copy {
-    @apply relative z-2 w-full lg:max-w-[46%] xl:max-w-[44%] shrink-0;
+    @apply relative z-2 w-full lg:max-w-[42%] xl:max-w-[40%] shrink-0;
 }
 .hero-positioning__lottie {
     @apply relative z-1 shrink-0 ml-auto overflow-hidden;
-    width: min(70vw, 38vh, 22rem);
-    height: min(70vw, 38vh, 22rem);
+    width: min(86vw, 54vh, 30rem);
+    height: min(86vw, 54vh, 30rem);
     aspect-ratio: 1 / 1;
     animation: hero-subhead-in 0.55s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
 }
@@ -302,27 +302,27 @@
 }
 @media (width >= 768px) {
     .hero-positioning__lottie {
-        width: min(48vw, 42vh, 28rem);
-        height: min(48vw, 42vh, 28rem);
+        width: min(60vw, 58vh, 36rem);
+        height: min(60vw, 58vh, 36rem);
     }
 }
 @media (width >= 992px) {
     .hero-positioning__lottie {
-        width: min(42%, 52vh, 34rem);
-        height: min(42vw, 52vh, 34rem);
+        width: min(52%, 68vh, 46rem);
+        height: min(52vw, 68vh, 46rem);
         margin-left: 0;
     }
 }
 @media (width >= 1280px) {
     .hero-positioning__lottie {
-        width: min(44%, 56vh, 38rem);
-        height: min(40vw, 56vh, 38rem);
+        width: min(54%, 72vh, 50rem);
+        height: min(50vw, 72vh, 50rem);
     }
 }
 @media (width >= 1536px) {
     .hero-positioning__lottie {
-        width: min(44%, 58vh, 42rem);
-        height: min(38vw, 58vh, 42rem);
+        width: min(54%, 74vh, 54rem);
+        height: min(48vw, 74vh, 54rem);
     }
 }
 @media (prefers-reduced-motion: reduce) {
