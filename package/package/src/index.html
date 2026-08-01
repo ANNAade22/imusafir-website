@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -49,17 +49,42 @@
     <link rel="preload" href="assets/fonts/playfair-display-600.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="assets/fonts/great-vibes-400.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="assets/css/fonts.css">
-    <link rel="stylesheet" href="assets/css/style.css?v=20260801w">
+    <link rel="stylesheet" href="assets/css/style.css?v=20260801nrep">
     <link rel="stylesheet" href="assets/icons/fontawesome/css/all.min.css">
     <link rel="preload" href="assets/vendor/swiper/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css"></noscript>
+    <script>
+    (function () {
+        try {
+            if (sessionStorage.getItem("imusafir-opening-seen") === "1") {
+                document.documentElement.classList.add("opening-intro-skip");
+            }
+        } catch (e) {}
+    })();
+    </script>
 	
 </head>
 
 <body id="bg" class="selection:bg-[#484848] selection:text-white">
     
 <!-- LOADING AREA START ===== -->
-<!-- Preloader disabled for faster first paint -->
+<div class="loading-area opening-intro" id="opening-intro" aria-hidden="true">
+    <div class="loading-box"></div>
+    <div class="opening-intro__media">
+        <video class="opening-intro__video" playsinline muted autoplay preload="auto">
+            <source src="assets/video/opening.webm" type="video/webm">
+            <source src="assets/video/opening.mp4" type="video/mp4">
+        </video>
+    </div>
+</div>
+<script>
+(function () {
+    if (document.documentElement.classList.contains("opening-intro-skip")) {
+        var el = document.getElementById("opening-intro");
+        if (el) el.remove();
+    }
+})();
+</script>
 <!-- LOADING AREA  END ====== -->
 
 <!-- Curser Pointer -->
@@ -84,7 +109,7 @@
                     <span class="block absolute left-2.5 h-0.5 rounded-px bg-heading duration-300 top-8 w-4"></span>
                 </button>
                 <div class="lg:hidden fixed top-0 left-0 bg-black size-full duration-300 z-999 opacity-0 visible pointer-events-none menu-close fade-overlay"></div>
-                <div class="flex lg:justify-center lg:basis-auto lg:grow max-lg:flex-col justify-start font-base max-lg:fixed max-lg:h-screen max-lg:px-5 max-lg:top-0 max-lg:-left-75 max-lg:z-9999 max-lg:bg-richblack max-lg:w-72 max-lg:overflow-auto max-lg:duration-700 header-nav custom-scroll">
+                <div class="flex lg:justify-center lg:basis-auto lg:grow justify-start font-base header-nav custom-scroll">
                     <div class="flex items-center relative z-9 py-6.25 lg:hidden">
                         <a href="index.html" class="brand-lockup" aria-label="iMUSAFIR GLOBAL home">
                             <span class="brand-wordmark">iMUSAFIR</span>
@@ -143,6 +168,10 @@
                             <div class="container hero-positioning__container mx-auto px-5 md:px-10 xl:px-17.5 flex-1 flex flex-col justify-center max-w-[90rem] min-h-0">
                                 <div class="hero-positioning__layout">
                                     <div class="hero-positioning__copy">
+                                        <div class="hero-positioning__brand brand-lockup" aria-hidden="true">
+                                            <span class="brand-wordmark">iMUSAFIR</span>
+                                            <span class="brand-global">GLOBAL</span>
+                                        </div>
                                         <span class="hero-positioning__gold-rule" aria-hidden="true"></span>
                                         <h1 class="hero-positioning__headline">
                                             <span class="hero-positioning__headline-line" style="--line-delay: 0.05s">Your next opportunity</span>
@@ -181,7 +210,7 @@
                                     </div>
                                     <div>
                                         <span class="brand-stats__value">500+</span>
-                                        <span class="brand-stats__label">Connections created</span>
+                                        <span class="brand-stats__label">Connections</span>
                                     </div>
                                     <div>
                                         <span class="brand-stats__value">Global</span>
@@ -348,8 +377,8 @@
             </div>
         </div> 
     </div>
-    <div class="absolute -left-28.75 top-2/5 w-57.5 opacity-50 animate-slide-top2"><img src="assets/images/hotballon-Left.png" alt="image" width="233" height="333"></div>
-    <div class="absolute -right-13.75 top-2/5 w-27.5 animate-slide-top"><img src="assets/images/hotballon-right.png" alt="image"  width="110" height="166"></div>
+    <div class="absolute -left-28.75 top-2/5 w-57.5 opacity-50 animate-slide-top2 max-md:hidden" aria-hidden="true"><img src="assets/images/hotballon-Left.png" alt="" width="233" height="333"></div>
+    <div class="absolute -right-13.75 top-2/5 w-27.5 animate-slide-top max-md:hidden" aria-hidden="true"><img src="assets/images/hotballon-right.png" alt=""  width="110" height="166"></div>
 </div>
                     <!--POPULAR DESTINATION SECTION END-->
 
@@ -357,7 +386,7 @@
                     <div class="section-light section-pad section-divider lg:pt-30 !pb-0">
     <div class="container">
         <div class="grid grid-cols-12">
-            <div class="xl:col-span-5 lg:col-span-7 col-span-12 px-3.75 max-lg:mb-40">
+            <div class="xl:col-span-5 lg:col-span-7 col-span-12 px-3.75">
                 <div class="2xl:mb-30 mb-10 relative">
                     <!-- TITLE START-->
                     <div class="text-left mb-0">
@@ -412,7 +441,7 @@
                     </div>
                 </div>
             </div>
-            <div class="xl:col-span-7 lg:col-span-5 col-span-12 relative px-3.75">
+            <div class="xl:col-span-7 lg:col-span-5 col-span-12 relative px-3.75 max-lg:hidden">
                 <div class="we-rec-images max-md:pb-10">
                     <div class="we-rec-badge">
                         <div class="we-rec-badge-plane">
@@ -517,11 +546,11 @@
                     <!-- CLIENT LOGO  SECTION End -->
                     
                     <!--WE OFFER SERVICES SECTION START-->
-                    <div class="section-light section-pad !pb-0 -mb-8 md:-mb-12 section-divider relative overflow-hidden before:absolute before:left-0 before:right-0 before:bottom-0 before:z-0 2xl:before:h-40 sm:before:h-28 before:h-0 before:bg-body-bg">
+                    <div class="services-offer section-light section-pad !pb-0 -mb-8 md:-mb-12 section-divider relative overflow-hidden before:absolute before:left-0 before:right-0 before:bottom-0 before:z-0 2xl:before:h-40 sm:before:h-28 before:h-0 before:bg-body-bg">
     <div class="container">
         <div class="relative z-1">
             <div class="grid grid-cols-12">
-                <div class="lg:col-span-5 col-span-12 px-3.75">
+                <div class="lg:col-span-5 col-span-12 px-3.75 max-lg:hidden">
                     <div class="relative z-1">
                         <picture>
                             <source srcset="assets/images/Left-Man-Image.webp" type="image/webp">
@@ -533,14 +562,14 @@
                 </div>
                 <div class="lg:col-span-7 col-span-12 px-3.75">
                     <div class="trv-we-off-content">
-                        <div class="lg:mr-22.5 text-left mb-15">
+                        <div class="lg:mr-22.5 text-left mb-15 services-offer__intro">
                             <h2 class="xl:text-46 md:text-40 text-3xl mb-2.5">We Offer Best <span class="text-citrusyellow">Services</span></h2>
                             <p class="text-bodycolor mb-12.5 text-base">Unlocking Global Business Through Meaningful Travel. iMusafir delivers curated international business and luxury travel experiences for entrepreneurs and investors.</p>
                         </div>
-                        <div class="grid grid-cols-12 gap-7.5">
-                            <div class="xl:col-span-4 md:col-span-6 col-span-12 mb-10">
-                                <div class="relative text-center bg-white ml-3 rounded-tl-8xl rounded-br-8xl rounded-tr-2xl rounded-bl-2xl pt-8.75 px-4 pb-15">
-                                    <div class="inline-block mb-7.5">
+                        <div class="grid grid-cols-12 gap-7.5 services-offer__grid">
+                            <div class="xl:col-span-4 md:col-span-6 col-span-12 mb-10 services-offer__item">
+                                <div class="relative text-center bg-white ml-3 rounded-tl-8xl rounded-br-8xl rounded-tr-2xl rounded-bl-2xl pt-8.75 px-4 pb-15 services-offer__card">
+                                    <div class="inline-block mb-7.5 services-offer__icon">
                                         <span>
                                             <img src="assets/images/trv-icon/ship.png" alt="Image" class="max-w-16 w-full inline-block" width="64" height="64" loading="lazy">
                                         </span>
@@ -549,7 +578,7 @@
                                         <h4 class="mb-3.75 text-2xl">Business Immersion</h4>
                                         <p class="p-text">Hands-on exposure to international markets, suppliers, and business ecosystems.</p>
                                     </div>
-                                    <div class="relative after:absolute after:-left-7 after:-top-10.25 after:size-0 after:border-t-[12px] after:border-t-transparent after:border-r-[12px] after:border-r-[#A8884A] after:border-b-[12px] after:border-b-transparent">
+                                    <div class="relative services-offer__badge after:absolute after:-left-7 after:-top-10.25 after:size-0 after:border-t-[12px] after:border-t-transparent after:border-r-[12px] after:border-r-[#A8884A] after:border-b-[12px] after:border-b-transparent">
                                         <div class="absolute -left-7 -bottom-15 size-0 border-b-[90px] border-b-[#C5A059] border-r-[80px] border-r-transparent">
                                             <span class="trv-service-badge-label">Service</span>
                                             <div class="text-2xl font-black text-white pl-2.5">01</div>
@@ -557,9 +586,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="xl:col-span-4 md:col-span-6 col-span-12 mb-10">
-                                <div class="relative text-center bg-white ml-3 rounded-tl-8xl rounded-br-8xl rounded-tr-2xl rounded-bl-2xl pt-8.75 px-4 pb-15">
-                                    <div class="inline-block mb-7.5">
+                            <div class="xl:col-span-4 md:col-span-6 col-span-12 mb-10 services-offer__item">
+                                <div class="relative text-center bg-white ml-3 rounded-tl-8xl rounded-br-8xl rounded-tr-2xl rounded-bl-2xl pt-8.75 px-4 pb-15 services-offer__card">
+                                    <div class="inline-block mb-7.5 services-offer__icon">
                                         <span>
                                             <img src="assets/images/trv-icon/plane-booking.png" alt="Image" class="max-w-16 w-full inline-block" width="64" height="64" loading="lazy">
                                         </span>
@@ -568,7 +597,7 @@
                                         <h4 class="mb-3.75 text-2xl">Executive Networking</h4>
                                         <p class="p-text">Connect with founders, investors, and industry leaders through curated events.</p>
                                     </div>
-                                    <div class="relative after:absolute after:-left-7 after:-top-10.25 after:size-0 after:border-t-[12px] after:border-t-transparent after:border-r-[12px] after:border-r-[#8A6F3E] after:border-b-[12px] after:border-b-transparent">
+                                    <div class="relative services-offer__badge after:absolute after:-left-7 after:-top-10.25 after:size-0 after:border-t-[12px] after:border-t-transparent after:border-r-[12px] after:border-r-[#8A6F3E] after:border-b-[12px] after:border-b-transparent">
                                         <div class="absolute -left-7 -bottom-15 size-0 border-b-[90px] border-b-[#D4B87A] border-r-[80px] border-r-transparent">
                                             <span class="trv-service-badge-label">Service</span>
                                             <div class="text-2xl font-black text-richblack pl-2.5">02</div>
@@ -576,9 +605,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="xl:col-span-4 md:col-span-6 col-span-12 mb-10">
-                                <div class="relative text-center bg-white ml-3 rounded-tl-8xl rounded-br-8xl rounded-tr-2xl rounded-bl-2xl pt-8.75 px-4 pb-15">
-                                    <div class="inline-block mb-7.5">
+                            <div class="xl:col-span-4 md:col-span-6 col-span-12 mb-10 services-offer__item">
+                                <div class="relative text-center bg-white ml-3 rounded-tl-8xl rounded-br-8xl rounded-tr-2xl rounded-bl-2xl pt-8.75 px-4 pb-15 services-offer__card">
+                                    <div class="inline-block mb-7.5 services-offer__icon">
                                         <span>
                                             <img src="assets/images/trv-icon/guide-icon.png" alt="Image" class="max-w-16 w-full inline-block" width="64" height="64" loading="lazy">
                                         </span>
@@ -587,7 +616,7 @@
                                         <h4 class="mb-3.75 text-2xl">VIP Experiences</h4>
                                         <p class="p-text">Premium travel, hospitality, and exclusive access throughout every delegation.</p>
                                     </div>
-                                    <div class="relative after:absolute after:-left-7 after:-top-10.25 after:size-0 after:border-t-[12px] after:border-t-transparent after:border-r-[12px] after:border-r-[#6B5630] after:border-b-[12px] after:border-b-transparent">
+                                    <div class="relative services-offer__badge after:absolute after:-left-7 after:-top-10.25 after:size-0 after:border-t-[12px] after:border-t-transparent after:border-r-[12px] after:border-r-[#6B5630] after:border-b-[12px] after:border-b-transparent">
                                         <div class="absolute -left-7 -bottom-15 size-0 border-b-[90px] border-b-[#A8884A] border-r-[80px] border-r-transparent">
                                             <span class="trv-service-badge-label">Service</span>
                                             <div class="text-2xl font-black text-white pl-2.5">03</div>
@@ -595,9 +624,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="xl:col-span-4 md:col-span-6 col-span-12 mb-10">
-                                <div class="relative text-center bg-white ml-3 rounded-tl-8xl rounded-br-8xl rounded-tr-2xl rounded-bl-2xl pt-8.75 px-4 pb-15">
-                                    <div class="inline-block mb-7.5">
+                            <div class="xl:col-span-4 md:col-span-6 col-span-12 mb-10 services-offer__item">
+                                <div class="relative text-center bg-white ml-3 rounded-tl-8xl rounded-br-8xl rounded-tr-2xl rounded-bl-2xl pt-8.75 px-4 pb-15 services-offer__card">
+                                    <div class="inline-block mb-7.5 services-offer__icon">
                                         <span>
                                             <img src="assets/images/trv-icon/ship.png" alt="Image" class="max-w-16 w-full inline-block" width="64" height="64" loading="lazy">
                                         </span>
@@ -606,7 +635,7 @@
                                         <h4 class="mb-3.75 text-2xl">Global Market Access</h4>
                                         <p class="p-text">Entry into emerging markets across Africa, America, and Asia.</p>
                                     </div>
-                                    <div class="relative after:absolute after:-left-7 after:-top-10.25 after:size-0 after:border-t-[12px] after:border-t-transparent after:border-r-[12px] after:border-r-[#A8884A] after:border-b-[12px] after:border-b-transparent">
+                                    <div class="relative services-offer__badge after:absolute after:-left-7 after:-top-10.25 after:size-0 after:border-t-[12px] after:border-t-transparent after:border-r-[12px] after:border-r-[#A8884A] after:border-b-[12px] after:border-b-transparent">
                                         <div class="absolute -left-7 -bottom-15 size-0 border-b-[90px] border-b-[#C5A059] border-r-[80px] border-r-transparent">
                                             <span class="trv-service-badge-label">Service</span>
                                             <div class="text-2xl font-black text-white pl-2.5">04</div>
@@ -614,9 +643,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="xl:col-span-4 md:col-span-6 col-span-12 mb-10">
-                                <div class="relative text-center bg-white ml-3 rounded-tl-8xl rounded-br-8xl rounded-tr-2xl rounded-bl-2xl pt-8.75 px-4 pb-15">
-                                    <div class="inline-block mb-7.5">
+                            <div class="xl:col-span-4 md:col-span-6 col-span-12 mb-10 services-offer__item">
+                                <div class="relative text-center bg-white ml-3 rounded-tl-8xl rounded-br-8xl rounded-tr-2xl rounded-bl-2xl pt-8.75 px-4 pb-15 services-offer__card">
+                                    <div class="inline-block mb-7.5 services-offer__icon">
                                         <span>
                                             <img src="assets/images/trv-icon/plane-booking.png" alt="Image" class="max-w-16 w-full inline-block" width="64" height="64" loading="lazy">
                                         </span>
@@ -625,7 +654,7 @@
                                         <h4 class="mb-3.75 text-2xl">Entrepreneur Delegations</h4>
                                         <p class="p-text">Organized group journeys designed for founders seeking global growth.</p>
                                     </div>
-                                    <div class="relative after:absolute after:-left-7 after:-top-10.25 after:size-0 after:border-t-[12px] after:border-t-transparent after:border-r-[12px] after:border-r-[#8A6F3E] after:border-b-[12px] after:border-b-transparent">
+                                    <div class="relative services-offer__badge after:absolute after:-left-7 after:-top-10.25 after:size-0 after:border-t-[12px] after:border-t-transparent after:border-r-[12px] after:border-r-[#8A6F3E] after:border-b-[12px] after:border-b-transparent">
                                         <div class="absolute -left-7 -bottom-15 size-0 border-b-[90px] border-b-[#D4B87A] border-r-[80px] border-r-transparent">
                                             <span class="trv-service-badge-label">Service</span>
                                             <div class="text-2xl font-black text-richblack pl-2.5">05</div>
@@ -633,9 +662,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="xl:col-span-4 md:col-span-6 col-span-12 mb-10">
-                                <div class="relative text-center bg-white ml-3 rounded-tl-8xl rounded-br-8xl rounded-tr-2xl rounded-bl-2xl pt-8.75 px-4 pb-15">
-                                    <div class="inline-block mb-7.5">
+                            <div class="xl:col-span-4 md:col-span-6 col-span-12 mb-10 services-offer__item">
+                                <div class="relative text-center bg-white ml-3 rounded-tl-8xl rounded-br-8xl rounded-tr-2xl rounded-bl-2xl pt-8.75 px-4 pb-15 services-offer__card">
+                                    <div class="inline-block mb-7.5 services-offer__icon">
                                         <span>
                                             <img src="assets/images/trv-icon/guide-icon.png" alt="Image" class="max-w-16 w-full inline-block" width="64" height="64" loading="lazy">
                                         </span>
@@ -644,7 +673,7 @@
                                         <h4 class="mb-3.75 text-2xl">Luxury Hospitality</h4>
                                         <p class="p-text">Five-star accommodations and seamless logistics from arrival to departure.</p>
                                     </div>
-                                    <div class="relative after:absolute after:-left-7 after:-top-10.25 after:size-0 after:border-t-[12px] after:border-t-transparent after:border-r-[12px] after:border-r-[#6B5630] after:border-b-[12px] after:border-b-transparent">
+                                    <div class="relative services-offer__badge after:absolute after:-left-7 after:-top-10.25 after:size-0 after:border-t-[12px] after:border-t-transparent after:border-r-[12px] after:border-r-[#6B5630] after:border-b-[12px] after:border-b-transparent">
                                         <div class="absolute -left-7 -bottom-15 size-0 border-b-[90px] border-b-[#A8884A] border-r-[80px] border-r-transparent">
                                             <span class="trv-service-badge-label">Service</span>
                                             <div class="text-2xl font-black text-white pl-2.5">06</div>
@@ -653,7 +682,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="rounded-full 2xl:h-50 overflow-hidden">
+                        <div class="rounded-full 2xl:h-50 overflow-hidden max-lg:hidden">
                             <picture>
                                 <source srcset="assets/images/landscape-pic.webp" type="image/webp">
                                 <img src="assets/images/landscape-pic.png" alt="image" class="w-full" width="726" height="199" loading="lazy">
@@ -664,8 +693,8 @@
             </div>
         </div>
     </div>
-    <div class="absolute left-0 2xl:bottom-55 bottom-40"><img src="assets/images/building-1.png" alt="Image" width="301" height="640" loading="lazy"></div>
-    <div class="absolute md:right-0 sm:-right-20 -right-38 md:top-0 sm:-top-3 -top-12"><img src="assets/images/Right-top-plane.png" alt="Image" width="257" height="342" loading="lazy"></div>
+    <div class="absolute left-0 2xl:bottom-55 bottom-40 max-lg:hidden" aria-hidden="true"><img src="assets/images/building-1.png" alt="" width="301" height="640" loading="lazy"></div>
+    <div class="absolute md:right-0 sm:-right-20 -right-38 md:top-0 sm:-top-3 -top-12 max-lg:hidden" aria-hidden="true"><img src="assets/images/Right-top-plane.png" alt="" width="257" height="342" loading="lazy"></div>
 </div>
                     <!--WE OFFER SERVICES SECTION END-->
 
@@ -696,9 +725,9 @@
 									</div>
                                     <div class="rounded-xl md:max-w-59 max-w-[inherit] p-5 pt-15 ml-3 -mt-11 bg-primary max-md:text-center max-md:mb-7.5">
                                         <span class="text-richblack font-semibold text-lg leading-6 block pb-2.5">Limited Availability</span>
-                                        <div class="flex max-md:justify-center items-end">
-                                            <h2 class="!text-richblack !text-95 !leading-[0.75] !font-black !font-base shrink-0">20</h2>
-                                            <div class="block text-lg text-richblack/80 normal-case font-black leading-5 -ml-4 mb-1 shrink-0">Founders only</div>
+                                        <div class="flex max-md:justify-center items-end gap-2 sm:gap-3">
+                                            <h2 class="!text-richblack !text-95 !leading-[0.75] !font-black !font-base shrink-0 !mb-0">20</h2>
+                                            <div class="block text-lg text-richblack/80 normal-case font-black leading-5 mb-1 shrink-0 max-w-[5.5rem]">Founders only</div>
                                         </div>
                                     </div>
                                 </div>
@@ -758,7 +787,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="xl:col-span-5 col-span-12 px-3.75 pb-8 xl:pb-12">
+                    <div class="xl:col-span-5 col-span-12 px-3.75 pb-8 xl:pb-12 max-lg:hidden">
                         <div class="steps-hero-column">
                             <img src="assets/images/hotballon-Left.png" alt="" class="w-17 absolute left-0 2xl:-bottom-106.25 bottom-8 animate-slide-top2" width="68" height="98" loading="lazy">
                             <img src="assets/images/hotballon-right.png" alt="" class="sm:w-32 w-25 absolute sm:right-15 right-0 top-2.5 z-1" width="128" height="198" loading="lazy">
@@ -1086,22 +1115,22 @@
                     <!--TESTIMONIAL SECTION End-->
                     
 <!-- WOMEN STRATEGY STORIES START -->
-<section id="women-strategy-stories" class="women-strategy-stories bg-body-bg px-4 pt-10 pb-12 md:px-10 md:pt-12 md:pb-14 lg:px-20" aria-labelledby="women-strategy-heading">
+<section id="women-strategy-stories" class="women-strategy-stories bg-body-bg px-4 pt-8 pb-9 md:px-10 md:pt-12 md:pb-14 lg:px-20" aria-labelledby="women-strategy-heading">
     <div class="mx-auto max-w-[1440px]">
-        <header class="mb-8 md:mb-10 text-center max-w-3xl mx-auto">
+        <header class="mb-5 md:mb-10 text-center max-w-3xl mx-auto">
             <h2 id="women-strategy-heading" class="women-strategy-stories__heading xl:text-46 md:text-40 text-3xl font-title font-semibold leading-[1.15] text-[#1C1915]">
                 Women Behind <span class="text-citrusyellow">iMUSAFIR</span>
             </h2>
-            <div class="mt-3">
-                <img src="assets/images/background/Title-Separator.png" alt="" class="w-72 max-w-full inline-block" width="288" height="43" loading="lazy" aria-hidden="true">
+            <div class="mt-2 md:mt-3">
+                <img src="assets/images/background/Title-Separator.png" alt="" class="w-56 md:w-72 max-w-full inline-block" width="288" height="43" loading="lazy" aria-hidden="true">
             </div>
         </header>
 
-        <div class="women-strategy-stories__row flex flex-col items-center gap-4 lg:flex-row lg:justify-center" data-women-stories>
+        <div class="women-strategy-stories__row flex flex-col items-center gap-3 md:gap-4 lg:flex-row lg:justify-center" data-women-stories>
             <article class="women-strategy-stories__card is-active flex flex-col gap-3" data-story-index="0" tabindex="0">
-                <div class="women-strategy-stories__panel relative h-[420px] w-full overflow-hidden rounded-[24px] p-3">
-                    <div class="flex h-full w-full flex-col md:flex-row">
-                        <div class="women-strategy-stories__image relative h-full w-full flex-shrink-0 overflow-hidden rounded-[16px] md:w-[196px]">
+                <div class="women-strategy-stories__panel relative h-auto lg:h-[420px] w-full overflow-hidden rounded-[24px] p-3">
+                    <div class="flex h-full w-full flex-col lg:flex-row">
+                        <div class="women-strategy-stories__image relative h-full w-full flex-shrink-0 overflow-hidden rounded-[16px] lg:w-[196px]">
                             <picture>
                                 <source srcset="assets/images/founder-simran.webp" type="image/webp">
                                 <img src="assets/images/founder-simran.png" alt="Simran" class="h-full w-full object-cover" width="196" height="396" loading="lazy" decoding="async" referrerpolicy="no-referrer">
@@ -1127,9 +1156,9 @@
             </article>
 
             <article class="women-strategy-stories__card flex flex-col gap-3" data-story-index="1" tabindex="0">
-                <div class="women-strategy-stories__panel relative h-[420px] w-full overflow-hidden rounded-[24px] p-3">
-                    <div class="flex h-full w-full flex-col md:flex-row">
-                        <div class="women-strategy-stories__image relative h-full w-full flex-shrink-0 overflow-hidden rounded-[16px] md:w-[196px]">
+                <div class="women-strategy-stories__panel relative h-auto lg:h-[420px] w-full overflow-hidden rounded-[24px] p-3">
+                    <div class="flex h-full w-full flex-col lg:flex-row">
+                        <div class="women-strategy-stories__image relative h-full w-full flex-shrink-0 overflow-hidden rounded-[16px] lg:w-[196px]">
                             <picture>
                                 <source srcset="assets/images/team-ismahan.webp" type="image/webp">
                                 <img src="assets/images/team-ismahan.png" alt="Ismahan" class="h-full w-full object-cover object-top" width="196" height="396" loading="lazy" decoding="async" referrerpolicy="no-referrer">
@@ -1155,9 +1184,9 @@
             </article>
 
             <article class="women-strategy-stories__card flex flex-col gap-3" data-story-index="2" tabindex="0">
-                <div class="women-strategy-stories__panel relative h-[420px] w-full overflow-hidden rounded-[24px] p-3">
-                    <div class="flex h-full w-full flex-col md:flex-row">
-                        <div class="women-strategy-stories__image relative h-full w-full flex-shrink-0 overflow-hidden rounded-[16px] md:w-[196px]">
+                <div class="women-strategy-stories__panel relative h-auto lg:h-[420px] w-full overflow-hidden rounded-[24px] p-3">
+                    <div class="flex h-full w-full flex-col lg:flex-row">
+                        <div class="women-strategy-stories__image relative h-full w-full flex-shrink-0 overflow-hidden rounded-[16px] lg:w-[196px]">
                             <picture>
                                 <source srcset="assets/images/team-hibo.webp" type="image/webp">
                                 <img src="assets/images/team-hibo.png" alt="Hibo" class="h-full w-full object-cover object-top" width="196" height="396" loading="lazy" decoding="async" referrerpolicy="no-referrer">
@@ -1208,8 +1237,8 @@
         </ul>
     </div>
     <div class="container site-footer__grid">
-        <div class="grid grid-cols-12 gap-y-8">
-            <div class="lg:col-span-3 col-span-12 sm:px-3.75 site-footer__links">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-x-6 gap-y-7 site-footer__columns">
+            <div class="lg:col-span-3 site-footer__links">
                 <h3>Explore</h3>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -1218,7 +1247,7 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
-            <div class="lg:col-span-3 col-span-6 sm:px-3.75 site-footer__links">
+            <div class="lg:col-span-3 site-footer__links">
                 <h3>Destinations</h3>
                 <ul>
                     <li><a href="contact.html">Dubai</a></li>
@@ -1228,7 +1257,7 @@
                     <li><a href="contact.html">Nigeria</a></li>
                 </ul>
             </div>
-            <div class="lg:col-span-3 col-span-6 sm:px-3.75 site-footer__links">
+            <div class="lg:col-span-3 site-footer__links">
                 <h3>Legal</h3>
                 <ul>
                     <li><a href="#">Terms &amp; Conditions</a></li>
@@ -1236,7 +1265,7 @@
                     <li><a href="contact.html">Help</a></li>
                 </ul>
             </div>
-            <div class="lg:col-span-3 col-span-12 sm:px-3.75">
+            <div class="sm:col-span-2 lg:col-span-3">
                 <div class="site-footer__links">
                     <h3>Contact</h3>
                 </div>
@@ -1292,15 +1321,16 @@
 <!-- JAVASCRIPT  FILES ========================================= -->
 <script defer src="assets/vendor/gsap/gsap.min.js"></script>
 <script defer src="assets/js/jquery-3.7.1.min.js"></script>
-<script defer src="assets/vendor/xmenu/xmenu.js"></script>
+<script defer src="assets/vendor/xmenu/xmenu.js?v=20260801menu3"></script>
 <script defer src="assets/vendor/gsap/ScrollTrigger.min.js"></script>
 <script defer src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 <script defer src="assets/js/dz.carousel.js?v=20260617"></script>
 <script defer src="assets/js/animation.js"></script>
 <script defer src="assets/js/custom.js?v=20260611"></script>
+<script defer src="assets/js/opening-intro.js?v=20260801a"></script>
 <script defer src="assets/js/jelly-explore-button.js?v=20260801a"></script>
 <script defer src="assets/js/women-strategy-stories.js"></script>
 <script defer src="assets/vendor/lottie/lottie.min.js"></script>
-<script defer src="assets/js/hero-lottie.js?v=20260801y"></script>
+<script defer src="assets/js/hero-lottie.js?v=20260801z"></script>
 </body>
 </html>

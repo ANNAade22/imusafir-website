@@ -84,54 +84,135 @@
     .women-strategy-stories__card.is-active {
         width: min(520px, 100%);
         max-width: 520px;
+        cursor: default;
     }
 
     .women-strategy-stories__row {
         width: 100%;
     }
 
-    .women-strategy-stories__panel {
-        height: auto;
-        min-height: 240px;
+    .women-strategy-stories__panel,
+    .women-strategy-stories__card.is-active .women-strategy-stories__panel {
+        height: auto !important;
+        min-height: 0;
+        overflow: visible;
+        background-color: var(--wss-panel-active);
     }
 
     .women-strategy-stories__image {
-        height: 220px;
+        height: 200px;
         width: 100% !important;
+        flex-shrink: 0;
     }
 
-    .women-strategy-stories__content {
-        flex: 0 0 auto;
-        width: 100%;
-        max-height: 0;
-        opacity: 0;
-        transform: translateY(16px);
-    }
-
-    .women-strategy-stories__card.is-active .women-strategy-stories__panel {
-        min-height: 420px;
-    }
-
+    .women-strategy-stories__content,
     .women-strategy-stories__card.is-active .women-strategy-stories__content {
-        max-height: 320px;
-        opacity: 1;
-        transform: translateY(0);
+        flex: 0 0 auto !important;
+        width: 100% !important;
+        min-width: 0;
+        max-height: none !important;
+        height: auto !important;
+        opacity: 1 !important;
+        overflow: visible;
+        pointer-events: auto;
+        transform: none !important;
+    }
+
+    .women-strategy-stories__content-inner {
+        height: auto !important;
+        padding: 1.15rem 1rem 1.25rem !important;
+        color: #fff;
+    }
+
+    .women-strategy-stories__content-inner p:first-child {
+        margin-bottom: 1rem;
+        font-size: 0.9375rem;
+        line-height: 1.55;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
     }
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
+/* Phone: compact side-by-side cards so the section stays short */
+@media (max-width: 767px) {
+    .women-strategy-stories {
+        padding-top: 2rem !important;
+        padding-bottom: 2.25rem !important;
+    }
+
+    .women-strategy-stories > div > header {
+        margin-bottom: 1.1rem !important;
+    }
+
+    .women-strategy-stories__heading {
+        font-size: 1.5rem !important;
+        line-height: 1.2 !important;
+    }
+
+    .women-strategy-stories__row {
+        gap: 0.65rem !important;
+    }
+
+    .women-strategy-stories__card,
+    .women-strategy-stories__card.is-active {
+        width: 100%;
+        max-width: none;
+        gap: 0.3rem !important;
+    }
+
+    .women-strategy-stories__panel,
     .women-strategy-stories__card.is-active .women-strategy-stories__panel {
-        height: 420px;
-        min-height: 420px;
+        padding: 0.45rem !important;
+        border-radius: 16px !important;
     }
 
-    .women-strategy-stories__card.is-active .women-strategy-stories__image {
-        height: 100%;
-        width: 196px !important;
+    .women-strategy-stories__panel > .flex {
+        flex-direction: row !important;
+        align-items: stretch;
+        min-height: 108px;
     }
 
+    .women-strategy-stories__image {
+        width: 92px !important;
+        height: 108px !important;
+        border-radius: 12px !important;
+    }
+
+    .women-strategy-stories__image > div {
+        display: none;
+    }
+
+    .women-strategy-stories__content,
     .women-strategy-stories__card.is-active .women-strategy-stories__content {
-        max-height: none;
-        width: auto;
+        flex: 1 1 auto !important;
+        width: auto !important;
+        min-width: 0;
+    }
+
+    .women-strategy-stories__content-inner {
+        padding: 0.35rem 0.55rem 0.4rem 0.65rem !important;
+        justify-content: center;
+    }
+
+    .women-strategy-stories__content-inner p:first-child {
+        margin-bottom: 0.4rem;
+        font-size: 0.75rem;
+        line-height: 1.4;
+        -webkit-line-clamp: 3;
+    }
+
+    .women-strategy-stories__content-inner h4 {
+        font-size: 0.8125rem !important;
+    }
+
+    .women-strategy-stories__role {
+        font-size: 0.6875rem !important;
+        white-space: normal !important;
+    }
+
+    .women-strategy-stories__label {
+        font-size: 0.75rem !important;
     }
 }

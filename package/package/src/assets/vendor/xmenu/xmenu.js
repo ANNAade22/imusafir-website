@@ -145,22 +145,51 @@ const xMenu = function () {
 
       if (!toggler || !headerNav) return;
 
-      const toggleMenu = () => {
-        const isOpen = headerNav.classList.toggle("show");
-        toggler.classList.toggle("open");
+      const navAnchor = document.createComment("header-nav-anchor");
+      headerNav.parentNode.insertBefore(navAnchor, headerNav);
 
-        if (window.innerWidth < 992) {
-          document.body.classList.toggle("overflow-hidden", isOpen);
+      const setOpenState = (isOpen) => {
+        headerNav.classList.toggle("show", isOpen);
+        toggler.classList.toggle("open", isOpen);
+        document.body.classList.toggle("nav-open", isOpen);
+        document.body.classList.toggle("overflow-hidden", isOpen && window.innerWidth < 992);
+      };
+
+      const syncPortal = () => {
+        const mobile = window.innerWidth < 992;
+        if (mobile) {
+          if (menuClose && menuClose.parentElement !== document.body) {
+            document.body.appendChild(menuClose);
+          }
+          if (headerNav.parentElement !== document.body) {
+            document.body.appendChild(headerNav);
+          }
+          headerNav.classList.add("header-nav--portal");
+          if (menuClose) menuClose.classList.add("menu-close--portal");
+        } else {
+          if (navAnchor.parentNode) {
+            if (menuClose && menuClose.parentElement === document.body) {
+              navAnchor.parentNode.insertBefore(menuClose, navAnchor.nextSibling);
+            }
+            if (headerNav.parentElement === document.body) {
+              navAnchor.parentNode.insertBefore(headerNav, navAnchor.nextSibling);
+            }
+          }
+          headerNav.classList.remove("header-nav--portal");
+          if (menuClose) menuClose.classList.remove("menu-close--portal");
+          setOpenState(false);
         }
       };
 
-      const closeMenu = () => {
-        headerNav.classList.remove("show");
-        toggler.classList.remove("open");
+      syncPortal();
 
-        if (window.innerWidth < 992) {
-          document.body.classList.remove("overflow-hidden");
-        }
+      const toggleMenu = () => {
+        if (window.innerWidth >= 992) return;
+        setOpenState(!headerNav.classList.contains("show"));
+      };
+
+      const closeMenu = () => {
+        setOpenState(false);
       };
 
       toggler.addEventListener("click", toggleMenu);
@@ -169,10 +198,14 @@ const xMenu = function () {
         menuClose.addEventListener("click", closeMenu);
       }
 
+      headerNav.querySelectorAll("a[href]").forEach((link) => {
+        link.addEventListener("click", () => {
+          if (window.innerWidth < 992) closeMenu();
+        });
+      });
+
       window.addEventListener("resize", () => {
-        if (window.innerWidth >= 992) {
-          document.body.classList.remove("overflow-hidden");
-        }
+        syncPortal();
       });
     });
   };
