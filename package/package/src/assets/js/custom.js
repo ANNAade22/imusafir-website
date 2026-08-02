@@ -509,20 +509,29 @@ const Imusafir = (function () {
     }
   };
 
+  const DELEGATION_INTEREST_LABELS = {
+    "cocreate-la-2026": "CoCreate, Los Angeles",
+    "indonesia-2026": "Indonesia Business, Trade and Luxury Delegation",
+    "boss-lady-retreat-2026": "Two-Week Boss Lady Retreat",
+    "umrah-2027": "Month-Long Umrah Experience",
+    "china-expo-2027": "China Expo and Business Delegation",
+  };
+
   const DELEGATION_PACKAGE_LABELS = {
-    "standard-delegate": "Standard Delegate ($2,997)",
-    "executive-delegate": "Executive Delegate ($4,997)",
-    "elite-founder-circle": "Elite Founder Circle ($7,997)",
-    "legacy-companion-pass": "Legacy Companion Pass ($1,997–$2,497)",
+    "standard-delegate": "Standard Delegate",
+    "executive-delegate": "Executive Delegate",
+    "elite-founder-circle": "Elite Founder Circle",
+    "legacy-companion-pass": "Legacy Companion Pass",
     "not-sure": "Not sure yet — help me choose",
   };
 
   const buildContactSubject = (interest, pkg) => {
+    const interestLabel = DELEGATION_INTEREST_LABELS[interest];
     if (interest === "indonesia-2026" && pkg && DELEGATION_PACKAGE_LABELS[pkg]) {
-      return "Indonesia 2026 — " + DELEGATION_PACKAGE_LABELS[pkg];
+      return interestLabel + " — " + DELEGATION_PACKAGE_LABELS[pkg];
     }
-    if (interest === "indonesia-2026") {
-      return "Indonesia 2026 Delegation Inquiry";
+    if (interestLabel) {
+      return interestLabel + " Inquiry";
     }
     if (pkg && DELEGATION_PACKAGE_LABELS[pkg]) {
       return "Delegation Inquiry — " + DELEGATION_PACKAGE_LABELS[pkg];

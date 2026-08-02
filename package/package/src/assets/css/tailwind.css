@@ -12,9 +12,12 @@
 @import "./components/component.css";
 @import "./components/homepages.css";
 @import "./components/women-strategy-stories.css";
+@import "./components/faq-imusafir.css";
+@import "./components/contact-orbit.css";
 @import "./components/accordions.css";
 @import "./components/btn.css";
 @import "./components/swiper.css";
+@import "./components/scroll-stack.css";
 @import "./abstract/variable.css";
 @import "../vendor/xmenu/xmenu.css";
 
@@ -130,7 +133,7 @@
     --bg3-gradient: 180deg, #FFFFFF 24.65%, #E0E0E0 100%;
     --bg4-gradient: 180deg, rgba(197, 160, 89, 0) 40%, #1C1915 100%;
     --st-blue-gradient: to bottom, rgb(197, 160, 89) 45%, rgb(255, 255, 255) 100%;
-    --st-pink-gradient: to bottom, rgb(245, 230, 200) 55%, rgb(255, 255, 255) 100%;
+    --st-pink-gradient: to bottom, rgb(180, 100, 120) 45%, rgb(255, 255, 255) 100%;
     --st-green-gradient: to bottom, rgb(28, 25, 21) 46%, rgb(255, 255, 255) 100%;
     --heading-gradient: 90deg, rgba(197, 160, 89, 0.1) 0%, rgba(28, 25, 21, 0.12) 100%;
 	--st-paleaqua-gradient: 90deg, rgba(197, 160, 89, 0.1) 0%, rgba(28, 25, 21, 0.12) 100%;

@@ -701,7 +701,7 @@
     .trv-pricing-summary {
         grid-template-columns: repeat(4, minmax(0, 1fr));
         gap: 1rem;
-        margin-bottom: 0;
+        margin-bottom: 1.5rem;
     }
 }
 .trv-pricing-summary-card {
@@ -713,16 +713,14 @@
     height: 100%;
     padding: 1.75rem 1.25rem;
     border: 10px solid rgba(41, 137, 145, 0.2);
-    border-radius: 110px;
+    border-radius: 48px;
     background: #fff;
     box-shadow: var(--shadow-trv-content);
 }
-@media (width >= 1200px) {
+@media (width >= 768px) {
     .trv-pricing-summary-card {
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
-        border-bottom-width: 0;
-        padding-bottom: 2rem;
+        border-radius: 72px;
+        padding: 2rem 1.5rem;
     }
 }
 .trv-pricing-summary-card--featured {
