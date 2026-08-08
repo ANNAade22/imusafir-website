@@ -126,27 +126,44 @@
     filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.18));
 }
 
+/* Outline: crisp stroke on overlay (outside gooey filter); fill + blob on hover */
+.site-button.jelly-explore--outline {
+    --jelly-label-color: var(--rich-black);
+    border-color: transparent;
+    background-color: transparent;
+}
+
 .site-button.jelly-explore--outline .jelly-body,
 .site-button.jelly-explore--outline .jelly-blob {
     background-color: transparent;
-    box-shadow: inset 0 0 0 1.5px var(--jelly-color);
 }
 
 .site-button.jelly-explore--outline .jelly-body-overlay {
     background-color: transparent;
+    box-shadow: inset 0 0 0 1.5px var(--jelly-color);
 }
 
 .site-button.jelly-explore--outline .jelly-shadow {
-    opacity: 0.25;
+    opacity: 0.22;
 }
 
-.site-button.jelly-explore--outline:hover .jelly-body,
-.site-button.jelly-explore--outline:hover .jelly-blob {
+.site-button.jelly-explore--outline .jelly-label {
+    color: var(--jelly-label-color) !important;
+    filter: none;
+}
+
+.site-button.jelly-explore--outline.is-jelly-hovered .jelly-body,
+.site-button.jelly-explore--outline.is-jelly-hovered .jelly-blob {
     background-color: var(--jelly-color);
 }
 
-.site-button.jelly-explore--outline:hover {
-    --jelly-label-color: var(--rich-black);
+.site-button.jelly-explore--outline.is-jelly-hovered .jelly-body-overlay {
+    background-color: var(--jelly-color);
+    box-shadow: none;
+}
+
+.site-button.jelly-explore--outline.is-jelly-hovered .jelly-shadow {
+    opacity: 0.55;
 }
 
 .site-button.jelly-explore:disabled,

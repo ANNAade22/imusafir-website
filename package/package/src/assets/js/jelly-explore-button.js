@@ -3,10 +3,10 @@
  * Enhances all .site-button elements; preserves text, href, and click behavior.
  */
 (function () {
-  const BLOB_SIZE = 70;
   const SPRING = { stiffness: 200, damping: 20 };
   const FILTER_ID = "jelly-gooey-filter";
   const SELECTOR = ".site-button";
+  const LABEL_DARK = "#1C1915";
 
   let uid = 0;
 
@@ -30,11 +30,6 @@
     if (el.classList.contains("btn-white")) return "#FFFFFF";
     const css = getComputedStyle(document.documentElement);
     return (css.getPropertyValue("--primary") || "#C5A059").trim();
-  }
-
-  function resolveLabelColor(el) {
-    if (el.classList.contains("outline")) return (getComputedStyle(document.documentElement).getPropertyValue("--primary") || "#C5A059").trim();
-    return "#1C1915";
   }
 
   function createSpring(stiffness, damping) {
@@ -74,14 +69,19 @@
     el.classList.add("jelly-explore");
 
     const color = resolveColor(el);
-    const labelColor = resolveLabelColor(el);
     const content = el.innerHTML;
     const id = "jelly-" + ++uid;
     const isOutline = el.classList.contains("outline");
 
     el.style.setProperty("--jelly-color", color);
-    el.style.setProperty("--jelly-label-color", labelColor);
+    // Always keep label dark for contrast on cream + gold fills.
+    // Hover class toggles fill; never pin label color via inline vars that block CSS.
+    el.style.setProperty("--jelly-label-color", LABEL_DARK);
     el.setAttribute("data-jelly-id", id);
+
+    if (isOutline) {
+      el.classList.add("jelly-explore--outline");
+    }
 
     el.innerHTML =
       '<span class="jelly-shadow" aria-hidden="true"></span>' +
@@ -101,9 +101,6 @@
     const label = el.querySelector(".jelly-label");
 
     gooey.style.filter = "url(#" + FILTER_ID + ")";
-    if (isOutline) {
-      el.classList.add("jelly-explore--outline");
-    }
 
     const mouseX = createSpring(SPRING.stiffness, SPRING.damping);
     const mouseY = createSpring(SPRING.stiffness, SPRING.damping);
@@ -123,6 +120,13 @@
       body.style.height = h + "px";
       overlay.style.width = w + "px";
       overlay.style.height = h + "px";
+    }
+
+    function setHovered(next) {
+      isHovered = next;
+      el.classList.toggle("is-jelly-hovered", next);
+      // Force readable label on filled / outline states.
+      label.style.color = LABEL_DARK;
     }
 
     function applyTransforms() {
@@ -178,7 +182,7 @@
 
     el.addEventListener("mouseenter", () => {
       if (isDisabled()) return;
-      isHovered = true;
+      setHovered(true);
       syncSize();
       startLoop();
       applyTransforms();
@@ -192,7 +196,7 @@
     });
 
     el.addEventListener("mouseleave", () => {
-      isHovered = false;
+      setHovered(false);
       isPressed = false;
       mouseX.set(0);
       mouseY.set(0);
@@ -213,6 +217,7 @@
       applyTransforms();
     });
 
+    label.style.color = LABEL_DARK;
     syncSize();
     applyTransforms();
     requestAnimationFrame(() => {

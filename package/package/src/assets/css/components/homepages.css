@@ -434,8 +434,13 @@
     animation: hero-subhead-in 0.45s cubic-bezier(0.16, 1, 0.3, 1) 0.12s both;
 }
 .hero-positioning__actions {
-    @apply flex flex-col xs:flex-row flex-wrap items-stretch xs:items-center justify-center lg:justify-start gap-3 md:gap-5;
+    @apply flex flex-col xs:flex-row flex-wrap items-stretch xs:items-center justify-center lg:justify-start gap-4 md:gap-6;
     animation: hero-actions-in 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0.18s both;
+}
+.hero-positioning__actions .site-button.outline,
+.hero-positioning__actions .site-button.jelly-explore--outline {
+    position: relative;
+    z-index: 1;
 }
 .hero-positioning__actions .site-button {
     width: 100%;
@@ -640,18 +645,27 @@
     @apply block font-title font-semibold text-base sm:text-lg text-heading leading-snug;
 }
 .founder-vision__actions {
-    @apply flex flex-wrap items-center gap-4 sm:gap-5 pt-2;
+    @apply flex flex-nowrap items-center gap-3 pt-2;
 }
-.founder-vision__cta-secondary {
-    @apply inline-flex items-center justify-center py-3.75 px-7.5 text-base font-medium text-primary border border-primary/25 rounded-full duration-500 whitespace-nowrap hover:bg-primary/5 hover:border-citrusyellow/50 hover:text-citrusyellow;
-    transition:
-        transform 0.55s cubic-bezier(0.16, 1, 0.3, 1),
-        background-color 0.45s ease,
-        border-color 0.45s ease,
-        color 0.45s ease;
+.founder-vision__actions .site-button {
+    flex: 0 1 auto;
+    min-width: 0;
+    padding: 0.8rem 1.15rem;
+    font-size: 0.6875rem;
+    letter-spacing: 0.08em;
 }
-.founder-vision__cta-secondary:hover {
-    transform: translateY(-3px);
+.founder-vision__actions .site-button .jelly-label {
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+}
+.founder-vision__actions .site-button .jelly-label .fa-arrow-right {
+    margin-left: 0.35rem;
+}
+@media (width < 380px) {
+    .founder-vision__actions {
+        flex-wrap: wrap;
+    }
 }
 .trv-adventure-st1 {
     background-image: image-set(

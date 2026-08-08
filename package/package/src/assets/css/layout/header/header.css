@@ -118,7 +118,27 @@
     @apply h-10 sm:h-11 lg:h-12 w-auto max-w-none object-contain;
 }
 
-/* Brand wordmark (navbar) */
+/* Brand logo (navbar) */
+.brand-logo {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    line-height: 0;
+}
+.brand-logo img {
+    display: block;
+    height: 2.75rem;
+    width: auto;
+    max-width: none;
+    object-fit: contain;
+}
+@media (min-width: 992px) {
+    .brand-logo img {
+        height: 3.25rem;
+    }
+}
+
+/* Brand wordmark (footer / hero) */
 .brand-lockup {
     display: inline-flex;
     flex-direction: column;
