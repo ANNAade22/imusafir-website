@@ -1449,6 +1449,9 @@
   .object-cover {
     object-fit: cover;
   }
+  .object-\[center_20\%\] {
+    object-position: center 20%;
+  }
   .object-bottom {
     object-position: bottom;
   }
@@ -3154,6 +3157,11 @@
   .lg\:flex-row {
     @media (width >= 992px) {
       flex-direction: row;
+    }
+  }
+  .lg\:items-start {
+    @media (width >= 992px) {
+      align-items: flex-start;
     }
   }
   .lg\:justify-center {
@@ -9192,6 +9200,9 @@ button.scroltop span {
 .women-strategy-stories__eyebrow {
   font-family: "Playfair Display", "Georgia", serif;
 }
+.women-strategy-stories__row {
+  align-items: flex-start;
+}
 .women-strategy-stories__card {
   width: 220px;
   flex-shrink: 0;
@@ -9214,8 +9225,52 @@ button.scroltop span {
 .women-strategy-stories__card.is-active .women-strategy-stories__panel {
   background-color: var(--wss-panel-active);
 }
-.women-strategy-stories__role {
+@media (min-width: 1024px) {
+  .women-strategy-stories__row {
+    align-items: flex-start !important;
+  }
+  .women-strategy-stories__panel, .women-strategy-stories__card.is-active .women-strategy-stories__panel {
+    height: 460px;
+    min-height: 460px;
+    max-height: 460px;
+  }
+  .women-strategy-stories__panel > .flex {
+    height: 100%;
+    min-height: 100%;
+    align-items: stretch;
+  }
+  .women-strategy-stories__image {
+    height: 100%;
+    min-height: 100%;
+    align-self: stretch;
+  }
+  .women-strategy-stories__image picture, .women-strategy-stories__image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .women-strategy-stories__card:not(.is-active) .women-strategy-stories__image {
+    width: 100% !important;
+  }
+  .women-strategy-stories__content-inner {
+    height: 100%;
+    min-height: 0;
+    overflow: hidden;
+  }
+  .women-strategy-stories__content-inner p:first-child {
+    margin-bottom: 1rem;
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    overflow: visible;
+    -webkit-line-clamp: unset;
+  }
+}
+.women-strategy-stories__content-inner h4 {
   color: var(--wss-gold) !important;
+}
+.women-strategy-stories__role {
+  color: rgba(255, 255, 255, 0.85) !important;
 }
 .women-strategy-stories__label {
   color: var(--wss-label) !important;
@@ -9248,6 +9303,7 @@ button.scroltop span {
   }
   .women-strategy-stories__row {
     width: 100%;
+    align-items: center !important;
   }
   .women-strategy-stories__panel, .women-strategy-stories__card.is-active .women-strategy-stories__panel {
     height: auto !important;
@@ -9280,10 +9336,9 @@ button.scroltop span {
     margin-bottom: 1rem;
     font-size: 0.9375rem;
     line-height: 1.55;
-    display: -webkit-box;
-    -webkit-line-clamp: 5;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+    display: block;
+    overflow: visible;
+    -webkit-line-clamp: unset;
   }
 }
 @media (max-width: 767px) {
@@ -9299,50 +9354,52 @@ button.scroltop span {
     line-height: 1.2 !important;
   }
   .women-strategy-stories__row {
-    gap: 0.65rem !important;
+    gap: 0.85rem !important;
   }
   .women-strategy-stories__card, .women-strategy-stories__card.is-active {
     width: 100%;
     max-width: none;
-    gap: 0.3rem !important;
+    gap: 0.35rem !important;
   }
   .women-strategy-stories__panel, .women-strategy-stories__card.is-active .women-strategy-stories__panel {
-    padding: 0.45rem !important;
+    padding: 0.55rem !important;
     border-radius: 16px !important;
   }
   .women-strategy-stories__panel > .flex {
-    flex-direction: row !important;
+    flex-direction: column !important;
     align-items: stretch;
-    min-height: 108px;
+    min-height: 0;
   }
   .women-strategy-stories__image {
-    width: 92px !important;
-    height: 108px !important;
+    width: 100% !important;
+    height: 180px !important;
     border-radius: 12px !important;
   }
   .women-strategy-stories__image > div {
     display: none;
   }
   .women-strategy-stories__content, .women-strategy-stories__card.is-active .women-strategy-stories__content {
-    flex: 1 1 auto !important;
-    width: auto !important;
+    flex: 0 0 auto !important;
+    width: 100% !important;
     min-width: 0;
   }
   .women-strategy-stories__content-inner {
-    padding: 0.35rem 0.55rem 0.4rem 0.65rem !important;
-    justify-content: center;
+    padding: 0.85rem 0.75rem 0.9rem !important;
+    justify-content: flex-start;
   }
   .women-strategy-stories__content-inner p:first-child {
-    margin-bottom: 0.4rem;
-    font-size: 0.75rem;
-    line-height: 1.4;
-    -webkit-line-clamp: 3;
+    margin-bottom: 0.75rem;
+    font-size: 0.875rem;
+    line-height: 1.55;
+    display: block;
+    overflow: visible;
+    -webkit-line-clamp: unset;
   }
   .women-strategy-stories__content-inner h4 {
-    font-size: 0.8125rem !important;
+    font-size: 0.875rem !important;
   }
   .women-strategy-stories__role {
-    font-size: 0.6875rem !important;
+    font-size: 0.75rem !important;
     white-space: normal !important;
   }
   .women-strategy-stories__label {
