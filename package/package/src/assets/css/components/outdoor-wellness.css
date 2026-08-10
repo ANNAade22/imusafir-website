@@ -18,40 +18,146 @@
     var(--body-bgcolor, #faf6ef);
 }
 
-/* Homepage teaser: hero layout without the page background photo */
+/* Homepage teaser: full-viewport section, content packed and centered */
 .ow-hero--home {
-  min-height: 0;
+  min-height: 100svh;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
   background: var(--body-bgcolor, #faf6ef);
+  padding-top: clamp(5.5rem, 8vh, 7rem) !important;
+  padding-bottom: clamp(2.5rem, 5vh, 4rem) !important;
+  box-sizing: border-box;
 }
 
-.ow-hero--home .ow-hero__inner {
-  padding-top: 4.5rem;
-  padding-bottom: 4.5rem;
+.ow-hero--home .container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1 1 auto;
 }
 
-@media (width >= 768px) {
-  .ow-hero--home .ow-hero__inner {
-    padding-top: 5.5rem;
-    padding-bottom: 5.5rem;
+.ow-hero--home .ow-hero__layout.ow-hero__layout--home {
+  max-width: 90rem;
+  width: 100%;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column !important;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+}
+
+.ow-hero--home .ow-hero__headline--banner {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  color: var(--heading-color);
+  font-family: var(--font-title, "Playfair Display", Georgia, serif);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.ow-hero--home .ow-hero__body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1.5rem 2.5rem;
+  width: 100%;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+@media (width >= 992px) {
+  .ow-hero--home .ow-hero__body {
+    gap: 2.5rem;
+    align-items: center;
   }
 }
 
+.ow-hero--home .ow-hero__copy {
+  max-width: 40rem;
+  flex: 1 1 45%;
+  text-align: left;
+  min-width: 0;
+  margin: 0;
+  padding-top: 0.25rem;
+}
+
+.ow-hero--home .ow-hero__actions {
+  justify-content: flex-start;
+  gap: 0.85rem 1.1rem;
+}
+
+.ow-hero--home .ow-hero__actions .site-button {
+  font-size: 0.9375rem;
+  min-height: 3.25rem;
+  padding-inline: 1.75rem;
+}
+
+.ow-hero--home .ow-hero__sub {
+  font-size: clamp(1.125rem, 2vw, 1.375rem);
+  line-height: 1.7;
+  margin: 0 0 1.1rem;
+}
+
+.ow-hero--home .ow-hero__meta {
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  margin: 0 0 1.75rem;
+}
+
 .ow-hero--home .ow-hero__lottie {
-  width: min(64vw, 34vh, 16rem);
-  height: min(64vw, 34vh, 16rem);
+  width: min(42vw, 38vh, 24rem) !important;
+  height: min(42vw, 38vh, 24rem) !important;
+  max-height: min(38vh, 24rem);
+  flex: 0 0 auto;
+  margin: 0;
+  overflow: hidden;
+}
+
+.ow-hero--home .ow-hero__lottie .swiper-wrapper,
+.ow-hero--home .ow-hero__lottie .swiper-slide {
+  height: 100% !important;
 }
 
 @media (width >= 768px) {
   .ow-hero--home .ow-hero__lottie {
-    width: min(48vw, 40vh, 22rem);
-    height: min(48vw, 40vh, 22rem);
+    width: min(40vw, 42vh, 30rem) !important;
+    height: min(40vw, 42vh, 30rem) !important;
+    max-height: min(42vh, 30rem);
   }
 }
 
 @media (width >= 992px) {
   .ow-hero--home .ow-hero__lottie {
-    width: min(42%, 48vh, 28rem);
-    height: min(42vw, 48vh, 28rem);
+    width: min(42%, 48vh, 36rem) !important;
+    height: min(42vw, 48vh, 36rem) !important;
+    max-height: min(48vh, 36rem);
+  }
+}
+
+@media (width >= 1280px) {
+  .ow-hero--home .ow-hero__lottie {
+    width: min(40%, 50vh, 40rem) !important;
+    height: min(40vw, 50vh, 40rem) !important;
+    max-height: min(50vh, 40rem);
+  }
+}
+
+@media (width < 420px) {
+  .ow-hero--home .ow-hero__headline--banner {
+    white-space: normal;
+  }
+
+  .ow-hero--home .ow-hero__body {
+    flex-direction: column;
+    align-items: center;
   }
 }
 
