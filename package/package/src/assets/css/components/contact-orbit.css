@@ -152,21 +152,24 @@
 }
 
 .contact-orbit__icon svg {
-  display: block;
   width: 12px;
   height: 12px;
   flex-shrink: 0;
 }
 
-.contact-orbit__icon-minus {
-  display: none;
-}
-
-.contact-orbit__item.is-open .contact-orbit__icon-minus {
+.contact-orbit__icon .contact-orbit__icon-plus {
   display: block;
 }
 
-.contact-orbit__item.is-open .contact-orbit__icon-plus {
+.contact-orbit__icon .contact-orbit__icon-minus {
+  display: none;
+}
+
+.contact-orbit__item.is-open .contact-orbit__icon .contact-orbit__icon-minus {
+  display: block;
+}
+
+.contact-orbit__item.is-open .contact-orbit__icon .contact-orbit__icon-plus {
   display: none;
 }
 
@@ -290,6 +293,14 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
+}
+
+.contact-orbit__row--single {
+  grid-template-columns: 1fr;
+}
+
+#delegation-package-field[hidden] {
+  display: none !important;
 }
 
 .contact-orbit__select-wrap {
@@ -477,6 +488,10 @@
   .contact-orbit__row {
     grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
+  }
+
+  .contact-orbit__row--single {
+    grid-template-columns: 1fr;
   }
 
   .contact-orbit__form {

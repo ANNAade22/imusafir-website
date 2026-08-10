@@ -515,6 +515,8 @@ const Imusafir = (function () {
     "boss-lady-retreat-2026": "Two-Week Boss Lady Retreat",
     "umrah-2027": "Month-Long Umrah Experience",
     "china-expo-2027": "China Expo and Business Delegation",
+    "outdoor-wellness": "Outdoor Wellness Pilot (Participant / Volunteer / Referral)",
+    "outdoor-wellness-sponsor": "Outdoor Wellness — Founding Sponsor / Partner",
   };
 
   const DELEGATION_PACKAGE_LABELS = {
@@ -539,6 +541,9 @@ const Imusafir = (function () {
     return "";
   };
 
+  const isOutdoorWellnessInterest = (interest) =>
+    interest === "outdoor-wellness" || interest === "outdoor-wellness-sponsor";
+
   const applyContactFormParams = () => {
     const form = document.getElementById("contact-form");
     if (!form) return;
@@ -561,8 +566,12 @@ const Imusafir = (function () {
       packageSelect.value = pkg;
     }
 
+    const resolvedInterest = interest || interestSelect?.value || "";
+    if (packageSelect && isOutdoorWellnessInterest(resolvedInterest) && !pkg) {
+      packageSelect.value = "not-sure";
+    }
+
     if (subjectInput && !subjectInput.dataset.userEdited) {
-      const resolvedInterest = interest || interestSelect?.value || "";
       const resolvedPackage = pkg || packageSelect?.value || "";
       const subject = buildContactSubject(resolvedInterest, resolvedPackage);
       if (subject) {
@@ -578,6 +587,10 @@ const Imusafir = (function () {
     const subjectInput = document.getElementById("contact-subject");
     const interestSelect = document.getElementById("delegation-interest");
     const packageSelect = document.getElementById("delegation-package");
+    const messageField = document.getElementById("contact-message");
+    const defaultMessagePlaceholder =
+      messageField?.getAttribute("placeholder") ||
+      "Share your goals for a delegation, Outdoor Wellness, or sponsorship — and any questions you have...";
 
     if (subjectInput) {
       subjectInput.addEventListener("input", () => {
@@ -602,11 +615,63 @@ const Imusafir = (function () {
       note.classList.toggle("hidden", packageSelect.value !== "legacy-companion-pass");
     };
 
-    interestSelect?.addEventListener("change", updateSubjectFromSelections);
+    const updateWellnessFormState = () => {
+      const interest = interestSelect?.value || "";
+      const wellness = isOutdoorWellnessInterest(interest);
+      const packageField = document.getElementById("delegation-package-field");
+      const interestPackageRow = document.getElementById("interest-package-row");
+      const companionNote = document.getElementById("companion-package-note");
+
+      if (packageField) {
+        packageField.hidden = wellness;
+      }
+      if (interestPackageRow) {
+        interestPackageRow.classList.toggle("contact-orbit__row--single", wellness);
+      }
+
+      if (packageSelect) {
+        if (wellness) {
+          packageSelect.value = "not-sure";
+          packageSelect.required = false;
+          packageSelect.classList.add("has-value");
+          packageSelect.setAttribute("aria-hidden", "true");
+          packageSelect.tabIndex = -1;
+        } else {
+          packageSelect.required = true;
+          packageSelect.removeAttribute("aria-hidden");
+          packageSelect.tabIndex = 0;
+          if (packageSelect.dataset.wellnessAuto === "1") {
+            packageSelect.value = "";
+            packageSelect.classList.remove("has-value");
+            delete packageSelect.dataset.wellnessAuto;
+          }
+        }
+        if (wellness) {
+          packageSelect.dataset.wellnessAuto = "1";
+        }
+      }
+
+      if (companionNote && wellness) {
+        companionNote.classList.add("hidden");
+      }
+
+      if (messageField) {
+        messageField.placeholder = wellness
+          ? "Tell us if you want to participate, volunteer, refer someone, or explore sponsorship..."
+          : defaultMessagePlaceholder;
+      }
+    };
+
+    interestSelect?.addEventListener("change", () => {
+      updateWellnessFormState();
+      updateSubjectFromSelections();
+      updateCompanionPackageNote();
+    });
     packageSelect?.addEventListener("change", () => {
       updateSubjectFromSelections();
       updateCompanionPackageNote();
     });
+    updateWellnessFormState();
     updateCompanionPackageNote();
   };
 

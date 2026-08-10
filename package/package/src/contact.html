@@ -45,7 +45,7 @@
     
 	<link rel="stylesheet" type="text/css" href="assets/icons/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="assets/css/fonts.css">
-    <link rel="stylesheet" href="assets/css/style.css?v=20260803orbit5">
+    <link rel="stylesheet" href="assets/css/style.css?v=20260810faqicon">
 	
 </head>
 
@@ -109,6 +109,11 @@
                         <li class="lg:inline-block block max-lg:border-b max-lg:border-white/10 relative group">
                             <a class="lg:py-6 py-3 xl:px-5 lg:px-3 relative lg:inline-block block" href="indonesia-2026.html">
                                 <span class="inline-block">Events</span>
+                            </a>
+                        </li>
+                        <li class="lg:inline-block block max-lg:border-b max-lg:border-white/10 relative group">
+                            <a class="lg:py-6 py-3 xl:px-5 lg:px-3 relative lg:inline-block block" href="outdoor-wellness.html">
+                                <span class="inline-block">Outdoor Wellness</span>
                             </a>
                         </li>
                         <li class="lg:inline-block block max-lg:border-b max-lg:border-white/10 relative group">
@@ -181,7 +186,7 @@
 									<div class="contact-orbit__header">
 										<span class="contact-orbit__eyebrow">What we get asked</span>
 										<h2 id="contact-orbit-heading" class="contact-orbit__title">Your questions<br>Answered</h2>
-										<p class="contact-orbit__sub">Here are the most common questions founders ask before joining an iMUSAFIR delegation.</p>
+										<p class="contact-orbit__sub">Common questions about our business delegations &mdash; and a few about the Outdoor Wellness pilot.</p>
 									</div>
 									<div class="contact-orbit__faq-list" role="list">
 										<article class="contact-orbit__item is-open" role="listitem">
@@ -256,6 +261,30 @@
 												<p class="contact-orbit__answer">Pricing depends on package and destination &mdash; from Standard and Executive Delegate to Elite Founder Circle, plus a Legacy Companion Pass. Most secure a seat with a deposit and payment plan, or pay in full after we confirm details.</p>
 											</div>
 										</article>
+										<article class="contact-orbit__item" role="listitem">
+											<button type="button" class="contact-orbit__trigger" aria-expanded="false" aria-controls="co-panel-7" id="co-trigger-7">
+												<span class="contact-orbit__icon" aria-hidden="true">
+													<svg class="contact-orbit__icon-plus" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7H11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M7 3V11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+													<svg class="contact-orbit__icon-minus" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7H11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+												</span>
+												<span class="contact-orbit__question">What is the Outdoor Wellness Pilot?</span>
+											</button>
+											<div class="contact-orbit__panel" id="co-panel-7" role="region" aria-labelledby="co-trigger-7">
+												<p class="contact-orbit__answer">A Fall 2026 Minnesota pilot for young adults ages 18&ndash;26 &mdash; culturally inclusive hiking, camping, leadership, and wellness experiences, especially for immigrant and underserved communities. No prior outdoor experience is required. <a href="outdoor-wellness.html" class="underline underline-offset-2">Learn more</a>.</p>
+											</div>
+										</article>
+										<article class="contact-orbit__item" role="listitem">
+											<button type="button" class="contact-orbit__trigger" aria-expanded="false" aria-controls="co-panel-8" id="co-trigger-8">
+												<span class="contact-orbit__icon" aria-hidden="true">
+													<svg class="contact-orbit__icon-plus" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7H11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M7 3V11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+													<svg class="contact-orbit__icon-minus" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7H11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+												</span>
+												<span class="contact-orbit__question">How do I join or sponsor Outdoor Wellness?</span>
+											</button>
+											<div class="contact-orbit__panel" id="co-panel-8" role="region" aria-labelledby="co-trigger-8">
+												<p class="contact-orbit__answer">Use the form and select Outdoor Wellness Pilot or Founding Sponsor / Partner. Tell us if you want to participate, volunteer, refer someone, or explore sponsorship &mdash; we&rsquo;ll follow up personally. Sponsorship opportunities are available for community and wellness partners.</p>
+											</div>
+										</article>
 									</div>
 								</div>
 
@@ -264,7 +293,7 @@
 									<div class="contact-orbit__header">
 										<span class="contact-orbit__eyebrow">Reach out to us</span>
 										<h2 class="contact-orbit__title">Ready?<br>Let&rsquo;s connect</h2>
-										<p class="contact-orbit__sub">Tell us about your business and preferred package. We&rsquo;ll reach out personally to discuss next steps.</p>
+										<p class="contact-orbit__sub">Tell us which experience you&rsquo;re interested in &mdash; a business delegation or the Outdoor Wellness pilot. We&rsquo;ll reach out personally.</p>
 									</div>
 									<form id="contact-form" name="contact" class="contact-orbit__form dz-form dzForm" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" novalidate>
 										<input type="hidden" name="form-name" value="contact">
@@ -296,25 +325,33 @@
 											</div>
 										</div>
 
-										<div class="contact-orbit__row">
+										<div class="contact-orbit__row" id="interest-package-row">
 											<div>
-												<label for="delegation-interest" class="contact-orbit__label">Delegation interested in <span class="contact-orbit__req" aria-hidden="true">&#10033;</span></label>
+												<label for="delegation-interest" class="contact-orbit__label">I&rsquo;m interested in <span class="contact-orbit__req" aria-hidden="true">&#10033;</span></label>
 												<div class="contact-orbit__select-wrap">
 													<select name="delegationInterest" id="delegation-interest" required class="contact-orbit__field contact-field">
 														<option value="">Select...</option>
-														<option value="cocreate-la-2026">CoCreate, Los Angeles (Sep 2026)</option>
-														<option value="indonesia-2026">Indonesia Business &amp; Luxury (Oct 2026)</option>
-														<option value="boss-lady-retreat-2026">Boss Lady Retreat (Dec 2026)</option>
-														<option value="umrah-2027">Month-Long Umrah (Feb 2027)</option>
-														<option value="china-expo-2027">China Expo &amp; Business (Apr 2027)</option>
-														<option value="future-delegation">Future Delegation</option>
-														<option value="general-inquiry">General Inquiry</option>
+														<optgroup label="Events &amp; Delegations">
+															<option value="cocreate-la-2026">CoCreate, Los Angeles (Sep 2026)</option>
+															<option value="indonesia-2026">Indonesia Business &amp; Luxury (Oct 2026)</option>
+															<option value="boss-lady-retreat-2026">Boss Lady Retreat (Dec 2026)</option>
+															<option value="umrah-2027">Month-Long Umrah (Feb 2027)</option>
+															<option value="china-expo-2027">China Expo &amp; Business (Apr 2027)</option>
+															<option value="future-delegation">Future Delegation</option>
+														</optgroup>
+														<optgroup label="Outdoor Wellness">
+															<option value="outdoor-wellness">Outdoor Wellness Pilot (Participant / Volunteer / Referral)</option>
+															<option value="outdoor-wellness-sponsor">Outdoor Wellness — Founding Sponsor / Partner</option>
+														</optgroup>
+														<optgroup label="Other">
+															<option value="general-inquiry">General Inquiry</option>
+														</optgroup>
 													</select>
 													<svg class="contact-orbit__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
 												</div>
 											</div>
-											<div>
-												<label for="delegation-package" class="contact-orbit__label">Package interested in <span class="contact-orbit__req" aria-hidden="true">&#10033;</span></label>
+											<div id="delegation-package-field">
+												<label for="delegation-package" class="contact-orbit__label">Delegation package <span class="contact-orbit__req" aria-hidden="true">&#10033;</span></label>
 												<div class="contact-orbit__select-wrap">
 													<select name="delegationPackage" id="delegation-package" required class="contact-orbit__field contact-field">
 														<option value="">Select...</option>
@@ -332,8 +369,8 @@
 										<p id="companion-package-note" class="contact-orbit__note hidden">Legacy Companion Pass requires an accompanying delegate registration.</p>
 
 										<div>
-											<label for="contact-message" class="contact-orbit__label">Tell us about your business or goals <span class="contact-orbit__req" aria-hidden="true">&#10033;</span></label>
-											<textarea name="message" id="contact-message" required class="contact-orbit__field contact-orbit__textarea contact-field" placeholder="Share your goals for this trip and any questions you have..."></textarea>
+											<label for="contact-message" class="contact-orbit__label">Tell us about your goals <span class="contact-orbit__req" aria-hidden="true">&#10033;</span></label>
+											<textarea name="message" id="contact-message" required class="contact-orbit__field contact-orbit__textarea contact-field" placeholder="Share your goals for a delegation, Outdoor Wellness, or sponsorship — and any questions you have..."></textarea>
 										</div>
 
 										<div class="contact-orbit__check">
@@ -376,6 +413,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="indonesia-2026.html">Indonesia 2026</a></li>
+                    <li><a href="outdoor-wellness.html">Outdoor Wellness</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
@@ -455,7 +493,7 @@
 <script defer src="assets/js/jquery-3.7.1.min.js"></script>
 <script defer src="assets/vendor/xmenu/xmenu.js?v=20260801menu3"></script>
 <script defer src="assets/js/dz.ajax.js"></script>
-<script defer src="assets/js/custom.js?v=20260611"></script>
+<script defer src="assets/js/custom.js?v=20260810ow2"></script>
 <script defer src="assets/js/contact-orbit.js?v=20260803a"></script>
 <script defer src="assets/js/jelly-explore-button.js?v=20260808c"></script>
 </body>
