@@ -98,39 +98,68 @@
 		}
 	}
 
-	function initSectionLotties() {
+	function markLottieLoaded(el) {
+		requestAnimationFrame(function () {
+			el.classList.add('is-loaded');
+		});
+	}
+
+	function loadLottieInto(el, options) {
+		var path = el.getAttribute('data-lottie');
+		if (!path || el.getAttribute('data-lottie-bound') === '1') return null;
+
+		el.setAttribute('data-lottie-bound', '1');
+
+		var reduceMotion = options.reduceMotion;
+		var anim = lottie.loadAnimation({
+			container: el,
+			renderer: 'svg',
+			loop: !reduceMotion && options.loop !== false,
+			autoplay: false,
+			path: path,
+		});
+
+		anim.addEventListener('DOMLoaded', function () {
+			markLottieLoaded(el);
+			if (reduceMotion) {
+				anim.goToAndStop(0, true);
+				return;
+			}
+			if (options.autoplayOnLoad) {
+				anim.play();
+			}
+		});
+
+		anim.addEventListener('data_failed', function () {
+			markLottieLoaded(el);
+		});
+
+		return anim;
+	}
+
+	function initHeroLottie() {
 		if (typeof lottie === 'undefined') return;
 
-		var nodes = document.querySelectorAll('.ow-section-lottie[data-lottie]');
-		if (!nodes.length) return;
+		var el = document.querySelector('.ow-hero--page .ow-hero__lottie[data-lottie-lazy], .ow-hero--page .ow-hero__lottie[data-lottie]');
+		if (!el || !el.getAttribute('data-lottie')) return;
 
 		var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+		var started = false;
 
-		Array.prototype.forEach.call(nodes, function (el) {
-			var path = el.getAttribute('data-lottie');
-			if (!path) return;
+		function start() {
+			if (started) return;
+			started = true;
 
-			var anim = lottie.loadAnimation({
-				container: el,
-				renderer: 'svg',
-				loop: !reduceMotion,
-				autoplay: false,
-				path: path,
+			var anim = loadLottieInto(el, {
+				reduceMotion: reduceMotion,
+				loop: true,
+				autoplayOnLoad: !reduceMotion,
 			});
+			if (!anim || reduceMotion) return;
 
-			if (reduceMotion) {
-				anim.addEventListener('DOMLoaded', function () {
-					anim.goToAndStop(0, true);
-				});
-				return;
-			}
+			if (!('IntersectionObserver' in window)) return;
 
-			if (!('IntersectionObserver' in window)) {
-				anim.play();
-				return;
-			}
-
-			var io = new IntersectionObserver(
+			var playIo = new IntersectionObserver(
 				function (entries) {
 					entries.forEach(function (entry) {
 						if (entry.isIntersecting) {
@@ -140,9 +169,90 @@
 						}
 					});
 				},
-				{ threshold: 0.25 }
+				{ threshold: 0.2 }
 			);
-			io.observe(el);
+			playIo.observe(el);
+		}
+
+		if (!('IntersectionObserver' in window)) {
+			start();
+			return;
+		}
+
+		// Lazy: begin fetch when hero is near viewport; blur clears on DOMLoaded
+		var lazyIo = new IntersectionObserver(
+			function (entries) {
+				entries.forEach(function (entry) {
+					if (!entry.isIntersecting) return;
+					lazyIo.unobserve(el);
+					start();
+				});
+			},
+			{ rootMargin: '120px 0px', threshold: 0.01 }
+		);
+		lazyIo.observe(el);
+	}
+
+	function initSectionLotties() {
+		if (typeof lottie === 'undefined') return;
+
+		var nodes = document.querySelectorAll('.ow-section-lottie[data-lottie]');
+		if (!nodes.length) return;
+
+		var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+		Array.prototype.forEach.call(nodes, function (el) {
+			if (el.closest('.ow-hero--page')) return;
+
+			var path = el.getAttribute('data-lottie');
+			if (!path) return;
+
+			function bind() {
+				var anim = loadLottieInto(el, {
+					reduceMotion: reduceMotion,
+					loop: true,
+					autoplayOnLoad: false,
+				});
+				if (!anim) return;
+
+				if (reduceMotion) return;
+
+				if (!('IntersectionObserver' in window)) {
+					anim.play();
+					return;
+				}
+
+				var io = new IntersectionObserver(
+					function (entries) {
+						entries.forEach(function (entry) {
+							if (entry.isIntersecting) {
+								anim.play();
+							} else {
+								anim.pause();
+							}
+						});
+					},
+					{ threshold: 0.25 }
+				);
+				io.observe(el);
+			}
+
+			if (!('IntersectionObserver' in window)) {
+				bind();
+				return;
+			}
+
+			var lazyIo = new IntersectionObserver(
+				function (entries) {
+					entries.forEach(function (entry) {
+						if (!entry.isIntersecting) return;
+						lazyIo.unobserve(el);
+						bind();
+					});
+				},
+				{ rootMargin: '160px 0px', threshold: 0.01 }
+			);
+			lazyIo.observe(el);
 		});
 	}
 
@@ -182,6 +292,7 @@
 
 	function init() {
 		initHeroSwiper();
+		initHeroLottie();
 		initSectionLotties();
 		initReveals();
 	}
