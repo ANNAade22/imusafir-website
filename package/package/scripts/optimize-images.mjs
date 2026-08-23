@@ -21,7 +21,6 @@ const PRIORITY = [
   })),
   { rel: "background/inr-banner.jpg", out: "background/inr-banner.jpg", maxWidth: 1920, quality: 78 },
   { rel: "image-cont.png", maxWidth: 1600, quality: 80 },
-  { rel: "logo-dark.png", maxWidth: 400, quality: 85 },
   { rel: "butterfly.gif", maxWidth: 400 },
   { rel: "li-eye.gif", maxWidth: 200 },
   { rel: "Advertisment.png", maxWidth: 1200, quality: 80 },

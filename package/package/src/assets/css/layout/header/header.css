@@ -49,13 +49,14 @@
     z-index: 0;
     pointer-events: none;
     border-radius: inherit;
-    background: rgba(28, 25, 21, 0.42);
-    backdrop-filter: blur(18px) saturate(160%);
-    -webkit-backdrop-filter: blur(18px) saturate(160%);
-    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: var(--nav-glass-bg-gradient);
+    backdrop-filter: blur(24px) saturate(150%);
+    -webkit-backdrop-filter: blur(24px) saturate(150%);
+    border: 1px solid var(--nav-glass-border);
     box-shadow:
-        0 12px 40px rgba(28, 25, 21, 0.18),
-        0 2px 8px rgba(28, 25, 21, 0.08);
+        var(--nav-glass-shadow),
+        var(--nav-glass-shadow-soft),
+        inset 0 1px 0 var(--nav-glass-highlight);
 }
 .site-header.sticky-header.is-fixed .main-bar-wraper > div {
     position: relative;
@@ -125,17 +126,31 @@
     text-decoration: none;
     line-height: 0;
 }
+.brand-logo picture {
+    display: inline-flex;
+    line-height: 0;
+}
 .brand-logo img {
     display: block;
-    height: 2.75rem;
+    height: 3.5rem;
     width: auto;
     max-width: none;
     object-fit: contain;
+    filter: none;
+    opacity: 1;
 }
 @media (min-width: 992px) {
     .brand-logo img {
-        height: 3.25rem;
+        height: 4.5rem;
     }
+}
+.site-header.site-header--brand .brand-logo {
+    isolation: isolate;
+}
+.site-header.site-header--brand .brand-logo img {
+    filter: none;
+    opacity: 1;
+    mix-blend-mode: normal;
 }
 
 /* Brand wordmark (footer / hero) */
@@ -218,13 +233,14 @@
     z-index: 0;
     pointer-events: none;
     border-radius: inherit;
-    background: rgba(28, 25, 21, 0.42);
-    backdrop-filter: blur(18px) saturate(160%);
-    -webkit-backdrop-filter: blur(18px) saturate(160%);
-    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: var(--nav-glass-bg-gradient);
+    backdrop-filter: blur(24px) saturate(150%);
+    -webkit-backdrop-filter: blur(24px) saturate(150%);
+    border: 1px solid var(--nav-glass-border);
     box-shadow:
-        0 12px 40px rgba(28, 25, 21, 0.18),
-        0 2px 8px rgba(28, 25, 21, 0.08);
+        var(--nav-glass-shadow),
+        var(--nav-glass-shadow-soft),
+        inset 0 1px 0 var(--nav-glass-highlight);
 }
 .site-header.site-header--brand .main-bar-wraper > div {
     position: relative;
@@ -239,7 +255,7 @@
     background-color: #ffffff;
 }
 .site-header.site-header--brand .navbar-nav a {
-    color: #ffffff !important;
+    color: #f5ede0 !important;
     font-size: 0.875rem;
     letter-spacing: 0.06em;
     text-transform: uppercase;
@@ -277,9 +293,9 @@ body .menu-close.fade-overlay.menu-close--portal {
     z-index: 100040 !important;
     width: 100% !important;
     height: 100% !important;
-    background: rgba(28, 25, 21, 0.28) !important;
-    backdrop-filter: blur(6px) saturate(140%);
-    -webkit-backdrop-filter: blur(6px) saturate(140%);
+    background: var(--nav-glass-overlay) !important;
+    backdrop-filter: blur(8px) saturate(140%);
+    -webkit-backdrop-filter: blur(8px) saturate(140%);
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -309,14 +325,14 @@ body.nav-open .menu-close.fade-overlay.menu-close--portal {
     align-items: stretch !important;
     gap: 0.15rem;
     border-radius: 1.15rem;
-    background: rgba(28, 25, 21, 0.52) !important;
-    backdrop-filter: blur(22px) saturate(165%);
-    -webkit-backdrop-filter: blur(22px) saturate(165%);
-    border: 1px solid rgba(255, 255, 255, 0.16);
+    background: var(--nav-glass-menu-bg) !important;
+    backdrop-filter: blur(26px) saturate(150%);
+    -webkit-backdrop-filter: blur(26px) saturate(150%);
+    border: 1px solid var(--nav-glass-border);
     box-shadow:
-        0 18px 50px rgba(28, 25, 21, 0.28),
-        0 2px 10px rgba(28, 25, 21, 0.12),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        var(--nav-glass-shadow),
+        var(--nav-glass-shadow-soft),
+        inset 0 1px 0 var(--nav-glass-highlight);
     overflow-x: hidden !important;
     overflow-y: auto !important;
     transform: translateY(-0.6rem) scale(0.97);

@@ -1,10 +1,13 @@
 {
+	"overrides": {
+		"chalk-template": "1.1.2"
+	},
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"preinstall": "npx npm-force-resolutions",
 		"postinstall": "node scripts/setup-fonts.mjs",
 		"setup:fonts": "node scripts/setup-fonts.mjs",
-		"optimize:images": "node scripts/optimize-images.mjs",
+		"prepare:logo": "node scripts/prepare-logo.mjs",
 		"optimize:destinations": "node scripts/optimize-destinations.mjs",
 		"build:gallery": "node scripts/generate-gallery.mjs",
 		"dev": "npx @tailwindcss/cli -i ./src/assets/css/tailwind.css -o ./src/assets/css/style.css --watch",

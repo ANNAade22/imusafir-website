@@ -27,6 +27,21 @@
     /* Warm charcoal — navbar, footer, dark sections (not pure black) */
     --rich-black: #1C1915;
 
+    /* Navbar glass — smoked champagne glass (translucent + gold-friendly) */
+    --nav-glass-bg: rgba(22, 18, 14, 0.52);
+    --nav-glass-bg-gradient: linear-gradient(
+        135deg,
+        rgba(32, 26, 18, 0.58) 0%,
+        rgba(18, 14, 10, 0.48) 50%,
+        rgba(28, 22, 15, 0.55) 100%
+    );
+    --nav-glass-border: rgba(197, 160, 89, 0.35);
+    --nav-glass-highlight: rgba(255, 248, 235, 0.14);
+    --nav-glass-shadow: 0 10px 32px rgba(12, 9, 6, 0.22);
+    --nav-glass-shadow-soft: 0 1px 0 rgba(255, 255, 255, 0.06);
+    --nav-glass-menu-bg: rgba(22, 18, 14, 0.72);
+    --nav-glass-overlay: rgba(14, 11, 8, 0.32);
+
     /* Footer bottom bar — one shade deeper */
     --footer-bar: #141210;
 
